@@ -107,6 +107,12 @@
     font-weight: 400;
   }
 
+  /* Cursor personalizado */
+  .custom-cursor,
+  .custom-cursor * {
+    cursor: none !important;
+  }
+
   /* Scrollbar */
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--background); }

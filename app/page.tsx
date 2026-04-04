@@ -7,6 +7,7 @@ import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import ContactCTA from "@/components/sections/ContactCTA";
+import HowIWork from "@/components/sections/HowIWork";
 import SideNav from "@/components/ui/SideNav";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <Projects />
         <Experience />
         <Education />
+        <HowIWork />
         <ContactCTA />
       </main>
       <Footer />

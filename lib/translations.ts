@@ -128,6 +128,18 @@ export const translations = {
         },
       ],
     },
+    process: {
+      label: "Mi proceso",
+      heading: "Cómo",
+      headingAccent: "trabajo",
+      steps: [
+        { title: "Análisis", description: "Entiendo el problema a fondo antes de escribir la primera línea de código." },
+        { title: "Diseño", description: "Defino la arquitectura y estructura de datos que mejor se adapta al proyecto." },
+        { title: "Backend", description: "Construyo APIs sólidas, seguras y bien documentadas con Spring Boot o Node.js." },
+        { title: "Frontend", description: "Transformo la lógica en interfaces reactivas, limpias y accesibles." },
+        { title: "Entrega", description: "Despliego, documento y me aseguro de que todo funcione en producción." },
+      ],
+    },
     cta: {
       label: "¿Buscas una desarrolladora?",
       heading: "Estoy lista para",
@@ -302,6 +314,18 @@ export const translations = {
         },
       ],
     },
+    process: {
+      label: "My process",
+      heading: "How I",
+      headingAccent: "work",
+      steps: [
+        { title: "Analysis", description: "I understand the problem deeply before writing a single line of code." },
+        { title: "Design", description: "I define the architecture and data structure that fits the project best." },
+        { title: "Backend", description: "I build solid, secure and well-documented APIs with Spring Boot or Node.js." },
+        { title: "Frontend", description: "I turn logic into reactive, clean and accessible interfaces." },
+        { title: "Delivery", description: "I deploy, document and ensure everything works correctly in production." },
+      ],
+    },
     cta: {
       label: "Looking for a developer?",
       heading: "I'm ready to",
@@ -473,6 +497,18 @@ export const translations = {
           description:
             "Formation à la pensée critique, à l'argumentation structurée et à l'analyse de systèmes. Une base qui renforce ma capacité à concevoir des solutions propres et à raisonner sur des architectures complexes.",
         },
+      ],
+    },
+    process: {
+      label: "Mon processus",
+      heading: "Comment je",
+      headingAccent: "travaille",
+      steps: [
+        { title: "Analyse", description: "Je comprends le problème en profondeur avant d'écrire la première ligne de code." },
+        { title: "Conception", description: "Je définis l'architecture et la structure de données la plus adaptée au projet." },
+        { title: "Backend", description: "Je construis des API solides, sécurisées et bien documentées avec Spring Boot ou Node.js." },
+        { title: "Frontend", description: "Je transforme la logique en interfaces réactives, propres et accessibles." },
+        { title: "Livraison", description: "Je déploie, documente et m'assure que tout fonctionne correctement en production." },
       ],
     },
     cta: {

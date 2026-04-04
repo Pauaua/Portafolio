@@ -4,6 +4,8 @@ import "./globals.css";
 import BackgroundSparkles from "@/components/ui/BackgroundSparkles";
 import LanguageBanner from "@/components/ui/LanguageBanner";
 import { LanguageProvider } from "@/components/ui/LanguageProvider";
+import CustomCursor from "@/components/ui/CustomCursor";
+import EasterEgg from "@/components/ui/EasterEgg";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +49,8 @@ export default function RootLayout({
     <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen flex flex-col font-[family-name:var(--font-sans)]">
         <LanguageProvider>
+          <CustomCursor />
+          <EasterEgg />
           <BackgroundSparkles />
           <LanguageBanner />
           {/* pt-8 para compensar la barra de idioma (32px) */}

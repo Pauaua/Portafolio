@@ -10,6 +10,7 @@ const sections = [
   { id: "projects",   labelKey: "projects" },
   { id: "experience", labelKey: "experience" },
   { id: "education",  labelKey: "education" },
+  { id: "process",    labelKey: "process" },
   { id: "cta",        labelKey: "cta" },
 ];
 
@@ -21,6 +22,7 @@ const labelMap: Record<string, Record<string, string>> = {
     projects:   "Proyectos",
     experience: "Experiencia",
     education:  "Formación",
+    process:    "Mi proceso",
     cta:        "Contacto",
   },
   en: {
@@ -30,6 +32,7 @@ const labelMap: Record<string, Record<string, string>> = {
     projects:   "Projects",
     experience: "Experience",
     education:  "Education",
+    process:    "My process",
     cta:        "Contact",
   },
   fr: {
@@ -39,6 +42,7 @@ const labelMap: Record<string, Record<string, string>> = {
     projects:   "Projets",
     experience: "Expérience",
     education:  "Formation",
+    process:    "Mon processus",
     cta:        "Contact",
   },
 };
