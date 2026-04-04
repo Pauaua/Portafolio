@@ -104,8 +104,48 @@ export default function About() {
               <div className="absolute inset-0 rounded-full border border-primary/20 animate-pulse" />
               <div className="absolute inset-4 rounded-full border border-primary/10" />
               <div className="absolute inset-8 rounded-full overflow-hidden bg-secondary border-2 border-primary/30 glow-sm flex items-center justify-center">
-                {/* Reemplaza con <Image> cuando tengas foto */}
-                <span className="text-6xl select-none">👤</span>
+                {/* Ilustración conceptual — reemplazar con foto cuando esté disponible */}
+                <svg
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-full h-full p-5"
+                  aria-hidden="true"
+                >
+                  {/* Fondo suave */}
+                  <circle cx="100" cy="100" r="90" style={{ fill: "color-mix(in srgb, var(--color-primary) 8%, transparent)" }} />
+
+                  {/* Ventana de terminal */}
+                  <rect x="30" y="48" width="140" height="104" rx="10"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 10%, transparent)", stroke: "color-mix(in srgb, var(--color-primary) 30%, transparent)", strokeWidth: 1.5 }} />
+                  {/* Barra de título */}
+                  <rect x="30" y="48" width="140" height="24" rx="10"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 22%, transparent)" }} />
+                  <rect x="30" y="60" width="140" height="12"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 22%, transparent)" }} />
+                  {/* Dots */}
+                  <circle cx="46" cy="60" r="4" style={{ fill: "color-mix(in srgb, var(--color-primary) 70%, transparent)" }} />
+                  <circle cx="60" cy="60" r="4" style={{ fill: "color-mix(in srgb, var(--color-primary) 40%, transparent)" }} />
+                  <circle cx="74" cy="60" r="4" style={{ fill: "color-mix(in srgb, var(--color-primary) 25%, transparent)" }} />
+
+                  {/* Líneas de código */}
+                  <text x="42" y="92" fontSize="10" fontFamily="monospace"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 90%, transparent)" }}>❯ const dev =</text>
+                  <text x="42" y="107" fontSize="9" fontFamily="monospace"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 65%, transparent)" }}>{`  "full stack";`}</text>
+                  <text x="42" y="122" fontSize="9" fontFamily="monospace"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 50%, transparent)" }}>{`// Java · Python · React`}</text>
+                  <text x="42" y="137" fontSize="9" fontFamily="monospace"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 40%, transparent)" }}>{`// Next.js · Spring Boot`}</text>
+
+                  {/* Cursor */}
+                  <rect x="42" y="143" width="7" height="9" rx="1"
+                    style={{ fill: "color-mix(in srgb, var(--color-primary) 75%, transparent)" }} />
+
+                  {/* Órbita decorativa */}
+                  <circle cx="100" cy="100" r="94" strokeWidth="0.5" strokeDasharray="4 6"
+                    style={{ stroke: "color-mix(in srgb, var(--color-primary) 15%, transparent)" }} />
+                </svg>
               </div>
               {personalInfo.available && (
                 <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-light px-3 py-1.5 rounded-full shadow-lg">
