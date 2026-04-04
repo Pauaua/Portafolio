@@ -19,7 +19,7 @@ export const personalInfo = {
   available: true,
   avatar: "/images/avatar.jpg", // Coloca tu foto en public/images/
   // CV debe estar en public/ para que Next.js lo sirva
-  resume: "/CV PAULINA ACUNA PAIVA.pdf",
+  resume: "/CVREALPAPCV.pdf",
 };
 
 export const socialLinks = [
