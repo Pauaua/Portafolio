@@ -116,28 +116,28 @@ export const projects = [
   },
   {
     id: 3,
-    title: "To Do List",
+    title: "PlantiDex Mobile",
     description:
-      "Aplicación de escritorio para gestión de tareas con recordatorios y notificaciones del sistema. Permite cambiar entre distintos estilos visuales (Kawaii, Gatos, Equipos de fútbol) para personalizar la experiencia. Incluye instalador para Windows.",
-    role: "Desarrolladora única — proyecto personal",
+      "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa a nivel comunitario. Soporta captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
+    role: "Desarrolladora única — proyecto académico",
     stack: {
-      frontend: ["tkinter", "tkcalendar", "Pillow"],
-      backend: ["Python 3.8+", "schedule", "pytz"],
-      database: ["SQLite"],
-      tools: ["plyer", "pystray", "PyInstaller", "Inno Setup"],
+      frontend: ["Ionic 8", "Angular 20", "TypeScript", "SCSS"],
+      backend: ["Capacitor", "RxJS"],
+      database: ["@ionic/storage-angular", "localForage"],
+      tools: ["@capacitor/camera", "@capacitor/geolocation", "Karma / Jasmine", "Git"],
     },
     bullets: [
-      "Implementé sistema de notificaciones del sistema operativo con soporte explícito para zona horaria America/Santiago usando pytz y schedule.",
-      "Desarrollé múltiples estilos visuales intercambiables (Kawaii, Gatos, Equipos de fútbol) con configuración persistente en JSON y ajuste dinámico del tamaño de ventana.",
-      "Integré pystray para funcionamiento como ícono en la bandeja del sistema, permitiendo uso en segundo plano sin interrumpir el flujo de trabajo.",
+      "Implementé integración nativa de cámara y GPS con Capacitor, solicitando permisos Android en tiempo de ejecución con feedback claro al usuario en caso de denegación.",
+      "Desarrollé persistencia offline-first con @ionic/storage-angular (localForage) para registrar observaciones en campo sin necesidad de conexión a internet.",
+      "Construí gestión de estado reactiva con BehaviorSubject de RxJS para mantener la lista de especies sincronizada en tiempo real a través de múltiples vistas.",
     ],
     decision:
-      "Elegí tkinter por ser parte de la librería estándar de Python, eliminando dependencias externas para una app de escritorio liviana. SQLite se integra nativamente sin necesidad de servidor, lo que simplifica la distribución vía instalador.",
+      "Elegí Ionic + Angular + Capacitor por la combinación de productividad web con acceso real a hardware nativo (cámara, GPS). El enfoque offline-first con localForage fue clave para garantizar usabilidad en zonas rurales con conectividad limitada.",
     challenge:
-      "Los recordatorios en segundo plano con schedule requerían un hilo separado para no bloquear la UI de tkinter. Implementé threading con manejo de señales para detener limpiamente el scheduler al cerrar la aplicación sin dejar procesos huérfanos.",
-    tags: ["Python", "tkinter", "SQLite", "schedule"],
+      "La integración de permisos nativos de Android con Capacitor requirió manejo explícito de estados (concedido/denegado/no solicitado) en cada sesión. Resolví implementando un servicio de permisos centralizado que evalúa el estado antes de cada llamada a cámara o GPS.",
+    tags: ["Ionic", "Angular", "TypeScript", "Capacitor"],
     liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/ToDoListKawaii",
+    repoUrl: "https://github.com/Pauaua/PlantidexMobile",
     featured: false,
   },
   {

@@ -58,9 +58,9 @@ export const translations = {
             "Plataforma web MVC con autenticación por roles (Admin/User) y CRUD completo de usuarios y proyectos. Desarrollé la arquitectura con Java Spring Boot, Thymeleaf y H2 Database.",
         },
         {
-          title: "To Do List",
+          title: "PlantiDex Mobile",
           description:
-            "Aplicación de escritorio para gestión de tareas con recordatorios y notificaciones del sistema. Permite cambiar entre estilos visuales (Kawaii, Gatos, Equipos de fútbol) para personalizar la experiencia.",
+            "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa. Captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
         },
         {
           title: "Automatizador de Boletas SII",
@@ -259,9 +259,9 @@ export const translations = {
             "MVC web platform with role-based authentication (Admin/User) and full CRUD for users and projects. Built with Java Spring Boot, Thymeleaf and H2 Database.",
         },
         {
-          title: "To Do List",
+          title: "PlantiDex Mobile",
           description:
-            "Desktop task manager with reminders and system notifications. Switch between visual styles (Kawaii, Cats, Football teams) to personalize the experience.",
+            "Hybrid mobile app for recording and sharing native plant species observations. Photo capture, GPS geolocation and offline-first persistence for field use without internet.",
         },
         {
           title: "SII Electronic Receipt Automator",
@@ -459,9 +459,9 @@ export const translations = {
             "Plateforme web MVC avec authentification par rôles (Admin/Utilisateur) et CRUD complet. Développée avec Java Spring Boot, Thymeleaf et H2 Database.",
         },
         {
-          title: "To Do List",
+          title: "PlantiDex Mobile",
           description:
-            "Gestionnaire de tâches bureau avec rappels et notifications système. Permet de changer entre différents styles visuels (Kawaii, Chats, Équipes de football) pour personnaliser l'expérience.",
+            "Application mobile hybride pour enregistrer et partager des observations de flore native. Capture photo, géolocalisation GPS et persistance offline-first pour une utilisation terrain sans connexion.",
         },
         {
           title: "Automatiseur de Reçus SII",
