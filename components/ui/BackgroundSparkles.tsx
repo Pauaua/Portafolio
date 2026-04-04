@@ -32,9 +32,9 @@ export default function BackgroundSparkles() {
       {BLOBS.map((b, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-primary/10 blur-[90px]"
+          className="absolute rounded-full bg-primary/20 blur-[90px]"
           style={{ left: b.x, top: b.y, width: b.w, height: b.w }}
-          animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.8, 0.5] }}
+          animate={{ scale: [1, 1.15, 1], opacity: [0.65, 1.0, 0.65] }}
           transition={{
             duration: b.dur,
             delay: b.delay,
@@ -55,7 +55,7 @@ export default function BackgroundSparkles() {
             width: s.size,
             height: s.size,
           }}
-          animate={{ opacity: [0, 0.7, 0], scale: [0.8, 1.4, 0.8] }}
+          animate={{ opacity: [0, 0.9, 0], scale: [0.8, 1.4, 0.8] }}
           transition={{
             duration: s.dur,
             delay: s.delay,

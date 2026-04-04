@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
 import { education } from "@/lib/data";
@@ -7,6 +8,7 @@ import { useLanguage } from "@/components/ui/LanguageProvider";
 
 export default function Education() {
   const { t } = useLanguage();
+  const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <section id="education" className="section-padding">
@@ -33,6 +35,8 @@ export default function Education() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {education.map((item, i) => {
             const tx = t.education.items[i] ?? { degree: item.degree, description: item.description };
+            // En mobile: resalta la primera card (highlight). En desktop: resalta la que tiene hover.
+            const isActive = hovered !== null ? hovered === item.id : item.highlight;
             return (
             <motion.div
               key={item.id}
@@ -40,10 +44,12 @@ export default function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`p-6 rounded-2xl border bg-card transition-colors ${
-                item.highlight
+              onMouseEnter={() => setHovered(item.id)}
+              onMouseLeave={() => setHovered(null)}
+              className={`p-6 rounded-2xl border bg-card transition-colors cursor-default ${
+                isActive
                   ? "border-primary/40 bg-primary/3"
-                  : "border-border hover:border-primary/30"
+                  : "border-border"
               }`}
             >
               <div className="w-9 h-9 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">

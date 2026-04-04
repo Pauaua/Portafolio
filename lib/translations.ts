@@ -48,24 +48,24 @@ export const translations = {
       moreOnGithub: "Ver más en GitHub",
       items: [
         {
-          title: "PlantiDex Mobile",
+          title: "Automatizador de Facturas SII",
           description:
-            "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa a nivel comunitario. Desarrollé el frontend móvil completo con persistencia local, formularios reactivos y permisos nativos.",
+            "Herramienta de escritorio para automatizar la aceptación de facturas electrónicas en el portal del SII. Procesamiento masivo vía Excel con hasta 3 procesos concurrentes y generación automática de reportes.",
         },
         {
           title: "CTRL — Gestión de Usuarios y Proyectos",
           description:
-            "Aplicación web MVC para gestión administrativa con control de roles (Admin/User). Diseñé la arquitectura de base de datos e implementé autenticación y autorización con Spring Boot.",
+            "Plataforma web MVC con autenticación por roles (Admin/User) y CRUD completo de usuarios y proyectos. Desarrollé la arquitectura con Java Spring Boot, Thymeleaf y H2 Database.",
         },
         {
-          title: "Asegal ByF — Dashboard de Administración",
+          title: "To Do List",
           description:
-            "Panel de administración moderno para gestionar contenido web (blog, servicios, imágenes). Desarrollé el frontend con Next.js con arquitectura de componentes eficiente.",
+            "Aplicación de escritorio para gestión de tareas con recordatorios y notificaciones del sistema. Permite cambiar entre estilos visuales (Kawaii, Gatos, Equipos de fútbol) para personalizar la experiencia.",
         },
         {
-          title: "Asesorías Valdivia — Sistema Contable",
+          title: "Automatizador de Boletas SII",
           description:
-            "Sistema de gestión contable desarrollado desde cero. Diseño de base de datos, backend con Node.js y Prisma, e interfaz con React.",
+            "Aplicación de escritorio base para automatizar el flujo de boletas electrónicas del SII. Interfaz PyQt5 con autenticación por RUT, modo headless y logs en tiempo real.",
         },
       ],
     },
@@ -249,24 +249,24 @@ export const translations = {
       moreOnGithub: "More on GitHub",
       items: [
         {
-          title: "PlantiDex Mobile",
+          title: "SII Invoice Automator",
           description:
-            "Hybrid mobile app for recording and sharing native flora observations at a community level. I built the complete mobile frontend with local persistence, reactive forms and native permissions.",
+            "Desktop tool to automate electronic invoice acceptance on Chile's SII portal. Supports bulk processing via Excel with up to 3 concurrent processes and automatic report generation.",
         },
         {
           title: "CTRL — User & Project Management",
           description:
-            "MVC web application for administrative management with role-based access control (Admin/User). I designed the database architecture and implemented authentication and authorization with Spring Boot.",
+            "MVC web platform with role-based authentication (Admin/User) and full CRUD for users and projects. Built with Java Spring Boot, Thymeleaf and H2 Database.",
         },
         {
-          title: "Asegal ByF — Admin Dashboard",
+          title: "To Do List",
           description:
-            "Modern administration panel for managing web content (blog, services, images). I developed the frontend and admin interface using Next.js with an efficient component architecture.",
+            "Desktop task manager with reminders and system notifications. Switch between visual styles (Kawaii, Cats, Football teams) to personalize the experience.",
         },
         {
-          title: "Asesorías Valdivia — Accounting System",
+          title: "SII Electronic Receipt Automator",
           description:
-            "Accounting management system built from scratch. Database design, backend with Node.js and Prisma, and React interface.",
+            "Base desktop application to automate the electronic receipt workflow on Chile's SII portal. PyQt5 interface with RUT authentication, headless mode and real-time logs.",
         },
       ],
     },
@@ -449,24 +449,24 @@ export const translations = {
       moreOnGithub: "Plus sur GitHub",
       items: [
         {
-          title: "PlantiDex Mobile",
+          title: "Automatiseur de Factures SII",
           description:
-            "Application mobile hybride pour enregistrer et partager des observations de flore native à l'échelle communautaire. J'ai développé l'intégralité du frontend mobile avec persistance locale, formulaires réactifs et permissions natives.",
+            "Outil bureau pour automatiser l'acceptation des factures électroniques sur le portail SII du Chili. Traitement en masse via Excel avec jusqu'à 3 processus simultanés et génération automatique de rapports.",
         },
         {
           title: "CTRL — Gestion des utilisateurs et projets",
           description:
-            "Application web MVC pour la gestion administrative avec contrôle d'accès basé sur les rôles (Admin/Utilisateur). J'ai conçu l'architecture de la base de données et implémenté l'authentification et l'autorisation avec Spring Boot.",
+            "Plateforme web MVC avec authentification par rôles (Admin/Utilisateur) et CRUD complet. Développée avec Java Spring Boot, Thymeleaf et H2 Database.",
         },
         {
-          title: "Asegal ByF — Tableau de bord d'administration",
+          title: "To Do List",
           description:
-            "Panneau d'administration moderne pour gérer le contenu web (blog, services, images). J'ai développé le frontend et l'interface d'administration avec Next.js et une architecture de composants efficace.",
+            "Gestionnaire de tâches bureau avec rappels et notifications système. Permet de changer entre différents styles visuels (Kawaii, Chats, Équipes de football) pour personnaliser l'expérience.",
         },
         {
-          title: "Asesorías Valdivia — Système de comptabilité",
+          title: "Automatiseur de Reçus SII",
           description:
-            "Système de gestion comptable développé de zéro. Conception de la base de données, backend avec Node.js et Prisma, et interface avec React.",
+            "Application bureau de base pour automatiser le flux des reçus électroniques sur le portail SII. Interface PyQt5 avec authentification par RUT, mode headless et journaux en temps réel.",
         },
       ],
     },
