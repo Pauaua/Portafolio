@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 import { experience } from "@/lib/data";
+import { useLanguage } from "@/components/ui/LanguageProvider";
 
 export default function Experience() {
+  const { t } = useLanguage();
+
   return (
     <section id="experience" className="section-padding">
       <div className="container-max">
@@ -14,7 +17,7 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-sm text-primary font-light tracking-widest uppercase mb-3"
         >
-          Experiencia
+          {t.experience.label}
         </motion.p>
 
         <motion.h2
@@ -24,15 +27,17 @@ export default function Experience() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl font-light font-[family-name:var(--font-heading)] mb-12"
         >
-          Donde he{" "}
-          <span className="gradient-text">trabajado</span>
+          {t.experience.heading}{" "}
+          <span className="gradient-text">{t.experience.headingAccent}</span>
         </motion.h2>
 
         <div className="relative">
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/15 to-transparent hidden sm:block" />
 
           <div className="flex flex-col gap-7">
-            {experience.map((job, i) => (
+            {experience.map((job, i) => {
+              const tx = t.experience.items[i] ?? { role: job.role, description: job.description };
+              return (
               <motion.div
                 key={job.id}
                 initial={{ opacity: 0, x: -20 }}
@@ -53,7 +58,7 @@ export default function Experience() {
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                     <div>
                       <h3 className="font-light text-base font-[family-name:var(--font-heading)]">
-                        {job.role}
+                        {tx.role}
                       </h3>
                       <p className="text-primary text-sm font-light">{job.company}</p>
                     </div>
@@ -63,7 +68,7 @@ export default function Experience() {
                   </div>
 
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3 font-light">
-                    {job.description}
+                    {tx.description}
                   </p>
 
                   <div className="flex flex-wrap gap-1.5">
@@ -78,7 +83,8 @@ export default function Experience() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
 import { education } from "@/lib/data";
+import { useLanguage } from "@/components/ui/LanguageProvider";
 
 export default function Education() {
+  const { t } = useLanguage();
+
   return (
     <section id="education" className="section-padding">
       <div className="container-max">
@@ -14,7 +17,7 @@ export default function Education() {
           viewport={{ once: true }}
           className="text-sm text-primary font-light tracking-widest uppercase mb-3"
         >
-          Formación
+          {t.education.label}
         </motion.p>
 
         <motion.h2
@@ -24,11 +27,13 @@ export default function Education() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl font-light font-[family-name:var(--font-heading)] mb-12"
         >
-          Mi <span className="gradient-text">trayectoria académica</span>
+          {t.education.heading} <span className="gradient-text">{t.education.headingAccent}</span>
         </motion.h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {education.map((item, i) => (
+          {education.map((item, i) => {
+            const tx = t.education.items[i] ?? { degree: item.degree, description: item.description };
+            return (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 30 }}
@@ -46,14 +51,15 @@ export default function Education() {
               </div>
               <p className="text-xs text-primary font-light mb-1 tracking-wide">{item.period}</p>
               <h3 className="font-light text-sm font-[family-name:var(--font-heading)] mb-1 leading-snug">
-                {item.degree}
+                {tx.degree}
               </h3>
               <p className="text-muted-foreground text-xs font-light mb-2">{item.institution}</p>
               <p className="text-xs text-muted-foreground/80 leading-relaxed font-light">
-                {item.description}
+                {tx.description}
               </p>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

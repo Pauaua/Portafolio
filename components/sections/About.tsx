@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Mail } from "lucide-react";
 import { personalInfo } from "@/lib/data";
+import { useLanguage } from "@/components/ui/LanguageProvider";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -14,6 +15,8 @@ const fadeUp = {
 };
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="section-padding">
       <div className="container-max">
@@ -25,7 +28,7 @@ export default function About() {
           variants={fadeUp}
           className="text-sm text-primary font-light tracking-widest uppercase mb-3"
         >
-          Sobre mí
+          {t.about.label}
         </motion.p>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -39,8 +42,8 @@ export default function About() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-light font-[family-name:var(--font-heading)] mb-6 leading-tight"
             >
-              Del aula al{" "}
-              <span className="gradient-text">código</span>
+              {t.about.heading}{" "}
+              <span className="gradient-text">{t.about.headingAccent}</span>
             </motion.h2>
 
             <motion.p
@@ -51,7 +54,7 @@ export default function About() {
               variants={fadeUp}
               className="text-muted-foreground leading-relaxed text-base md:text-lg mb-4 font-light"
             >
-              {personalInfo.bio}
+              {t.about.bio}
             </motion.p>
 
             <motion.p
@@ -62,11 +65,7 @@ export default function About() {
               variants={fadeUp}
               className="text-muted-foreground/80 leading-relaxed text-sm mb-6 font-light"
             >
-              Antes de dedicarme al desarrollo, fui docente de Filosofía durante más de 8 años
-              y tengo un Magíster en Educación. Esa etapa me enseñó a comunicar ideas
-              complejas de forma clara, a gestionar proyectos con recursos limitados y a
-              trabajar con equipos diversos — habilidades que aplico directamente al
-              desarrollo de software.
+              {t.about.extra}
             </motion.p>
 
             <motion.div
@@ -110,7 +109,7 @@ export default function About() {
               </div>
               {personalInfo.available && (
                 <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground text-xs font-light px-3 py-1.5 rounded-full shadow-lg">
-                  Open to work
+                  {t.about.openToWork}
                 </div>
               )}
             </div>

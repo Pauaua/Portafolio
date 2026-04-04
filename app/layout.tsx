@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import BackgroundSparkles from "@/components/ui/BackgroundSparkles";
+import LanguageBanner from "@/components/ui/LanguageBanner";
+import { LanguageProvider } from "@/components/ui/LanguageProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -44,8 +46,14 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen flex flex-col font-[family-name:var(--font-sans)]">
-        <BackgroundSparkles />
-        {children}
+        <LanguageProvider>
+          <BackgroundSparkles />
+          <LanguageBanner />
+          {/* pt-8 para compensar la barra de idioma (32px) */}
+          <div className="pt-8 flex flex-col flex-1">
+            {children}
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,19 +1,30 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { navLinks, personalInfo } from "@/lib/data";
+import { personalInfo } from "@/lib/data";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import { useLanguage } from "@/components/ui/LanguageProvider";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { t, lang } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const whatsappUrl = `https://wa.me/${personalInfo.phone}?text=${encodeURIComponent(personalInfo.whatsappMessage)}`;
+
+  const navLinks = [
+    { label: t.nav.about,      href: "/#about" },
+    { label: t.nav.projects,   href: "/#projects" },
+    { label: t.nav.experience, href: "/#experience" },
+    { label: t.nav.education,  href: "/#education" },
+    { label: t.nav.contact,    href: "/contact" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -23,11 +34,11 @@ export default function Navbar() {
 
   useEffect(() => {
     setIsOpen(false);
-  }, [pathname]);
+  }, [pathname, lang]);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-background/85 backdrop-blur-md border-b border-border"
           : "bg-transparent"
@@ -35,12 +46,15 @@ export default function Navbar() {
     >
       <nav className="container-max flex items-center justify-between h-16 px-4 md:px-8 lg:px-16">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-lg font-semibold font-[family-name:var(--font-heading)] gradient-text hover:opacity-80 transition-opacity"
-        >
-          {personalInfo.name.split(" ")[0]}
-          <span className="text-primary">.</span>
+        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <Image
+            src="/logopf.png"
+            alt={personalInfo.name}
+            width={120}
+            height={120}
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -75,7 +89,7 @@ export default function Navbar() {
             className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-light border border-primary/40 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-200"
           >
             <MessageCircle size={14} />
-            Hablemos
+            {t.nav.cta}
           </a>
         </div>
 
@@ -133,7 +147,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   <MessageCircle size={14} />
-                  Hablemos por WhatsApp
+                  {t.nav.cta}
                 </a>
               </motion.li>
             </ul>

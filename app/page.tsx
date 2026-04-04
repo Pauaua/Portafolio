@@ -7,11 +7,13 @@ import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import ContactCTA from "@/components/sections/ContactCTA";
+import SideNav from "@/components/ui/SideNav";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <SideNav />
       <main className="flex-1">
         <Hero />
         <About />

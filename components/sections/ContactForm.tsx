@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Send, Mail, MapPin, CheckCircle, MessageCircle } from "lucide-react";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/SocialIcons";
 import { personalInfo, socialLinks } from "@/lib/data";
+import { useLanguage } from "@/components/ui/LanguageProvider";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <GithubIcon size={18} />,
@@ -22,6 +23,7 @@ type FormState = {
 type Status = "idle" | "sending" | "success" | "error";
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
@@ -73,15 +75,14 @@ export default function ContactForm() {
           className="mb-14"
         >
           <p className="text-sm text-primary font-light tracking-widest uppercase mb-3">
-            Contacto
+            {t.contact.label}
           </p>
           <h1 className="text-4xl md:text-5xl font-light font-[family-name:var(--font-heading)] mb-4 leading-tight">
-            ¿Quieres{" "}
-            <span className="gradient-text">contratarme?</span>
+            {t.contact.heading}{" "}
+            <span className="gradient-text">{t.contact.headingAccent}</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-xl leading-relaxed font-light">
-            Disponible para sumarte a equipos de desarrollo.
-            Respondo en menos de 24 horas.
+            {t.contact.subheading}
           </p>
 
           {/* WhatsApp shortcut */}
@@ -92,7 +93,7 @@ export default function ContactForm() {
             className="inline-flex items-center gap-2 mt-5 px-5 py-2.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-light hover:bg-primary/20 transition-colors"
           >
             <MessageCircle size={15} />
-            Contacto rápido vía WhatsApp
+            {t.contact.whatsapp}
           </a>
         </motion.div>
 
@@ -112,7 +113,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1 font-light">
-                    Email
+                    {t.contact.emailLabel}
                   </p>
                   <a
                     href={`mailto:${personalInfo.email}`}
@@ -129,7 +130,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1 font-light">
-                    Ubicación
+                    {t.contact.locationLabel}
                   </p>
                   <p className="text-sm font-light">{personalInfo.location}</p>
                 </div>
@@ -145,19 +146,19 @@ export default function ContactForm() {
                 </span>
                 <p className="text-sm font-light text-primary">
                   {personalInfo.available
-                    ? "Disponible para nuevos proyectos"
+                    ? t.contact.availableText
                     : "No disponible actualmente"}
                 </p>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed font-light">
-                Tiempo de respuesta: menos de 24 horas en días hábiles.
+                {t.contact.availableNote}
               </p>
             </div>
 
             {/* Social */}
             <div>
               <p className="text-xs text-muted-foreground uppercase tracking-wider mb-4 font-light">
-                Redes sociales
+                {t.contact.socialLabel}
               </p>
               <div className="flex gap-3">
                 {socialLinks.map((link) => (
@@ -187,16 +188,16 @@ export default function ContactForm() {
               <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center gap-4 p-8 rounded-2xl border border-primary/30 bg-primary/5">
                 <CheckCircle size={44} className="text-primary" />
                 <h3 className="text-xl font-light font-[family-name:var(--font-heading)]">
-                  ¡Mensaje enviado!
+                  {t.contact.successTitle}
                 </h3>
                 <p className="text-muted-foreground font-light">
-                  Gracias por escribirme. Te responderé pronto.
+                  {t.contact.successText}
                 </p>
                 <button
                   onClick={() => setStatus("idle")}
                   className="mt-2 px-6 py-2.5 rounded-full border border-primary/40 text-primary text-sm font-light hover:bg-primary/10 transition-colors"
                 >
-                  Enviar otro mensaje
+                  {t.contact.successBtn}
                 </button>
               </div>
             ) : (
@@ -210,7 +211,7 @@ export default function ContactForm() {
                       htmlFor="name"
                       className="text-xs text-muted-foreground uppercase tracking-wider font-light"
                     >
-                      Nombre *
+                      {t.contact.nameLabel} *
                     </label>
                     <input
                       id="name"
@@ -219,7 +220,7 @@ export default function ContactForm() {
                       required
                       value={form.name}
                       onChange={handleChange}
-                      placeholder="Tu nombre"
+                      placeholder={t.contact.namePlaceholder}
                       className="px-4 py-3 rounded-xl bg-input border border-border text-sm font-light placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
                     />
                   </div>
@@ -228,7 +229,7 @@ export default function ContactForm() {
                       htmlFor="email"
                       className="text-xs text-muted-foreground uppercase tracking-wider font-light"
                     >
-                      Email *
+                      {t.contact.emailFieldLabel} *
                     </label>
                     <input
                       id="email"
@@ -237,7 +238,7 @@ export default function ContactForm() {
                       required
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="tu@email.com"
+                      placeholder={t.contact.emailPlaceholder}
                       className="px-4 py-3 rounded-xl bg-input border border-border text-sm font-light placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
                     />
                   </div>
@@ -248,7 +249,7 @@ export default function ContactForm() {
                     htmlFor="subject"
                     className="text-xs text-muted-foreground uppercase tracking-wider font-light"
                   >
-                    Asunto
+                    {t.contact.subjectLabel}
                   </label>
                   <input
                     id="subject"
@@ -256,7 +257,7 @@ export default function ContactForm() {
                     type="text"
                     value={form.subject}
                     onChange={handleChange}
-                    placeholder="¿De qué se trata?"
+                    placeholder={t.contact.subjectPlaceholder}
                     className="px-4 py-3 rounded-xl bg-input border border-border text-sm font-light placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors"
                   />
                 </div>
@@ -266,7 +267,7 @@ export default function ContactForm() {
                     htmlFor="message"
                     className="text-xs text-muted-foreground uppercase tracking-wider font-light"
                   >
-                    Mensaje *
+                    {t.contact.messageLabel} *
                   </label>
                   <textarea
                     id="message"
@@ -275,14 +276,14 @@ export default function ContactForm() {
                     rows={6}
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Cuéntame sobre tu proyecto, idea o consulta..."
+                    placeholder={t.contact.messagePlaceholder}
                     className="px-4 py-3 rounded-xl bg-input border border-border text-sm font-light placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/20 transition-colors resize-none"
                   />
                 </div>
 
                 {status === "error" && (
                   <p className="text-sm text-destructive font-light">
-                    Hubo un error al enviar el mensaje. Por favor intentá de nuevo.
+                    {t.contact.errorText}
                   </p>
                 )}
 
@@ -313,12 +314,12 @@ export default function ContactForm() {
                           d="M4 12a8 8 0 018-8v8z"
                         />
                       </svg>
-                      Enviando...
+                      {t.contact.sending}
                     </>
                   ) : (
                     <>
                       <Send size={14} />
-                      Enviar mensaje
+                      {t.contact.submit}
                     </>
                   )}
                 </button>
