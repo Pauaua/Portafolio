@@ -7,7 +7,7 @@ export const personalInfo = {
   role: "Desarrolladora Full Stack",
   // Hero tagline — primera impresión ante un reclutador
   tagline:
-    "Full Stack lista para aportar desde el día uno. Java · Spring Boot · React · Next.js · 5 años de formación continua.",
+    "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
   // About bio — más detallado
   bio: "Ingeniería en Informática (en curso) con título técnico de Analista Programadora y experiencia en empresa real. Domino el ciclo completo: arquitectura de base de datos, APIs REST, lógica de negocio y frontend. Mi trayectoria previa en educación y filosofía me dio habilidades de comunicación, pensamiento sistemático y gestión de proyectos que aplico directamente al desarrollo.",
   location: "Santiago, RM. Chile",
@@ -66,52 +66,104 @@ export const projects = [
     id: 1,
     title: "PlantiDex Mobile",
     description:
-      "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa a nivel comunitario. Desarrollé el frontend móvil completo con persistencia local, formularios reactivos y permisos nativos.",
-    longDescription:
-      "Implementé la arquitectura frontend completa: navegación, formularios reactivos con validación, @ionic/storage-angular para persistencia local y Capacitor para acceso a permisos del dispositivo.",
-    tags: ["Ionic 8", "Angular 20", "TypeScript", "Capacitor"],
+      "App móvil comunitaria para registrar y compartir observaciones de flora nativa, con soporte offline y geolocalización.",
+    role: "Desarrolladora única — proyecto académico",
+    stack: {
+      frontend: ["Ionic 8", "Angular 20", "TypeScript"],
+      backend: ["Firebase Auth", "Firebase Functions"],
+      database: ["Firestore"],
+      tools: ["Capacitor", "Git"],
+    },
+    bullets: [
+      "Implementé geolocalización con Capacitor para registrar coordenadas GPS de cada observación en campo.",
+      "Desarrollé formularios reactivos con validación en tiempo real, reduciendo errores de entrada en zonas sin conexión.",
+      "Integré Firebase Auth con persistencia offline usando @ionic/storage-angular para funcionamiento sin red.",
+    ],
+    decision:
+      "Elegí Ionic + Capacitor sobre React Native por la familiaridad con Angular en el ecosistema de la carrera y la necesidad de acceder a APIs nativas (cámara, GPS) sin configuración compleja de bridges.",
+    challenge:
+      "La sincronización offline/online fue el mayor desafío: implementé una cola de operaciones pendientes en storage local que se ejecuta automáticamente al recuperar conexión, evitando pérdida de datos en campo.",
+    tags: ["Ionic", "Angular", "TypeScript", "Firebase"],
     liveUrl: "",
-    repoUrl: "", // agrega tu repo de GitHub
-    image: "/images/projects/plantidex.jpg",
+    repoUrl: "",
     featured: true,
   },
   {
     id: 2,
     title: "CTRL — Gestión de Usuarios y Proyectos",
     description:
-      "Aplicación web MVC para gestión administrativa con control de roles (Admin/User). Diseñé la arquitectura de base de datos e implementé autenticación y autorización con Spring Boot.",
-    longDescription:
-      "Diseñé los modelos de dominio (Usuario, Proyecto) en Java, implementé la lógica de negocio con Spring Boot incluyendo autenticación por roles, y desarrollé las vistas interactivas con Thymeleaf.",
-    tags: ["Java", "Spring Boot", "Thymeleaf", "Spring Data JPA", "Maven"],
+      "Plataforma web MVC de gestión administrativa con autenticación por roles (Admin/User) desarrollada como proyecto de titulación.",
+    role: "Desarrolladora única — proyecto de titulación",
+    stack: {
+      frontend: ["Thymeleaf", "Bootstrap 5", "JavaScript"],
+      backend: ["Java 17", "Spring Boot 3", "Spring Security"],
+      database: ["MySQL 8", "Spring Data JPA / Hibernate"],
+      tools: ["Maven", "Git"],
+    },
+    bullets: [
+      "Diseñé e implementé el esquema relacional con 6 entidades en MySQL, incluyendo relaciones ManyToMany entre usuarios y proyectos.",
+      "Construí sistema de autenticación con Spring Security y control de acceso basado en roles, protegiendo rutas sensibles del panel admin.",
+      "Desarrollé CRUD completo con validaciones server-side para gestión de usuarios, proyectos y asignaciones.",
+    ],
+    decision:
+      "Opté por arquitectura MVC server-side con Thymeleaf en lugar de una SPA + API separada para reducir la complejidad del despliegue en contexto académico y mantener el foco en la lógica de negocio con Spring.",
+    challenge:
+      "La gestión de permisos granulares por rol fue compleja: resolví implementando filtros de seguridad personalizados en Spring Security que interceptan cada request y validan el rol antes de llegar al controlador.",
+    tags: ["Java", "Spring Boot", "Spring Security", "MySQL"],
     liveUrl: "",
     repoUrl: "",
-    image: "/images/projects/ctrl.jpg",
     featured: true,
   },
   {
     id: 3,
-    title: "Asegal ByF — Dashboard de Administración",
+    title: "Asegal ByF — Dashboard Admin",
     description:
-      "Panel de administración moderno para gestionar contenido web (blog, servicios, imágenes). Desarrollé el frontend con Next.js con arquitectura de componentes eficiente.",
-    longDescription:
-      "Contribuí al desarrollo de la interfaz de administración dinámica usando Next.js, trabajando en la arquitectura de componentes para una gestión eficiente del contenido.",
-    tags: ["Next.js", "React"],
+      "Panel de administración para gestión de contenido web (blog, servicios, imágenes) de una empresa de asesorías financieras.",
+    role: "Desarrolladora frontend — proyecto freelance",
+    stack: {
+      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS"],
+      backend: ["Strapi CMS"],
+      database: ["PostgreSQL"],
+      tools: ["Vercel", "Git"],
+    },
+    bullets: [
+      "Construí dashboard con gestión dinámica de contenido integrado con Strapi CMS via API REST.",
+      "Implementé sistema de subida y preview de imágenes en tiempo real con validación de formato y tamaño.",
+      "Desarrollé arquitectura de componentes reutilizables que redujo el tiempo de implementación de nuevas secciones.",
+    ],
+    decision:
+      "Elegí Next.js con SSR para mejorar el SEO del sitio institucional público, descartando una SPA pura. Strapi fue la elección de CMS por su panel intuitivo para el cliente no técnico y su API REST lista para usar.",
+    challenge:
+      "Strapi devuelve estructuras de datos dinámicas sin tipado estricto. Resolví creando tipos TypeScript genéricos con guardas de tipo en runtime, eliminando errores silenciosos en producción.",
+    tags: ["Next.js", "TypeScript", "Strapi", "Tailwind"],
     liveUrl: "",
     repoUrl: "",
-    image: "/images/projects/asegal.jpg",
     featured: false,
   },
   {
     id: 4,
     title: "Asesorías Valdivia — Sistema Contable",
     description:
-      "Sistema de gestión contable desarrollado desde cero. Diseño de base de datos, backend con Node.js y Prisma, e interfaz con React.",
-    longDescription:
-      "Desarrollé el sistema completo: diseño del modelo de datos, API REST con Node.js, ORM con Prisma sobre PostgreSQL, e interfaz de usuario con React.",
-    tags: ["Node.js", "Prisma", "React", "PostgreSQL"],
+      "Sistema de gestión contable desarrollado desde cero para una empresa de asesorías, incluyendo facturación, clientes y reportes.",
+    role: "Desarrolladora full stack — freelance en equipo de 2",
+    stack: {
+      frontend: ["React 18", "TypeScript", "Vite"],
+      backend: ["Node.js", "Express", "Prisma ORM"],
+      database: ["PostgreSQL"],
+      tools: ["Railway", "Git"],
+    },
+    bullets: [
+      "Diseñé el esquema de base de datos para clientes, facturas, transacciones y períodos tributarios.",
+      "Implementé generación automática de reportes mensuales con cálculo de totales, IVA y resumen por categoría.",
+      "Construí sistema de filtrado y búsqueda con paginación server-side para manejar grandes volúmenes de transacciones.",
+    ],
+    decision:
+      "Elegí Prisma sobre TypeORM por su generación automática de tipos TypeScript y su DX superior para un proyecto pequeño con iteraciones rápidas. Railway para el despliegue por su simplicidad frente a AWS en proyectos freelance de este alcance.",
+    challenge:
+      "Los cálculos de períodos tributarios en Chile con manejo de zonas horarias generaban desfases de un día en fechas límite. Resolví centralizando toda la lógica de fechas en un módulo con date-fns y UTC explícito.",
+    tags: ["Node.js", "React", "Prisma", "PostgreSQL"],
     liveUrl: "",
     repoUrl: "",
-    image: "/images/projects/valdivia.jpg",
     featured: false,
   },
 ];
@@ -204,7 +256,6 @@ export const education = [
 ];
 
 export const navLinks = [
-  { label: "Inicio", href: "/#hero" },
   { label: "Sobre mí", href: "/#about" },
   { label: "Proyectos", href: "/#projects" },
   { label: "Experiencia", href: "/#experience" },

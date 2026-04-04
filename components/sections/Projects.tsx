@@ -1,13 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "@/components/ui/SocialIcons";
 import { projects, personalInfo } from "@/lib/data";
 import { useLanguage } from "@/components/ui/LanguageProvider";
+import ProjectModal from "@/components/ui/ProjectModal";
+
+type Project = (typeof projects)[number];
 
 export default function Projects() {
   const { t } = useLanguage();
+  const [selected, setSelected] = useState<Project | null>(null);
+
   const featuredProjects = projects.filter((p) => p.featured);
   const otherProjects = projects.filter((p) => !p.featured);
 
@@ -35,127 +41,38 @@ export default function Projects() {
         </motion.h2>
 
         {/* Featured */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="grid md:grid-cols-2 gap-5 mb-5">
           {featuredProjects.map((project, i) => {
             const tx = t.projects.items[project.id - 1] ?? { title: project.title, description: project.description };
             return (
-              <motion.article
+              <FeaturedCard
                 key={project.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/40 transition-all duration-300 hover:glow-sm"
-              >
-                {/* Image placeholder */}
-                <div className="h-44 bg-gradient-to-br from-secondary to-card flex items-center justify-center border-b border-border">
-                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
-                    <span className="text-2xl">🚀</span>
-                  </div>
-                </div>
-
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="text-base font-light mb-2 group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
-                    {tx.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1 font-light">
-                    {tx.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 text-xs rounded-full bg-primary/8 text-primary border border-primary/15 font-light"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-4 pt-3 border-t border-border">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors font-light"
-                      >
-                        <ExternalLink size={13} />
-                        {t.projects.live}
-                      </a>
-                    )}
-                    {project.repoUrl && (
-                      <a
-                        href={project.repoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors font-light"
-                      >
-                        <GithubIcon size={13} />
-                        {t.projects.code}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </motion.article>
+                project={project}
+                tx={tx}
+                index={i}
+                tModal={t.projectModal}
+                tProjects={t.projects}
+                onDetails={() => setSelected(project)}
+              />
             );
           })}
         </div>
 
         {/* Other projects */}
         {otherProjects.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
             {otherProjects.map((project, i) => {
               const tx = t.projects.items[project.id - 1] ?? { title: project.title, description: project.description };
               return (
-              <motion.article
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-all"
-              >
-                <h3 className="text-sm font-light mb-2 group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
-                  {tx.title}
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed mb-3 font-light">
-                  {tx.description}
-                </p>
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {project.tags.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 text-xs rounded-full bg-primary/8 text-primary font-light"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  {project.liveUrl && (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <ExternalLink size={13} />
-                    </a>
-                  )}
-                  {project.repoUrl && (
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <GithubIcon size={13} />
-                    </a>
-                  )}
-                </div>
-              </motion.article>
+                <SmallCard
+                  key={project.id}
+                  project={project}
+                  tx={tx}
+                  index={i}
+                  tModal={t.projectModal}
+                  tProjects={t.projects}
+                  onDetails={() => setSelected(project)}
+                />
               );
             })}
           </div>
@@ -178,6 +95,183 @@ export default function Projects() {
           </a>
         </motion.div>
       </div>
+
+      <ProjectModal project={selected} onClose={() => setSelected(null)} />
     </section>
+  );
+}
+
+/* ─── Featured card ──────────────────────────────────────── */
+function FeaturedCard({
+  project, tx, index, tModal, tProjects, onDetails,
+}: {
+  project: Project;
+  tx: { title: string; description: string };
+  index: number;
+  tModal: { viewRepo: string; viewLive: string; viewDetail: string };
+  tProjects: { live: string; code: string };
+  onDetails: () => void;
+}) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/40 transition-all duration-300 hover:glow-sm"
+    >
+      {/* Top strip with number */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-primary/60 via-primary to-primary/30" />
+
+      <div className="p-6 flex flex-col flex-1">
+        {/* Number + role */}
+        <div className="flex items-center justify-between mb-4">
+          <span className="text-3xl font-light text-primary/20 font-[family-name:var(--font-heading)]">
+            0{project.id}
+          </span>
+          <span className="text-[10px] font-light text-primary border border-primary/30 bg-primary/5 px-2.5 py-1 rounded-full">
+            {project.role.split("—")[0].trim()}
+          </span>
+        </div>
+
+        {/* Title + description */}
+        <h3 className="text-base font-light mb-2 group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
+          {tx.title}
+        </h3>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1 font-light line-clamp-2">
+          {tx.description}
+        </p>
+
+        {/* Stack grouped */}
+        <div className="flex flex-col gap-2 mb-5">
+          {(["frontend", "backend", "database"] as const).map((key) => {
+            const items = project.stack[key];
+            if (!items || items.length === 0) return null;
+            return (
+              <div key={key} className="flex flex-wrap gap-1.5">
+                {items.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2.5 py-1 text-[11px] rounded-full border border-border bg-secondary text-secondary-foreground font-light"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Actions */}
+        <div className="flex items-center gap-3 pt-4 border-t border-border">
+          {project.repoUrl && (
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors font-light"
+            >
+              <GithubIcon size={13} />
+              {tProjects.code}
+            </a>
+          )}
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors font-light"
+            >
+              <ExternalLink size={13} />
+              {tProjects.live}
+            </a>
+          )}
+          <button
+            onClick={onDetails}
+            className="ml-auto flex items-center gap-1 text-xs text-primary font-light hover:gap-2 transition-all"
+          >
+            {tModal.viewDetail}
+            <ArrowUpRight size={12} />
+          </button>
+        </div>
+      </div>
+    </motion.article>
+  );
+}
+
+/* ─── Small card ─────────────────────────────────────────── */
+function SmallCard({
+  project, tx, index, tModal, tProjects, onDetails,
+}: {
+  project: Project;
+  tx: { title: string; description: string };
+  index: number;
+  tModal: { viewRepo: string; viewLive: string; viewDetail: string };
+  tProjects: { live: string; code: string };
+  onDetails: () => void;
+}) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="group flex flex-col p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-all"
+    >
+      <div className="flex items-start justify-between gap-2 mb-3">
+        <h3 className="text-sm font-light group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
+          {tx.title}
+        </h3>
+        <span className="flex-shrink-0 text-[10px] font-light text-primary border border-primary/30 bg-primary/5 px-2 py-0.5 rounded-full whitespace-nowrap">
+          {project.role.split("—")[0].trim()}
+        </span>
+      </div>
+
+      <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1 font-light line-clamp-2">
+        {tx.description}
+      </p>
+
+      {/* Stack flat */}
+      <div className="flex flex-wrap gap-1.5 mb-4">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="px-2 py-0.5 text-[11px] rounded-full bg-primary/8 text-primary font-light"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="flex items-center gap-3 pt-3 border-t border-border">
+        {project.repoUrl && (
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <GithubIcon size={13} />
+          </a>
+        )}
+        {project.liveUrl && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ExternalLink size={13} />
+          </a>
+        )}
+        <button
+          onClick={onDetails}
+          className="ml-auto flex items-center gap-1 text-xs text-primary font-light hover:gap-2 transition-all"
+        >
+          Ver detalle
+          <ArrowUpRight size={12} />
+        </button>
+      </div>
+    </motion.article>
   );
 }
