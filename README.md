@@ -1,10 +1,11 @@
-# Paulina Acuña Paiva — Portfolio
+# Portafolio
+# Paulina Acuña Paiva 
 
 **Desarrolladora Full Stack** · Santiago, Chile
 
 Portafolio personal construido con Next.js 16, React 19 y Tailwind CSS v4. Presenta proyectos reales, experiencia profesional y un formulario de contacto funcional. Diseño dark/light elegante con animaciones Framer Motion, cursor personalizado, internacionalización en tres idiomas y easter egg interactivo.
 
-🔗 **[Ver en vivo →](https://portafolio-pauaua.vercel.app)**
+🔗 **[Ver en vivo →](https://paulinaap.vercel.app/)**
 
 ---
 
@@ -36,7 +37,7 @@ Este portafolio fue diseñado pensando en reclutadores técnicos: cada proyecto 
 - **Modales de proyecto** — stack, bullets de impacto, decisión técnica y desafío resuelto
 - **Formulario de contacto real** — envío a Gmail vía Resend API
 - **Side navigation** — puntos de sección fijos con tooltips, solo visible en desktop
-- **Easter egg** — escribe `hire me` en cualquier parte de la página
+- **Easter egg** — escribe `hire me` en cualquier parte de la página y te sorprenderá 
 - **Favicon personalizado** — logo propio vía `app/icon.png` (Next.js App Router)
 
 ---
@@ -69,18 +70,8 @@ Este portafolio fue diseñado pensando en reclutadores técnicos: cada proyecto 
 └── public/                 # Assets estáticos
 ```
 
----
 
-## Variables de entorno
-
-Para el formulario de contacto se requiere una API key de [Resend](https://resend.com):
-
-```env
-RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
-```
-
----
 
 ## Contacto
 
-**paulinefugit@gmail.com** · [LinkedIn](https://www.linkedin.com/in/paulinefugit/) · [GitHub](https://github.com/Pauaua)
+**paulinefugit@gmail.com** · [LinkedIn](https://www.linkedin.com/in/paulinefugit/) · [GitHub](https://github.com/Pauaua) [Currículum Virtual](https://paulinaap.vercel.app/)
