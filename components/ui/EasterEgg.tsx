@@ -11,7 +11,7 @@ export default function EasterEgg() {
   const bufferRef = useRef("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const rafRef = useRef<number>(0);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   // Detectar "hire me" tipeado en cualquier lugar
   useEffect(() => {
