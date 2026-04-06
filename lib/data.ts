@@ -12,13 +12,11 @@ export const personalInfo = {
   bio: "Ingeniería en Informática (en curso) con título técnico de Analista Programadora y experiencia en empresa real. Domino el ciclo completo: arquitectura de base de datos, APIs REST, lógica de negocio y frontend. Mi trayectoria previa en educación y filosofía me dio habilidades de comunicación, pensamiento sistemático y gestión de proyectos que aplico directamente al desarrollo.",
   location: "Santiago, RM. Chile",
   email: "paulinefugit@gmail.com",
-  // WhatsApp: número sin espacios ni +, prefijo país incluido
-  phone: "56974476368", // +56 9 74476368
+  phone: "56974476368",
   whatsappMessage: "Hola Paulina, vi tu portfolio y me gustaría hablar contigo.",
   github: "Pauaua",
   available: true,
-  avatar: "/images/avatar.jpg", // Coloca tu foto en public/images/
-  // CV debe estar en public/ para que Next.js lo sirva
+  avatar: "/images/avatar.jpg", // FALTA PONER IMAGEN
   resume: "/CVREALPAPCV.pdf",
 };
 
@@ -237,18 +235,18 @@ export const education = [
   },
   {
     id: 4,
-    institution: "Universidad (Chile)", // actualiza con el nombre exacto
-    degree: "Magíster en Educación",
-    period: "2015 — 2017", // ajusta las fechas reales
+    institution: "Universidad Miguel de Cervantes", 
+    degree: "Magíster en Educación cn mención en Currículum",
+    period: "2019 — 2021", 
     description:
       "Investigación educativa, diseño curricular y gestión de proyectos pedagógicos. Rigor metodológico y comunicación de ideas complejas — habilidades que hoy aplico directamente en desarrollo de software.",
     highlight: false,
   },
   {
     id: 5,
-    institution: "Universidad (Chile)", // actualiza con el nombre exacto
+    institution: "Pontificia Universidad Católica de Valparaíso", 
     degree: "Licenciatura en Filosofía",
-    period: "2010 — 2015", // ajusta las fechas reales
+    period: "2010 — 2016", 
     description:
       "Formación en pensamiento crítico, argumentación estructurada y análisis de sistemas. Base que potencia mi capacidad para diseñar soluciones limpias y razonar sobre arquitecturas complejas.",
     highlight: false,
