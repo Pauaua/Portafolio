@@ -90,8 +90,8 @@ export const projects = [
     id: 2,
     title: "CTRL — Gestión de Usuarios y Proyectos",
     description:
-      "Plataforma web MVC con autenticación por roles (Admin/User), CRUD completo de usuarios y proyectos, y control de acceso granular. Desarrollado con Java Spring Boot y Thymeleaf.",
-    role: "Desarrolladora única — proyecto académico",
+      "Aplicación web para la gestión de proyectos: usuarios, cargos, proyectos y tareas, con control de acceso por roles y soporte para despliegue en la nube.",
+    role: "Desarrolladora única — proyecto personal",
     stack: {
       frontend: ["Thymeleaf", "HTML/CSS", "JavaScript"],
       backend: ["Java", "Spring Boot", "Spring Data JPA"],
@@ -189,7 +189,7 @@ export const experience = [
     id: 3,
     company: "Docente de Filosofía",
     role: "Profesora — Sistema educativo formal",
-    period: "may 2017 — dic 2025",
+    period: "may 2017 — feb 2026",
     description:
       "Docente en establecimientos municipales y particulares pagados. Desarrollo de habilidades en planificación curricular, comunicación efectiva y gestión de grupos.",
     tags: ["Comunicación", "Planificación", "Gestión"],
