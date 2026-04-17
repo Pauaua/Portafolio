@@ -33,9 +33,7 @@ export default function ContactCTA() {
               <br />
               <span className="gradient-text">{t.cta.headingAccent}</span>
             </h2>
-            <p className="text-muted-foreground text-base md:text-lg max-w-lg mx-auto mb-8 leading-relaxed font-light">
-              {t.cta.description}
-            </p>
+
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
