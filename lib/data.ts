@@ -5,10 +5,10 @@
 export const personalInfo = {
   name: "Paulina Acuña Paiva",
   role: "Desarrolladora Full Stack",
-  // Hero tagline — primera impresión ante un reclutador
+  // Hero tagline
   tagline:
     "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
-  // About bio — más detallado
+  // About bio 
   bio: "Ingeniería en Informática (en curso) con título técnico de Analista Programadora y experiencia en empresa real. Domino el ciclo completo: arquitectura de base de datos, APIs REST, lógica de negocio y frontend. Mi trayectoria previa en educación y filosofía me dio habilidades de comunicación, pensamiento sistemático y gestión de proyectos que aplico directamente al desarrollo.",
   location: "Santiago, RM. Chile",
   email: "paulinefugit@gmail.com",
