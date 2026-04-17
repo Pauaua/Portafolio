@@ -37,6 +37,7 @@ export const translations = {
         "Lenguajes & Frameworks": "Lenguajes & Frameworks",
         "Bases de Datos & ORM": "Bases de Datos & ORM",
         "Herramientas & Metodologías": "Herramientas & Metodologías",
+        "Cloud & Deploy": "Cloud & Deploy",
       },
     },
     projects: {
@@ -63,9 +64,9 @@ export const translations = {
             "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa. Captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
         },
         {
-          title: "Automatizador de Boletas SII",
+          title: "Tienda Berbelis",
           description:
-            "Aplicación de escritorio base para automatizar el flujo de boletas electrónicas del SII. Interfaz PyQt5 con autenticación por RUT, modo headless y logs en tiempo real.",
+            "E-commerce completo para venta de productos orgánicos. Catálogo con filtros, carrito persistente, checkout, panel de administración y despliegue en Vercel con PostgreSQL serverless.",
         },
       ],
     },
@@ -146,9 +147,9 @@ export const translations = {
       headingAccent: "sumarme a tu equipo",
       description:
         "Disponible para posiciones full-time, part-time y proyectos freelance. Con experiencia en Java, Spring Boot, Python y React — y ganas de seguir creciendo.",
-      btn1: "Escríbeme por WhatsApp",
+      btn1: "Escríbeme",
       btn2: "Descargar CV",
-      btn3: "Contáctame directamente",
+      btn3: "Contáctame por correo",
     },
     contact: {
       label: "Contacto",
@@ -238,6 +239,7 @@ export const translations = {
         "Lenguajes & Frameworks": "Languages & Frameworks",
         "Bases de Datos & ORM": "Databases & ORM",
         "Herramientas & Metodologías": "Tools & Methodologies",
+        "Cloud & Deploy": "Cloud & Deploy",
       },
     },
     projects: {
@@ -264,9 +266,9 @@ export const translations = {
             "Hybrid mobile app for recording and sharing native plant species observations. Photo capture, GPS geolocation and offline-first persistence for field use without internet.",
         },
         {
-          title: "SII Electronic Receipt Automator",
+          title: "Tienda Berbelis",
           description:
-            "Base desktop application to automate the electronic receipt workflow on Chile's SII portal. PyQt5 interface with RUT authentication, headless mode and real-time logs.",
+            "Full e-commerce platform for organic health and beauty products. Product catalog with filters, persistent cart, checkout, admin panel and deployment on Vercel with serverless PostgreSQL.",
         },
       ],
     },
@@ -347,9 +349,9 @@ export const translations = {
       headingAccent: "join your team",
       description:
         "Available for full-time, part-time and freelance projects. Experienced in Java, Spring Boot, Python and React — eager to keep growing.",
-      btn1: "Message me on WhatsApp",
+      btn1: "Message me",
       btn2: "Download CV",
-      btn3: "Contact me directly",
+      btn3: "Contact me by email",
     },
     contact: {
       label: "Contact",
@@ -438,6 +440,7 @@ export const translations = {
         "Lenguajes & Frameworks": "Langages & Frameworks",
         "Bases de Datos & ORM": "Bases de données & ORM",
         "Herramientas & Metodologías": "Outils & Méthodologies",
+        "Cloud & Deploy": "Cloud & Déploiement",
       },
     },
     projects: {
@@ -464,9 +467,9 @@ export const translations = {
             "Application mobile hybride pour enregistrer et partager des observations de flore native. Capture photo, géolocalisation GPS et persistance offline-first pour une utilisation terrain sans connexion.",
         },
         {
-          title: "Automatiseur de Reçus SII",
+          title: "Tienda Berbelis",
           description:
-            "Application bureau de base pour automatiser le flux des reçus électroniques sur le portail SII. Interface PyQt5 avec authentification par RUT, mode headless et journaux en temps réel.",
+            "Plateforme e-commerce complète pour la vente de produits organiques. Catalogue avec filtres, panier persistant, checkout, panneau d'administration et déploiement sur Vercel avec PostgreSQL serverless.",
         },
       ],
     },
@@ -547,9 +550,9 @@ export const translations = {
       headingAccent: "rejoindre votre équipe",
       description:
         "Disponible pour des postes à temps plein, à temps partiel et des projets freelance. Expérimentée en Java, Spring Boot, Python et React — désireuse de continuer à progresser.",
-      btn1: "Écrivez-moi sur WhatsApp",
+      btn1: "Écrivez-moi",
       btn2: "Télécharger le CV",
-      btn3: "Me contacter directement",
+      btn3: "Me contacter par e-mail",
     },
     contact: {
       label: "Contact",

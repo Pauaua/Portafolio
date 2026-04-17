@@ -97,7 +97,7 @@ export default function ContactForm() {
           </a>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Left column — info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -185,7 +185,7 @@ export default function ContactForm() {
             className="lg:col-span-3"
           >
             {status === "success" ? (
-              <div className="flex flex-col items-center justify-center h-full min-h-[400px] text-center gap-4 p-8 rounded-2xl border border-primary/30 bg-primary/5">
+              <div className="flex flex-col items-center justify-center h-full min-h-[280px] sm:min-h-[400px] text-center gap-4 p-5 sm:p-8 rounded-2xl border border-primary/30 bg-primary/5">
                 <CheckCircle size={44} className="text-primary" />
                 <h3 className="text-xl font-light font-[family-name:var(--font-heading)]">
                   {t.contact.successTitle}
@@ -203,7 +203,7 @@ export default function ContactForm() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-5 p-6 md:p-8 rounded-2xl border border-border bg-card"
+                className="flex flex-col gap-4 sm:gap-5 p-4 sm:p-6 md:p-8 rounded-2xl border border-border bg-card"
               >
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-1.5">

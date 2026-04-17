@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border bg-background">
-      <div className="container-max px-4 md:px-8 lg:px-16 py-10 flex flex-col items-start gap-3">
+      <div className="container-max px-4 md:px-8 lg:px-16 py-6 md:py-8 lg:py-10 flex flex-col items-start gap-3">
         <Link href="/" className="hover:opacity-70 transition-opacity">
           <Image
             src="/logopf.png"

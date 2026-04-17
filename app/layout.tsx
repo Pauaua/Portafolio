@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Paulina Acuña — Desarrolladora Full Stack",
     description:
-      "Disponible para posiciones full-time y freelance. Full stack con Java, Python y React.",
+      "Disponible para posiciones full-time y freelance. Full stack con conocimientos en Java, Python y React.",
     type: "website",
   },
 };

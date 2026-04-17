@@ -31,7 +31,7 @@ export default function About() {
           {t.about.label}
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text */}
           <div>
             <motion.h2
@@ -100,7 +100,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="flex justify-center md:justify-end"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 rounded-full border border-primary/20 animate-pulse" />
               <div className="absolute inset-4 rounded-full border border-primary/10" />
               <div className="absolute inset-8 rounded-full overflow-hidden bg-secondary border-2 border-primary/30 glow-sm flex items-center justify-center">

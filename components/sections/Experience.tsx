@@ -44,7 +44,7 @@ export default function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex gap-6"
+                className="flex gap-4 sm:gap-6"
               >
                 {/* Dot */}
                 <div className="hidden sm:flex flex-col items-center">
@@ -54,7 +54,7 @@ export default function Experience() {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 p-5 rounded-2xl border border-border bg-card hover:border-primary/30 transition-colors">
+                <div className="flex-1 p-4 md:p-5 rounded-2xl border border-border bg-card hover:border-primary/30 transition-colors">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                     <div>
                       <h3 className="font-light text-base font-[family-name:var(--font-heading)]">

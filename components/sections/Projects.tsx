@@ -41,7 +41,7 @@ export default function Projects() {
         </motion.h2>
 
         {/* Featured */}
-        <div className="grid md:grid-cols-2 gap-5 mb-5">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-5 mb-4 md:mb-5">
           {featuredProjects.map((project, i) => {
             const tx = t.projects.items[project.id - 1] ?? { title: project.title, description: project.description };
             return (
@@ -60,7 +60,7 @@ export default function Projects() {
 
         {/* Other projects */}
         {otherProjects.length > 0 && (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4">
             {otherProjects.map((project, i) => {
               const tx = t.projects.items[project.id - 1] ?? { title: project.title, description: project.description };
               return (
@@ -123,7 +123,7 @@ function FeaturedCard({
       {/* Top strip with number */}
       <div className="h-1.5 w-full bg-gradient-to-r from-primary/60 via-primary to-primary/30" />
 
-      <div className="p-6 flex flex-col flex-1">
+      <div className="p-4 md:p-6 flex flex-col flex-1">
         {/* Number + role */}
         <div className="flex items-center justify-between mb-4">
           <span className="text-3xl font-light text-primary/20 font-[family-name:var(--font-heading)]">
@@ -216,7 +216,7 @@ function SmallCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="group flex flex-col p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-all"
+      className="group flex flex-col p-4 md:p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-all"
     >
       <div className="flex items-start justify-between gap-2 mb-3">
         <h3 className="text-sm font-light group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
