@@ -29,7 +29,7 @@ export default function Skills() {
           {t.skills.heading} <span className="gradient-text">{t.skills.headingAccent}</span>
         </motion.h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 gap-5">
           {skills.map((group, i) => (
             <motion.div
               key={group.category}
