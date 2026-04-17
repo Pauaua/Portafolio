@@ -1,5 +1,5 @@
 // ============================================================
-// PORTFOLIO DATA — edita este archivo para personalizar todo
+// PORTFOLIO DATA -- Edición de contenido del portafolio
 // ============================================================
 
 export const personalInfo = {
@@ -55,7 +55,11 @@ export const skills = [
   },
   {
     category: "Herramientas & Metodologías",
-    items: ["Git", "Docker", "Figma", "Maven", "Scrum", "MVC", "DDD", "VS Code"],
+    items: ["Git", "Figma", "Cursor", "VS Code", "Maven", "Postman", "MySQL Workbench", "Linear", "Scrum", "MVC", "DDD", "WordPress"],
+  },
+  {
+    category: "Cloud & Deploy",
+    items: ["Vercel", "Railway", "Supabase", "Cloudflare", "Docker"],
   },
 ];
 
@@ -140,28 +144,28 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Automatizador de Boletas SII",
+    title: "Tienda Berbelis",
     description:
-      "Aplicación de escritorio para automatizar el flujo de boletas electrónicas del SII. Interfaz PyQt5 con autenticación por RUT y contraseña, modo headless y logs en tiempo real.",
-    role: "Desarrolladora única — proyecto personal",
+      "Plataforma e-commerce completa para venta de productos orgánicos de salud y estética. Catálogo con paginación y filtros, carrito persistente, checkout, panel de administración y formulario de contacto.",
+    role: "Desarrolladora única — proyecto freelance",
     stack: {
-      frontend: ["PyQt5"],
-      backend: ["Python 3.8+", "Selenium WebDriver"],
-      database: [],
-      tools: ["webdriver-manager", "ChromeDriver"],
+      frontend: ["Next.js 15", "TypeScript", "Tailwind CSS v4"],
+      backend: ["Next.js API Routes", "Prisma 5"],
+      database: ["PostgreSQL", "Neon"],
+      tools: ["Vercel", "Git"],
     },
     bullets: [
-      "Construí la interfaz gráfica con PyQt5 con campos de credenciales SII (RUT/contraseña), toggle de modo headless y panel de logs en tiempo real.",
-      "Implementé arquitectura Worker/Thread para desacoplar la automatización del navegador de la interfaz gráfica y mantener la UI responsiva.",
-      "Diseñé el flujo base de autenticación y navegación automatizada con Selenium, preparado para integrar el workflow completo del SII.",
+      "Desarrollé catálogo de productos con paginación y filtrado server-side, y carrito de compras persistente con Context API.",
+      "Construí panel de administración completo para gestión de productos, pedidos y mensajes de contacto.",
+      "Desplegué la aplicación en Vercel con base de datos PostgreSQL serverless en Neon, incluyendo migraciones post-deploy con Prisma.",
     ],
     decision:
-      "Adopté la misma arquitectura de AutomatizadorFacturas (PyQt5 + Selenium + workers en hilos) para mantener consistencia entre ambas herramientas y facilitar la reutilización de código entre proyectos relacionados.",
+      "Elegí Next.js 15 con App Router para combinar Server Components (catálogo, SEO) con Client Components (carrito, interacciones), obteniendo lo mejor de SSR y SPA sin complejidad adicional.",
     challenge:
-      "El manejo de errores de Selenium en modo headless difiere del modo visible. Implementé captura de excepciones específicas de WebDriver y fallback a modo visible para facilitar la depuración durante el desarrollo.",
-    tags: ["Python", "PyQt5", "Selenium", "SII"],
-    liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/AutomatizadorBoletas",
+      "La sincronización del carrito entre Client Components y el estado del servidor requirió un Context API bien estructurado con persistencia en localStorage, garantizando que el carrito sobreviva recargas sin necesidad de autenticación.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    liveUrl: "https://tienda-berbelis.vercel.app/",
+    repoUrl: "https://github.com/Pauaua/TiendaBerbelis",
     featured: false,
   },
 ];

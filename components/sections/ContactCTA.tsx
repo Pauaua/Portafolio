@@ -17,7 +17,7 @@ export default function ContactCTA() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl border border-border bg-card overflow-hidden p-10 md:p-16 text-center"
+          className="relative rounded-3xl border border-border bg-card overflow-hidden p-6 sm:p-10 md:p-16 text-center"
         >
           {/* Glow center */}
           <div className="absolute inset-0 pointer-events-none">
