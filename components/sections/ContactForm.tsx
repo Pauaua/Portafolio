@@ -151,7 +151,7 @@ export default function ContactForm() {
                 </p>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed font-light">
-                {t.contact.availableNote}
+                {t.contact.availableText}
               </p>
             </div>
 
