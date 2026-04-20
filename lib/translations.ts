@@ -49,19 +49,24 @@ export const translations = {
       moreOnGithub: "Ver más en GitHub",
       items: [
         {
-          title: "Automatizador de Facturas SII",
+          title: "Phantasia — Sitio Web Corporativo",
           description:
-            "Herramienta de escritorio para automatizar la aceptación de facturas electrónicas en el portal del SII. Procesamiento masivo vía Excel con hasta 3 procesos concurrentes y generación automática de reportes.",
+            "Sitio corporativo para estudio de diseño y desarrollo. Landing completa con formulario de captación de leads de 6 pasos, soporte multilingüe (ES/EN/FR) y modo oscuro/claro.",
         },
         {
-          title: "CTRL — Gestión de Usuarios y Proyectos",
+          title: "Suite de Automatización SII",
           description:
-            "Plataforma web MVC con autenticación por roles (Admin/User) y CRUD completo de usuarios y proyectos. Desarrollé la arquitectura con Java Spring Boot, Thymeleaf y H2 Database.",
+            "Conjunto de herramientas de escritorio para automatizar operaciones en el portal del SII. Módulo de facturas completado con procesamiento masivo, hilos concurrentes e instalador profesional. Módulo de boletas en desarrollo.",
         },
         {
           title: "PlantiDex Mobile",
           description:
             "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa. Captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
+        },
+        {
+          title: "CTRL — Gestión de Usuarios y Proyectos",
+          description:
+            "Plataforma web MVC con autenticación por roles (Admin/User) y CRUD completo de usuarios y proyectos. Desarrollé la arquitectura con Java Spring Boot, Thymeleaf y H2 Database.",
         },
         {
           title: "Tienda Berbelis",
@@ -250,19 +255,24 @@ export const translations = {
       moreOnGithub: "More on GitHub",
       items: [
         {
-          title: "SII Invoice Automator",
+          title: "Phantasia — Corporate Website",
           description:
-            "Desktop tool to automate electronic invoice acceptance on Chile's SII portal. Supports bulk processing via Excel with up to 3 concurrent processes and automatic report generation.",
+            "Corporate site for a design and development studio. Full landing page with a 6-step lead capture form, multilingual support (ES/EN/FR) and dark/light mode.",
         },
         {
-          title: "CTRL — User & Project Management",
+          title: "SII Automation Suite",
           description:
-            "MVC web platform with role-based authentication (Admin/User) and full CRUD for users and projects. Built with Java Spring Boot, Thymeleaf and H2 Database.",
+            "Desktop toolkit to automate operations on Chile's SII portal. Invoice module completed with bulk processing, concurrent threads and professional installer. Payroll module in development.",
         },
         {
           title: "PlantiDex Mobile",
           description:
             "Hybrid mobile app for recording and sharing native plant species observations. Photo capture, GPS geolocation and offline-first persistence for field use without internet.",
+        },
+        {
+          title: "CTRL — User & Project Management",
+          description:
+            "MVC web platform with role-based authentication (Admin/User) and full CRUD for users and projects. Built with Java Spring Boot, Thymeleaf and H2 Database.",
         },
         {
           title: "Tienda Berbelis",
@@ -450,19 +460,24 @@ export const translations = {
       moreOnGithub: "Plus sur GitHub",
       items: [
         {
-          title: "Automatiseur de Factures SII",
+          title: "Phantasia — Site Web Corporatif",
           description:
-            "Outil bureau pour automatiser l'acceptation des factures électroniques sur le portail SII du Chili. Traitement en masse via Excel avec jusqu'à 3 processus simultanés et génération automatique de rapports.",
+            "Site corporatif pour un studio de design et développement. Landing complète avec formulaire de captation de leads en 6 étapes, support multilingue (ES/EN/FR) et mode sombre/clair.",
         },
         {
-          title: "CTRL — Gestion des utilisateurs et projets",
+          title: "Suite d'automatisation SII",
           description:
-            "Plateforme web MVC avec authentification par rôles (Admin/Utilisateur) et CRUD complet. Développée avec Java Spring Boot, Thymeleaf et H2 Database.",
+            "Ensemble d'outils bureau pour automatiser les opérations sur le portail SII du Chili. Module factures complété avec traitement en masse, fils concurrents et installateur professionnel. Module honoraires en développement.",
         },
         {
           title: "PlantiDex Mobile",
           description:
             "Application mobile hybride pour enregistrer et partager des observations de flore native. Capture photo, géolocalisation GPS et persistance offline-first pour une utilisation terrain sans connexion.",
+        },
+        {
+          title: "CTRL — Gestion des utilisateurs et projets",
+          description:
+            "Plateforme web MVC avec authentification par rôles (Admin/Utilisateur) et CRUD complet. Développée avec Java Spring Boot, Thymeleaf et H2 Database.",
         },
         {
           title: "Tienda Berbelis",

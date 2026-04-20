@@ -66,54 +66,54 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Automatizador de Facturas SII",
+    title: "Phantasia — Sitio Web Corporativo",
     description:
-      "Herramienta de escritorio para automatizar la aceptación de facturas electrónicas en el portal del SII. Soporta procesamiento individual y masivo vía Excel, con hasta 3 procesos concurrentes y generación automática de reportes.",
-    role: "Desarrolladora única — proyecto personal",
+      "Sitio corporativo para Phantasia, estudio de diseño y desarrollo de software. Landing completa con formulario de captación de leads de 6 pasos, soporte multilingüe (ES/EN/FR) y modo oscuro/claro.",
+    role: "Desarrolladora única — proyecto freelance",
+    stack: {
+      frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
+      backend: ["Next.js API Routes", "Prisma 7", "Resend"],
+      database: ["PostgreSQL", "Neon"],
+      tools: ["Vercel", "Git"],
+    },
+    bullets: [
+      "Implementé soporte multilingüe (ES/EN/FR) con enrutamiento automático por locale y detección de preferencia del navegador.",
+      "Desarrollé formulario de captación de leads en 6 pasos con almacenamiento en base de datos y envío de notificaciones por email con Resend.",
+      "Integré modo oscuro/claro con persistencia en localStorage y detección automática de preferencia del sistema.",
+    ],
+    decision:
+      "Elegí Next.js 16 con App Router para combinar Server Components (SEO, rendimiento) con Client Components (formulario multistep, tema), aprovechando el enrutamiento internacionalizado nativo del framework.",
+    challenge:
+      "La gestión del estado del formulario de 6 pasos entre rutas localizadas requirió un contexto compartido que sobreviviera la navegación sin perder los datos ingresados, resuelto con Context API y persistencia en sessionStorage.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "i18n"],
+    liveUrl: "https://phantasia.cl",
+    repoUrl: "https://github.com/Pauaua/PhantasiaWeb",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Suite de Automatización SII",
+    description:
+      "Conjunto de herramientas de escritorio para automatizar operaciones en el portal del SII. El módulo de facturas electrónicas soporta procesamiento individual y masivo desde Excel, hasta 3 hilos concurrentes, modo headless e instalador profesional. El módulo de boletas de honorarios replica la arquitectura base y está en integración activa.",
+    role: "Desarrolladora única — 2026",
     stack: {
       frontend: ["PyQt5"],
-      backend: ["Python 3.8+", "Selenium WebDriver", "Pandas"],
+      backend: ["Python", "Selenium WebDriver", "Pandas"],
       database: [],
       tools: ["webdriver-manager", "PyInstaller", "Inno Setup"],
     },
     bullets: [
-      "Implementé procesamiento masivo vía archivos Excel (xlsx/xls/csv) con hasta 3 instancias concurrentes de Chrome para acelerar el flujo de trabajo.",
-      "Desarrollé generación automática de reportes Excel con resumen de resultados (éxito/error) por empresa procesada.",
-      "Construí interfaz con PyQt5 con monitoreo en tiempo real mediante logs de operación y barra de progreso.",
+      "Módulo de facturas (completado): procesamiento masivo vía Excel con hasta 3 hilos concurrentes de Chrome, modo headless, generación automática de reportes e instalador profesional con PyInstaller + Inno Setup.",
+      "Módulo de boletas (en desarrollo): replica la arquitectura base PyQt5 + QThread + Selenium y está en proceso de integración con el flujo específico del portal SII.",
+      "Construí interfaz con PyQt5 con monitoreo en tiempo real mediante logs de operación, barra de progreso y cola thread-safe para sincronización de hilos.",
     ],
     decision:
-      "Opté por Selenium sobre APIs directas del SII dado que el portal no expone endpoints públicos. La arquitectura de workers en hilos separados permite mantener la UI responsiva durante el procesamiento concurrente.",
+      "Opté por Selenium sobre APIs directas del SII dado que el portal no expone endpoints públicos. La arquitectura de workers en QThread mantiene la UI responsiva durante el procesamiento concurrente.",
     challenge:
       "La sincronización de hasta 3 instancias de Chrome simultáneas generaba condiciones de carrera en el sistema de logs. Resolví implementando una cola thread-safe con queue.Queue de Python para garantizar la integridad de los registros.",
     tags: ["Python", "PyQt5", "Selenium", "Pandas"],
     liveUrl: "",
     repoUrl: "https://github.com/Pauaua/AutomatizadorFacturas",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "CTRL — Gestión de Usuarios y Proyectos",
-    description:
-      "Aplicación web para la gestión de proyectos: usuarios, cargos, proyectos y tareas, con control de acceso por roles y soporte para despliegue en la nube.",
-    role: "Desarrolladora única — proyecto personal",
-    stack: {
-      frontend: ["Thymeleaf", "HTML/CSS", "JavaScript"],
-      backend: ["Java", "Spring Boot", "Spring Data JPA"],
-      database: ["H2 Database", "Hibernate"],
-      tools: ["Maven", "Git"],
-    },
-    bullets: [
-      "Implementé autenticación con sesiones y control de acceso basado en roles (ADMIN/USER) que protege rutas sensibles del panel de administración.",
-      "Desarrollé CRUD completo para usuarios y proyectos con búsqueda, filtrado y gestión de asociaciones usuario-proyecto.",
-      "Diseñé arquitectura MVC con separación de controllers, models y repositories siguiendo buenas prácticas de Spring Boot.",
-    ],
-    decision:
-      "Elegí H2 Database sobre MySQL para facilitar la portabilidad y ejecución sin configuración externa. La persistencia file-based garantiza que los datos sobreviven reinicios de la aplicación sin depender de un servidor de base de datos.",
-    challenge:
-      "La gestión de permisos diferenciados entre ADMIN y USER requirió validaciones en múltiples capas: controladores, vistas Thymeleaf (th:if con roles) y nivel de sesión, para evitar accesos no autorizados por manipulación directa de URLs.",
-    tags: ["Java", "Spring Boot", "Thymeleaf", "H2"],
-    liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/Plantidex",
     featured: true,
   },
   {
@@ -144,6 +144,32 @@ export const projects = [
   },
   {
     id: 4,
+    title: "CTRL — Gestión de Usuarios y Proyectos",
+    description:
+      "Aplicación web para la gestión de proyectos: usuarios, cargos, proyectos y tareas, con control de acceso por roles y soporte para despliegue en la nube.",
+    role: "Desarrolladora única — proyecto personal",
+    stack: {
+      frontend: ["Thymeleaf", "HTML/CSS", "JavaScript"],
+      backend: ["Java", "Spring Boot", "Spring Data JPA"],
+      database: ["H2 Database", "Hibernate"],
+      tools: ["Maven", "Git"],
+    },
+    bullets: [
+      "Implementé autenticación con sesiones y control de acceso basado en roles (ADMIN/USER) que protege rutas sensibles del panel de administración.",
+      "Desarrollé CRUD completo para usuarios y proyectos con búsqueda, filtrado y gestión de asociaciones usuario-proyecto.",
+      "Diseñé arquitectura MVC con separación de controllers, models y repositories siguiendo buenas prácticas de Spring Boot.",
+    ],
+    decision:
+      "Elegí H2 Database sobre MySQL para facilitar la portabilidad y ejecución sin configuración externa. La persistencia file-based garantiza que los datos sobreviven reinicios de la aplicación sin depender de un servidor de base de datos.",
+    challenge:
+      "La gestión de permisos diferenciados entre ADMIN y USER requirió validaciones en múltiples capas: controladores, vistas Thymeleaf (th:if con roles) y nivel de sesión, para evitar accesos no autorizados por manipulación directa de URLs.",
+    tags: ["Java", "Spring Boot", "Thymeleaf", "H2"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/Plantidex",
+    featured: false,
+  },
+  {
+    id: 5,
     title: "Tienda Berbelis",
     description:
       "Plataforma e-commerce completa para venta de productos orgánicos de salud y estética. Catálogo con paginación y filtros, carrito persistente, checkout, panel de administración y formulario de contacto.",
