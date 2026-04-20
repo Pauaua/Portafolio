@@ -170,7 +170,7 @@ export default function ProjectModal({ project, onClose }: Props) {
 
                 {/* Links */}
                 {(project.repoUrl || project.liveUrl) && (
-                  <div className="flex gap-3 pt-1">
+                  <div className="flex flex-wrap gap-3 pt-1">
                     {project.repoUrl && (
                       <a
                         href={project.repoUrl}
@@ -179,7 +179,18 @@ export default function ProjectModal({ project, onClose }: Props) {
                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border text-sm font-light text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
                       >
                         <GithubIcon size={14} />
-                        {t.projectModal.viewRepo}
+                        {"repoUrl2" in project ? "Repo Facturas" : t.projectModal.viewRepo}
+                      </a>
+                    )}
+                    {"repoUrl2" in project && (project as typeof project & { repoUrl2: string }).repoUrl2 && (
+                      <a
+                        href={(project as typeof project & { repoUrl2: string }).repoUrl2}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border text-sm font-light text-muted-foreground hover:text-primary hover:border-primary/40 transition-colors"
+                      >
+                        <GithubIcon size={14} />
+                        Repo Boletas
                       </a>
                     )}
                     {project.liveUrl && (

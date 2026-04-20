@@ -172,7 +172,18 @@ function FeaturedCard({
               className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors font-light"
             >
               <GithubIcon size={13} />
-              {tProjects.code}
+              {"repoUrl2" in project ? "Facturas" : tProjects.code}
+            </a>
+          )}
+          {"repoUrl2" in project && (project as typeof project & { repoUrl2: string }).repoUrl2 && (
+            <a
+              href={(project as typeof project & { repoUrl2: string }).repoUrl2}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors font-light"
+            >
+              <GithubIcon size={13} />
+              Boletas
             </a>
           )}
           {project.liveUrl && (

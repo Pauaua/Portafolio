@@ -14,7 +14,7 @@ export const translations = {
       badge1: "Disponible para contratación",
       badge2: "Disponible para proyectos",
       greeting: "Hola, soy",
-      role: "Desarrolladora Full Stack — Técnico Analista Programador",
+      role: "Desarrolladora Full Stack",
       tagline:
         "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
       cta1: "Revisa mis proyectos",
@@ -220,7 +220,7 @@ export const translations = {
       badge1: "Available for hire",
       badge2: "Available for projects",
       greeting: "Hi, I'm",
-      role: "Full Stack Developer — Certified Programmer Analyst",
+      role: "Full Stack Developer",
       tagline:
         "I build digital products that work — from backend to frontend, with clear methodologies enabling clean and efficient code.",
       cta1: "See my projects",
@@ -425,7 +425,7 @@ export const translations = {
       badge1: "Disponible à l'embauche",
       badge2: "Disponible pour des projets",
       greeting: "Bonjour, je suis",
-      role: "Développeuse Full Stack — Analyste Programmeuse Certifiée",
+      role: "Développeuse Full Stack",
       tagline:
         "Je construis des produits numériques qui fonctionnent — du backend au frontend, avec des méthodologies claires permettant un code propre et efficace.",
       cta1: "Voir mes projets",

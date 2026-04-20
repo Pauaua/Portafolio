@@ -114,6 +114,7 @@ export const projects = [
     tags: ["Python", "PyQt5", "Selenium", "Pandas"],
     liveUrl: "",
     repoUrl: "https://github.com/Pauaua/AutomatizadorFacturas",
+    repoUrl2: "https://github.com/Pauaua/AutomatizadorBoletas",
     featured: true,
   },
   {
