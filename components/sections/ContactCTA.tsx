@@ -35,7 +35,7 @@ export default function ContactCTA() {
             </h2>
 
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
               <a
                 href={whatsappUrl}
                 target="_blank"

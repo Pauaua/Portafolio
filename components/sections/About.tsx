@@ -98,7 +98,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center md:justify-end"
+            className="flex justify-center md:justify-end order-last md:order-none"
           >
             <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 rounded-full border border-primary/20 animate-pulse" />
