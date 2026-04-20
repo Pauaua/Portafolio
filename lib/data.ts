@@ -94,7 +94,7 @@ export const projects = [
     id: 2,
     title: "Suite de Automatización SII",
     description:
-      "Conjunto de herramientas de escritorio para automatizar operaciones en el portal del SII. El módulo de facturas electrónicas soporta procesamiento individual y masivo desde Excel, hasta 3 hilos concurrentes, modo headless e instalador profesional. El módulo de boletas de honorarios replica la arquitectura base y está en integración activa.",
+      "Conjunto de dos herramientas de escritorio para automatizar operaciones tributarias en el portal del SII. El módulo de facturas electrónicas soporta procesamiento individual y masivo desde Excel, hasta 3 hilos concurrentes con Selenium WebDriver, modo headless y generación automática de reportes, distribuido con instalador profesional (PyInstaller + Inno Setup). El módulo de boletas de honorarios implementa el flujo completo: autenticación con RUT/clave, procesamiento individual y masivo desde Excel, modo headless y generación de reportes al finalizar. Ambos módulos comparten la misma arquitectura base (PyQt5 + QThread + Selenium) con monitoreo de logs en tiempo real.",
     role: "Desarrolladora única — 2026",
     stack: {
       frontend: ["PyQt5"],
@@ -203,7 +203,7 @@ export const experience = [
     role: "Desarrolladora Full Stack (Práctica)",
     period: "feb 2026 — mar 2026",
     description:
-      "Práctica de 360 horas para titulación de Técnico Analista Programadora. Soporte, desarrollo e implementación de funcionalidades bajo arquitectura multi-tenant con Domain-Driven Design. Diseño de mockups y desarrollo de página web institucional con WordPress.",
+      "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript (data-es/data-en), integración de formularios WPForms con estilos glassmorphism, reCAPTCHA v2 y configuración Polylang. Arquitectura bajo DDD multi-tenant.",
     tags: ["DDD", "Multi-tenant", "WordPress", "Fullstack"],
   },
   {
@@ -212,7 +212,7 @@ export const experience = [
     role: "Desarrolladora Full Stack",
     period: "may 2024 — dic 2024",
     description:
-      "Desarrollo de aplicaciones web full stack bajo metodologías ágiles. Coordinación con cliente para definición de requerimientos, implementación de bases de datos relacionales y APIs REST.",
+      "Desarrollo de aplicaciones web full stack para clientes externos bajo metodologías ágiles. Construcción de sitios y plataformas con Next.js 15, gestión de base de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, y despliegue continuo en Vercel. Coordinación directa con clientes para levantamiento y definición de requerimientos.",
     tags: ["React", "Node.js", "PostgreSQL", "Scrum"],
   },
   {

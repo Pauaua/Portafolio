@@ -56,7 +56,7 @@ export const translations = {
         {
           title: "Suite de Automatización SII",
           description:
-            "Conjunto de herramientas de escritorio para automatizar operaciones en el portal del SII. Módulo de facturas completado con procesamiento masivo, hilos concurrentes e instalador profesional. Módulo de boletas en desarrollo.",
+            "Dos herramientas de escritorio para automatizar operaciones tributarias en el SII. Módulo de facturas con procesamiento masivo, hasta 3 hilos concurrentes e instalador profesional. Módulo de boletas con flujo completo: autenticación, procesamiento masivo y reportes.",
         },
         {
           title: "PlantiDex Mobile",
@@ -83,12 +83,12 @@ export const translations = {
         {
           role: "Desarrolladora Full Stack (Práctica)",
           description:
-            "Práctica de 360 horas para titulación de Técnico Analista Programadora. Soporte, desarrollo e implementación de funcionalidades bajo arquitectura multi-tenant con Domain-Driven Design. Diseño de mockups y desarrollo de página web institucional con WordPress.",
+            "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript (data-es/data-en), integración de formularios WPForms con estilos glassmorphism, reCAPTCHA v2 y configuración Polylang. Arquitectura bajo DDD multi-tenant.",
         },
         {
           role: "Desarrolladora Full Stack",
           description:
-            "Desarrollo de aplicaciones web full stack bajo metodologías ágiles. Coordinación con cliente para definición de requerimientos, implementación de bases de datos relacionales y APIs REST.",
+            "Desarrollo de aplicaciones web full stack para clientes externos bajo metodologías ágiles. Construcción de sitios y plataformas con Next.js 15, gestión de base de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, y despliegue continuo en Vercel. Coordinación directa con clientes para levantamiento y definición de requerimientos.",
         },
         {
           role: "Profesora — Sistema educativo formal",
@@ -262,7 +262,7 @@ export const translations = {
         {
           title: "SII Automation Suite",
           description:
-            "Desktop toolkit to automate operations on Chile's SII portal. Invoice module completed with bulk processing, concurrent threads and professional installer. Payroll module in development.",
+            "Two desktop tools to automate tax operations on Chile's SII portal. Invoice module with bulk processing, up to 3 concurrent threads and professional installer. Fee receipts module with full flow: authentication, bulk processing and reports.",
         },
         {
           title: "PlantiDex Mobile",
@@ -289,12 +289,12 @@ export const translations = {
         {
           role: "Full Stack Developer (Internship)",
           description:
-            "360-hour internship for Programmer Analyst certification. Support, development and implementation of features under a multi-tenant architecture with Domain-Driven Design. Mockup design and development of the institutional website with WordPress.",
+            "360-hour internship for Programmer Analyst certification. Developed a bilingual (ES/EN) institutional website in WordPress with Divi child theme, dynamic JavaScript translation system (data-es/data-en), WPForms integration with glassmorphism styles, reCAPTCHA v2 and Polylang configuration. Architecture under DDD multi-tenant.",
         },
         {
           role: "Full Stack Developer",
           description:
-            "Full stack web application development under agile methodologies. Client coordination for requirements definition, implementation of relational databases and REST APIs.",
+            "Full stack web application development for external clients under agile methodologies. Built sites and platforms with Next.js 15, database management with Prisma ORM on MySQL, PostgreSQL and Supabase, and continuous deployment on Vercel. Direct client coordination for requirements gathering and definition.",
         },
         {
           role: "Philosophy Teacher — Formal Education",
@@ -467,7 +467,7 @@ export const translations = {
         {
           title: "Suite d'automatisation SII",
           description:
-            "Ensemble d'outils bureau pour automatiser les opérations sur le portail SII du Chili. Module factures complété avec traitement en masse, fils concurrents et installateur professionnel. Module honoraires en développement.",
+            "Deux outils bureau pour automatiser les opérations fiscales sur le portail SII du Chili. Module factures avec traitement en masse, jusqu'à 3 fils concurrents et installateur professionnel. Module honoraires avec flux complet : authentification, traitement en masse et rapports.",
         },
         {
           title: "PlantiDex Mobile",
@@ -494,12 +494,12 @@ export const translations = {
         {
           role: "Développeuse Full Stack (Stage)",
           description:
-            "Stage de 360 heures pour la certification d'Analyste Programmeuse. Support, développement et implémentation de fonctionnalités sous une architecture multi-tenant avec Domain-Driven Design. Conception de maquettes et développement du site institutionnel avec WordPress.",
+            "Stage de 360 heures pour la certification d'Analyste Programmeuse. Développement d'un site institutionnel bilingue (ES/EN) sous WordPress avec Divi child theme, système de traduction dynamique JavaScript (data-es/data-en), intégration WPForms avec styles glassmorphism, reCAPTCHA v2 et configuration Polylang. Architecture DDD multi-tenant.",
         },
         {
           role: "Développeuse Full Stack",
           description:
-            "Développement d'applications web full stack sous méthodologies agiles. Coordination avec le client pour la définition des besoins, implémentation de bases de données relationnelles et d'API REST.",
+            "Développement d'applications web full stack pour des clients externes sous méthodologies agiles. Construction de sites et plateformes avec Next.js 15, gestion de base de données avec Prisma ORM sur MySQL, PostgreSQL et Supabase, et déploiement continu sur Vercel. Coordination directe avec les clients pour le recueil et la définition des besoins.",
         },
         {
           role: "Professeure de Philosophie — Éducation formelle",

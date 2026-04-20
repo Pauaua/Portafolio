@@ -97,13 +97,13 @@ export default function ContactForm() {
           </a>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-5 gap-8 md:gap-12">
           {/* Left column — info */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
-            className="lg:col-span-2 flex flex-col gap-6"
+            className="md:col-span-2 flex flex-col gap-6"
           >
             {/* Info cards */}
             <div className="flex flex-col gap-3">
@@ -139,7 +139,7 @@ export default function ContactForm() {
 
             {/* Availability */}
             <div className="p-5 rounded-xl border border-border bg-card">
-              <div className="flex items-center gap-2 mb-2">
+              <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
@@ -150,9 +150,6 @@ export default function ContactForm() {
                     : "No disponible actualmente"}
                 </p>
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed font-light">
-                {t.contact.availableText}
-              </p>
             </div>
 
             {/* Social */}
@@ -182,7 +179,7 @@ export default function ContactForm() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="lg:col-span-3"
+            className="md:col-span-3"
           >
             {status === "success" ? (
               <div className="flex flex-col items-center justify-center h-full min-h-[280px] sm:min-h-[400px] text-center gap-4 p-5 sm:p-8 rounded-2xl border border-primary/30 bg-primary/5">
