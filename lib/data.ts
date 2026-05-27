@@ -66,28 +66,28 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Phantasia — Sitio Web Corporativo",
+    title: "Eclipse FM 107.7 — Web & Dashboard",
     description:
-      "Sitio corporativo para Phantasia, estudio de diseño y desarrollo de software. Landing completa con formulario de captación de leads de 6 pasos, soporte multilingüe (ES/EN/FR) y modo oscuro/claro.",
+      "Sitio web oficial y panel de administración para Radio Eclipse FM 107.7, emisora comunitaria de Quilicura. Incluye reproductor de streaming en vivo con chat integrado, grilla de programación, blog, noticias y dashboard con control de acceso por roles.",
     role: "Desarrolladora única — proyecto freelance",
     stack: {
-      frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
-      backend: ["Next.js API Routes", "Prisma 7", "Resend"],
+      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS"],
+      backend: ["Next.js API Routes", "NextAuth v5", "Prisma"],
       database: ["PostgreSQL", "Neon"],
       tools: ["Vercel", "Git"],
     },
     bullets: [
-      "Implementé soporte multilingüe (ES/EN/FR) con enrutamiento automático por locale y detección de preferencia del navegador.",
-      "Desarrollé formulario de captación de leads en 6 pasos con almacenamiento en base de datos y envío de notificaciones por email con Resend.",
-      "Integré modo oscuro/claro con persistencia en localStorage y detección automática de preferencia del sistema.",
+      "Implementé reproductor de audio streaming en tiempo real con chat integrado, permitiendo a los oyentes interactuar durante las transmisiones en vivo.",
+      "Desarrollé dashboard de administración con roles diferenciados (Admin/SubAdmin/Team) para gestión de programas, sponsors, blog y noticias.",
+      "Construí grilla de programación semanal, catálogo de programas y sección de noticias locales con sistema completo de gestión de contenidos.",
     ],
     decision:
-      "Elegí Next.js 16 con App Router para combinar Server Components (SEO, rendimiento) con Client Components (formulario multistep, tema), aprovechando el enrutamiento internacionalizado nativo del framework.",
+      "Elegí NextAuth v5 para la autenticación del dashboard por su integración nativa con Next.js App Router y soporte flexible de providers. La separación entre sitio público y panel admin en la misma base de código simplifica el despliegue y mantenimiento.",
     challenge:
-      "La gestión del estado del formulario de 6 pasos entre rutas localizadas requirió un contexto compartido que sobreviviera la navegación sin perder los datos ingresados, resuelto con Context API y persistencia en sessionStorage.",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "i18n"],
-    liveUrl: "https://phantasia.cl",
-    repoUrl: "https://github.com/Pauaua/PhantasiaWeb",
+      "Mantener el reproductor de streaming activo entre navegaciones sin interrumpir la reproducción requirió un contexto global que persiste el estado del audio fuera del árbol de rutas, evitando que el componente se desmonte al cambiar de página.",
+    tags: ["Next.js", "TypeScript", "NextAuth", "PostgreSQL"],
+    liveUrl: "https://eclipse-fm.vercel.app",
+    repoUrl: "https://github.com/Pauaua/EclipseFM",
     featured: true,
   },
   {
@@ -119,58 +119,6 @@ export const projects = [
   },
   {
     id: 3,
-    title: "PlantiDex Mobile",
-    description:
-      "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa a nivel comunitario. Soporta captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
-    role: "Desarrolladora única — proyecto académico",
-    stack: {
-      frontend: ["Ionic 8", "Angular 20", "TypeScript", "SCSS"],
-      backend: ["Capacitor", "RxJS"],
-      database: ["@ionic/storage-angular", "localForage"],
-      tools: ["@capacitor/camera", "@capacitor/geolocation", "Karma / Jasmine", "Git"],
-    },
-    bullets: [
-      "Implementé integración nativa de cámara y GPS con Capacitor, solicitando permisos Android en tiempo de ejecución con feedback claro al usuario en caso de denegación.",
-      "Desarrollé persistencia offline-first con @ionic/storage-angular (localForage) para registrar observaciones en campo sin necesidad de conexión a internet.",
-      "Construí gestión de estado reactiva con BehaviorSubject de RxJS para mantener la lista de especies sincronizada en tiempo real a través de múltiples vistas.",
-    ],
-    decision:
-      "Elegí Ionic + Angular + Capacitor por la combinación de productividad web con acceso real a hardware nativo (cámara, GPS). El enfoque offline-first con localForage fue clave para garantizar usabilidad en zonas rurales con conectividad limitada.",
-    challenge:
-      "La integración de permisos nativos de Android con Capacitor requirió manejo explícito de estados (concedido/denegado/no solicitado) en cada sesión. Resolví implementando un servicio de permisos centralizado que evalúa el estado antes de cada llamada a cámara o GPS.",
-    tags: ["Ionic", "Angular", "TypeScript", "Capacitor"],
-    liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/PlantidexMobile",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "CTRL — Gestión de Usuarios y Proyectos",
-    description:
-      "Aplicación web para la gestión de proyectos: usuarios, cargos, proyectos y tareas, con control de acceso por roles y soporte para despliegue en la nube.",
-    role: "Desarrolladora única — proyecto personal",
-    stack: {
-      frontend: ["Thymeleaf", "HTML/CSS", "JavaScript"],
-      backend: ["Java", "Spring Boot", "Spring Data JPA"],
-      database: ["H2 Database", "Hibernate"],
-      tools: ["Maven", "Git"],
-    },
-    bullets: [
-      "Implementé autenticación con sesiones y control de acceso basado en roles (ADMIN/USER) que protege rutas sensibles del panel de administración.",
-      "Desarrollé CRUD completo para usuarios y proyectos con búsqueda, filtrado y gestión de asociaciones usuario-proyecto.",
-      "Diseñé arquitectura MVC con separación de controllers, models y repositories siguiendo buenas prácticas de Spring Boot.",
-    ],
-    decision:
-      "Elegí H2 Database sobre MySQL para facilitar la portabilidad y ejecución sin configuración externa. La persistencia file-based garantiza que los datos sobreviven reinicios de la aplicación sin depender de un servidor de base de datos.",
-    challenge:
-      "La gestión de permisos diferenciados entre ADMIN y USER requirió validaciones en múltiples capas: controladores, vistas Thymeleaf (th:if con roles) y nivel de sesión, para evitar accesos no autorizados por manipulación directa de URLs.",
-    tags: ["Java", "Spring Boot", "Thymeleaf", "H2"],
-    liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/Plantidex",
-    featured: false,
-  },
-  {
-    id: 5,
     title: "Tienda Berbelis",
     description:
       "Plataforma e-commerce completa para venta de productos orgánicos de salud y estética. Catálogo con paginación y filtros, carrito persistente, checkout, panel de administración y formulario de contacto.",
@@ -196,29 +144,55 @@ export const projects = [
     featured: false,
   },
   {
-    id: 6,
-    title: "Eclipse FM 107.7 — Web & Dashboard",
+    id: 4,
+    title: "PlantiDex Mobile",
     description:
-      "Sitio web oficial y panel de administración para Radio Eclipse FM 107.7, emisora comunitaria de Quilicura. Incluye reproductor de streaming en vivo con chat integrado, grilla de programación, blog, noticias y dashboard con control de acceso por roles.",
-    role: "Desarrolladora única — proyecto freelance",
+      "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa a nivel comunitario. Soporta captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
+    role: "Desarrolladora única — proyecto académico",
     stack: {
-      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS"],
-      backend: ["Next.js API Routes", "NextAuth v5", "Prisma"],
-      database: ["PostgreSQL", "Neon"],
-      tools: ["Vercel", "Git"],
+      frontend: ["Ionic 8", "Angular 20", "TypeScript", "SCSS"],
+      backend: ["Capacitor", "RxJS"],
+      database: ["@ionic/storage-angular", "localForage"],
+      tools: ["@capacitor/camera", "@capacitor/geolocation", "Karma / Jasmine", "Git"],
     },
     bullets: [
-      "Implementé reproductor de audio streaming en tiempo real con chat integrado, permitiendo a los oyentes interactuar durante las transmisiones en vivo.",
-      "Desarrollé dashboard de administración con roles diferenciados (Admin/SubAdmin/Team) para gestión de programas, sponsors, blog y noticias.",
-      "Construí grilla de programación semanal, catálogo de programas y sección de noticias locales con sistema completo de gestión de contenidos.",
+      "Implementé integración nativa de cámara y GPS con Capacitor, solicitando permisos Android en tiempo de ejecución con feedback claro al usuario en caso de denegación.",
+      "Desarrollé persistencia offline-first con @ionic/storage-angular (localForage) para registrar observaciones en campo sin necesidad de conexión a internet.",
+      "Construí gestión de estado reactiva con BehaviorSubject de RxJS para mantener la lista de especies sincronizada en tiempo real a través de múltiples vistas.",
     ],
     decision:
-      "Elegí NextAuth v5 para la autenticación del dashboard por su integración nativa con Next.js App Router y soporte flexible de providers. La separación entre sitio público y panel admin en la misma base de código simplifica el despliegue y mantenimiento.",
+      "Elegí Ionic + Angular + Capacitor por la combinación de productividad web con acceso real a hardware nativo (cámara, GPS). El enfoque offline-first con localForage fue clave para garantizar usabilidad en zonas rurales con conectividad limitada.",
     challenge:
-      "Mantener el reproductor de streaming activo entre navegaciones sin interrumpir la reproducción requirió un contexto global que persiste el estado del audio fuera del árbol de rutas, evitando que el componente se desmonte al cambiar de página.",
-    tags: ["Next.js", "TypeScript", "NextAuth", "PostgreSQL"],
-    liveUrl: "https://eclipse-fm.vercel.app",
-    repoUrl: "https://github.com/Pauaua/EclipseFM",
+      "La integración de permisos nativos de Android con Capacitor requirió manejo explícito de estados (concedido/denegado/no solicitado) en cada sesión. Resolví implementando un servicio de permisos centralizado que evalúa el estado antes de cada llamada a cámara o GPS.",
+    tags: ["Ionic", "Angular", "TypeScript", "Capacitor"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/PlantidexMobile",
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "CTRL — Gestión de Usuarios y Proyectos",
+    description:
+      "Aplicación web para la gestión de proyectos: usuarios, cargos, proyectos y tareas, con control de acceso por roles y soporte para despliegue en la nube.",
+    role: "Desarrolladora única — proyecto personal",
+    stack: {
+      frontend: ["Thymeleaf", "HTML/CSS", "JavaScript"],
+      backend: ["Java", "Spring Boot", "Spring Data JPA"],
+      database: ["H2 Database", "Hibernate"],
+      tools: ["Maven", "Git"],
+    },
+    bullets: [
+      "Implementé autenticación con sesiones y control de acceso basado en roles (ADMIN/USER) que protege rutas sensibles del panel de administración.",
+      "Desarrollé CRUD completo para usuarios y proyectos con búsqueda, filtrado y gestión de asociaciones usuario-proyecto.",
+      "Diseñé arquitectura MVC con separación de controllers, models y repositories siguiendo buenas prácticas de Spring Boot.",
+    ],
+    decision:
+      "Elegí H2 Database sobre MySQL para facilitar la portabilidad y ejecución sin configuración externa. La persistencia file-based garantiza que los datos sobreviven reinicios de la aplicación sin depender de un servidor de base de datos.",
+    challenge:
+      "La gestión de permisos diferenciados entre ADMIN y USER requirió validaciones en múltiples capas: controladores, vistas Thymeleaf (th:if con roles) y nivel de sesión, para evitar accesos no autorizados por manipulación directa de URLs.",
+    tags: ["Java", "Spring Boot", "Thymeleaf", "H2"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/Plantidex",
     featured: false,
   },
   {
@@ -252,6 +226,15 @@ export const projects = [
 export const experience = [
   {
     id: 1,
+    company: "Phantasia Soluciones Creativas",
+    role: "Desarrolladora Full Stack",
+    period: "mar 2026 — actualidad",
+    description:
+      "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
+    tags: ["Next.js", "TypeScript", "Prisma", "Vercel", "Freelance"],
+  },
+  {
+    id: 2,
     company: "Mimasoft",
     role: "Desarrolladora Full Stack (Práctica)",
     period: "feb 2026 — mar 2026",
@@ -260,7 +243,7 @@ export const experience = [
     tags: ["DDD", "Multi-tenant", "WordPress", "Fullstack"],
   },
   {
-    id: 2,
+    id: 3,
     company: "Unicorn Solutions",
     role: "Desarrolladora Full Stack",
     period: "may 2024 — dic 2024",
@@ -269,7 +252,7 @@ export const experience = [
     tags: ["React", "Node.js", "PostgreSQL", "Scrum"],
   },
   {
-    id: 3,
+    id: 4,
     company: "Docente de Filosofía",
     role: "Profesora — Sistema educativo formal",
     period: "may 2017 — feb 2026",
@@ -278,7 +261,7 @@ export const experience = [
     tags: ["Comunicación", "Planificación", "Gestión"],
   },
   {
-    id: 4,
+    id: 5,
     company: "Organización A.L.T.",
     role: "Directora de Proyectos",
     period: "nov 2020 — dic 2025",
