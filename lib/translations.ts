@@ -49,14 +49,19 @@ export const translations = {
       moreOnGithub: "Ver más en GitHub",
       items: [
         {
-          title: "Phantasia — Sitio Web Corporativo",
+          title: "Eclipse FM 107.7 — Web & Dashboard",
           description:
-            "Sitio corporativo para estudio de diseño y desarrollo. Landing completa con formulario de captación de leads de 6 pasos, soporte multilingüe (ES/EN/FR) y modo oscuro/claro.",
+            "Sitio web y panel de administración para radio comunitaria. Streaming en vivo con chat, grilla de programación, blog, noticias y dashboard con roles diferenciados.",
         },
         {
           title: "Suite de Automatización SII",
           description:
             "Dos herramientas de escritorio para automatizar operaciones tributarias en el SII. Módulo de facturas con procesamiento masivo, hasta 3 hilos concurrentes e instalador profesional. Módulo de boletas con flujo completo: autenticación, procesamiento masivo y reportes.",
+        },
+        {
+          title: "Tienda Berbelis",
+          description:
+            "E-commerce completo para venta de productos orgánicos. Catálogo con filtros, carrito persistente, checkout, panel de administración y despliegue en Vercel con PostgreSQL serverless.",
         },
         {
           title: "PlantiDex Mobile",
@@ -67,16 +72,6 @@ export const translations = {
           title: "CTRL — Gestión de Usuarios y Proyectos",
           description:
             "Plataforma web MVC con autenticación por roles (Admin/User) y CRUD completo de usuarios y proyectos. Desarrollé la arquitectura con Java Spring Boot, Thymeleaf y H2 Database.",
-        },
-        {
-          title: "Tienda Berbelis",
-          description:
-            "E-commerce completo para venta de productos orgánicos. Catálogo con filtros, carrito persistente, checkout, panel de administración y despliegue en Vercel con PostgreSQL serverless.",
-        },
-        {
-          title: "Eclipse FM 107.7 — Web & Dashboard",
-          description:
-            "Sitio web y panel de administración para radio comunitaria. Streaming en vivo con chat, grilla de programación, blog, noticias y dashboard con roles diferenciados.",
         },
         {
           title: "Aguas Mi Sur — Sitio Institucional",
@@ -90,6 +85,11 @@ export const translations = {
       heading: "Donde he",
       headingAccent: "trabajado",
       items: [
+        {
+          role: "Desarrolladora Full Stack",
+          description:
+            "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
+        },
         {
           role: "Desarrolladora Full Stack (Práctica)",
           description:
@@ -265,14 +265,19 @@ export const translations = {
       moreOnGithub: "More on GitHub",
       items: [
         {
-          title: "Phantasia — Corporate Website",
+          title: "Eclipse FM 107.7 — Web & Dashboard",
           description:
-            "Corporate site for a design and development studio. Full landing page with a 6-step lead capture form, multilingual support (ES/EN/FR) and dark/light mode.",
+            "Website and admin dashboard for a community radio station. Live streaming with integrated chat, program schedule, blog, news and role-based admin panel.",
         },
         {
           title: "SII Automation Suite",
           description:
             "Two desktop tools to automate tax operations on Chile's SII portal. Invoice module with bulk processing, up to 3 concurrent threads and professional installer. Fee receipts module with full flow: authentication, bulk processing and reports.",
+        },
+        {
+          title: "Tienda Berbelis",
+          description:
+            "Full e-commerce platform for organic health and beauty products. Product catalog with filters, persistent cart, checkout, admin panel and deployment on Vercel with serverless PostgreSQL.",
         },
         {
           title: "PlantiDex Mobile",
@@ -283,16 +288,6 @@ export const translations = {
           title: "CTRL — User & Project Management",
           description:
             "MVC web platform with role-based authentication (Admin/User) and full CRUD for users and projects. Built with Java Spring Boot, Thymeleaf and H2 Database.",
-        },
-        {
-          title: "Tienda Berbelis",
-          description:
-            "Full e-commerce platform for organic health and beauty products. Product catalog with filters, persistent cart, checkout, admin panel and deployment on Vercel with serverless PostgreSQL.",
-        },
-        {
-          title: "Eclipse FM 107.7 — Web & Dashboard",
-          description:
-            "Website and admin dashboard for a community radio station. Live streaming with integrated chat, program schedule, blog, news and role-based admin panel.",
         },
         {
           title: "Aguas Mi Sur — Institutional Website",
@@ -306,6 +301,11 @@ export const translations = {
       heading: "Where I've",
       headingAccent: "worked",
       items: [
+        {
+          role: "Full Stack Developer",
+          description:
+            "Freelance development of digital products for the studio and its clients. Built the multilingual corporate website (ES/EN/FR) with Next.js 16, a 6-step lead capture system with database storage and email notifications (Resend). Web development for external clients of the studio.",
+        },
         {
           role: "Full Stack Developer (Internship)",
           description:
@@ -480,14 +480,19 @@ export const translations = {
       moreOnGithub: "Plus sur GitHub",
       items: [
         {
-          title: "Phantasia — Site Web Corporatif",
+          title: "Eclipse FM 107.7 — Web & Dashboard",
           description:
-            "Site corporatif pour un studio de design et développement. Landing complète avec formulaire de captation de leads en 6 étapes, support multilingue (ES/EN/FR) et mode sombre/clair.",
+            "Site web et tableau de bord pour une radio communautaire. Streaming en direct avec chat intégré, grille de programmation, blog, actualités et panneau d'administration avec rôles différenciés.",
         },
         {
           title: "Suite d'automatisation SII",
           description:
             "Deux outils bureau pour automatiser les opérations fiscales sur le portail SII du Chili. Module factures avec traitement en masse, jusqu'à 3 fils concurrents et installateur professionnel. Module honoraires avec flux complet : authentification, traitement en masse et rapports.",
+        },
+        {
+          title: "Tienda Berbelis",
+          description:
+            "Plateforme e-commerce complète pour la vente de produits organiques. Catalogue avec filtres, panier persistant, checkout, panneau d'administration et déploiement sur Vercel avec PostgreSQL serverless.",
         },
         {
           title: "PlantiDex Mobile",
@@ -498,16 +503,6 @@ export const translations = {
           title: "CTRL — Gestion des utilisateurs et projets",
           description:
             "Plateforme web MVC avec authentification par rôles (Admin/Utilisateur) et CRUD complet. Développée avec Java Spring Boot, Thymeleaf et H2 Database.",
-        },
-        {
-          title: "Tienda Berbelis",
-          description:
-            "Plateforme e-commerce complète pour la vente de produits organiques. Catalogue avec filtres, panier persistant, checkout, panneau d'administration et déploiement sur Vercel avec PostgreSQL serverless.",
-        },
-        {
-          title: "Eclipse FM 107.7 — Web & Dashboard",
-          description:
-            "Site web et tableau de bord pour une radio communautaire. Streaming en direct avec chat intégré, grille de programmation, blog, actualités et panneau d'administration avec rôles différenciés.",
         },
         {
           title: "Aguas Mi Sur — Site Institutionnel",
@@ -521,6 +516,11 @@ export const translations = {
       heading: "Où j'ai",
       headingAccent: "travaillé",
       items: [
+        {
+          role: "Développeuse Full Stack",
+          description:
+            "Développement freelance de produits numériques pour le studio et ses clients. Construction du site web corporatif multilingue (ES/EN/FR) avec Next.js 16, système de captation de leads en 6 étapes avec stockage en base de données et notifications par email (Resend). Développement de sites et plateformes web pour les clients externes du studio.",
+        },
         {
           role: "Développeuse Full Stack (Stage)",
           description:
