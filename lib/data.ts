@@ -196,7 +196,7 @@ export const projects = [
     featured: false,
   },
   {
-    id: 7,
+    id: 6,
     title: "Aguas Mi Sur — Sitio Institucional",
     description:
       "Sitio web institucional para empresa de distribución de agua purificada en Chile. Desarrollado con Next.js 16 y Tailwind CSS v4, con base de datos serverless y despliegue continuo en Vercel.",
