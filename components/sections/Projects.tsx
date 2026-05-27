@@ -163,7 +163,7 @@ function FeaturedCard({
         </div>
 
         {/* Actions */}
-        <div className="flex items-center gap-3 pt-4 border-t border-border">
+        <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-border">
           {project.repoUrl && (
             <a
               href={project.repoUrl}
@@ -279,7 +279,7 @@ function SmallCard({
           onClick={onDetails}
           className="ml-auto flex items-center gap-1 text-xs text-primary font-light hover:gap-2 transition-all"
         >
-          Ver detalle
+          {tModal.viewDetail}
           <ArrowUpRight size={12} />
         </button>
       </div>
