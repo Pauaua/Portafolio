@@ -195,6 +195,58 @@ export const projects = [
     repoUrl: "https://github.com/Pauaua/TiendaBerbelis",
     featured: false,
   },
+  {
+    id: 6,
+    title: "Eclipse FM 107.7 — Web & Dashboard",
+    description:
+      "Sitio web oficial y panel de administración para Radio Eclipse FM 107.7, emisora comunitaria de Quilicura. Incluye reproductor de streaming en vivo con chat integrado, grilla de programación, blog, noticias y dashboard con control de acceso por roles.",
+    role: "Desarrolladora única — proyecto freelance",
+    stack: {
+      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS"],
+      backend: ["Next.js API Routes", "NextAuth v5", "Prisma"],
+      database: ["PostgreSQL", "Neon"],
+      tools: ["Vercel", "Git"],
+    },
+    bullets: [
+      "Implementé reproductor de audio streaming en tiempo real con chat integrado, permitiendo a los oyentes interactuar durante las transmisiones en vivo.",
+      "Desarrollé dashboard de administración con roles diferenciados (Admin/SubAdmin/Team) para gestión de programas, sponsors, blog y noticias.",
+      "Construí grilla de programación semanal, catálogo de programas y sección de noticias locales con sistema completo de gestión de contenidos.",
+    ],
+    decision:
+      "Elegí NextAuth v5 para la autenticación del dashboard por su integración nativa con Next.js App Router y soporte flexible de providers. La separación entre sitio público y panel admin en la misma base de código simplifica el despliegue y mantenimiento.",
+    challenge:
+      "Mantener el reproductor de streaming activo entre navegaciones sin interrumpir la reproducción requirió un contexto global que persiste el estado del audio fuera del árbol de rutas, evitando que el componente se desmonte al cambiar de página.",
+    tags: ["Next.js", "TypeScript", "NextAuth", "PostgreSQL"],
+    liveUrl: "https://eclipse-fm.vercel.app",
+    repoUrl: "https://github.com/Pauaua/EclipseFM",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Aguas Mi Sur — Sitio Institucional",
+    description:
+      "Sitio web institucional para empresa de distribución de agua purificada en Chile. Desarrollado con Next.js 16 y Tailwind CSS v4, con base de datos serverless y despliegue continuo en Vercel.",
+    role: "Desarrolladora única — proyecto freelance",
+    stack: {
+      frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
+      backend: ["Next.js API Routes", "Prisma 7"],
+      database: ["PostgreSQL", "Neon"],
+      tools: ["Vercel", "Turbopack", "Git"],
+    },
+    bullets: [
+      "Desarrollé sitio institucional completamente responsivo con Next.js 16 App Router y Tailwind CSS v4.",
+      "Integré base de datos PostgreSQL serverless con Prisma v7 para gestión de contenidos dinámicos.",
+      "Configuré Turbopack para builds optimizados y despliegue continuo en Vercel con entorno serverless.",
+    ],
+    decision:
+      "Elegí Next.js 16 con Turbopack por la velocidad de desarrollo y el despliegue serverless en Vercel, ideal para un sitio institucional que requiere bajo mantenimiento y alta disponibilidad.",
+    challenge:
+      "La configuración de Prisma v7 con el adaptador PostgreSQL serverless de Neon requirió ajustes específicos para el entorno serverless de Vercel, garantizando conexiones eficientes sin agotamiento de pool en funciones edge.",
+    tags: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS v4"],
+    liveUrl: "https://aguasmisur.vercel.app/",
+    repoUrl: "https://github.com/Pauaua/MiSur",
+    featured: false,
+  },
 ];
 
 export const experience = [

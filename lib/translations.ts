@@ -73,6 +73,16 @@ export const translations = {
           description:
             "E-commerce completo para venta de productos orgánicos. Catálogo con filtros, carrito persistente, checkout, panel de administración y despliegue en Vercel con PostgreSQL serverless.",
         },
+        {
+          title: "Eclipse FM 107.7 — Web & Dashboard",
+          description:
+            "Sitio web y panel de administración para radio comunitaria. Streaming en vivo con chat, grilla de programación, blog, noticias y dashboard con roles diferenciados.",
+        },
+        {
+          title: "Aguas Mi Sur — Sitio Institucional",
+          description:
+            "Sitio web institucional para empresa de distribución de agua purificada en Chile. Next.js 16, Tailwind CSS v4, Prisma v7 y despliegue serverless en Vercel.",
+        },
       ],
     },
     experience: {
@@ -279,6 +289,16 @@ export const translations = {
           description:
             "Full e-commerce platform for organic health and beauty products. Product catalog with filters, persistent cart, checkout, admin panel and deployment on Vercel with serverless PostgreSQL.",
         },
+        {
+          title: "Eclipse FM 107.7 — Web & Dashboard",
+          description:
+            "Website and admin dashboard for a community radio station. Live streaming with integrated chat, program schedule, blog, news and role-based admin panel.",
+        },
+        {
+          title: "Aguas Mi Sur — Institutional Website",
+          description:
+            "Institutional website for a purified water distribution company in Chile. Built with Next.js 16, Tailwind CSS v4, Prisma v7 and serverless deployment on Vercel.",
+        },
       ],
     },
     experience: {
@@ -483,6 +503,16 @@ export const translations = {
           title: "Tienda Berbelis",
           description:
             "Plateforme e-commerce complète pour la vente de produits organiques. Catalogue avec filtres, panier persistant, checkout, panneau d'administration et déploiement sur Vercel avec PostgreSQL serverless.",
+        },
+        {
+          title: "Eclipse FM 107.7 — Web & Dashboard",
+          description:
+            "Site web et tableau de bord pour une radio communautaire. Streaming en direct avec chat intégré, grille de programmation, blog, actualités et panneau d'administration avec rôles différenciés.",
+        },
+        {
+          title: "Aguas Mi Sur — Site Institutionnel",
+          description:
+            "Site web institutionnel pour une entreprise de distribution d'eau purifiée au Chili. Next.js 16, Tailwind CSS v4, Prisma v7 et déploiement serverless sur Vercel.",
         },
       ],
     },
