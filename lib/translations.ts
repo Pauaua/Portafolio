@@ -51,7 +51,7 @@ export const translations = {
         {
           title: "Eclipse FM 107.7 — Web & Dashboard",
           description:
-            "Sitio web y panel de administración para radio comunitaria. Streaming en vivo con chat, grilla de programación, blog, noticias y dashboard con roles diferenciados.",
+            "Plataforma full-stack para Radio Eclipse FM 107.7. Sitio público con reproductor de audio en vivo, chat integrado, grilla de programación semanal, blog y noticias. Panel de administración con 3 roles (Admin/SubAdmin/Team), autenticación NextAuth v5 + bcryptjs, PostgreSQL serverless (Neon), emails con Resend y validación con Zod.",
         },
         {
           title: "Suite de Automatización SII",
@@ -76,7 +76,7 @@ export const translations = {
         {
           title: "Aguas Mi Sur — Sitio Institucional",
           description:
-            "Sitio web institucional para empresa de distribución de agua purificada en Chile. Next.js 16, Tailwind CSS v4, Prisma v7 y despliegue serverless en Vercel.",
+            "Sitio web institucional para empresa distribuidora de agua purificada en Chile. Renderizado de contenido en Markdown, base de datos PostgreSQL serverless con Prisma v7 y Neon, validación con Zod v4 y despliegue continuo en Vercel.",
         },
       ],
     },
@@ -267,7 +267,7 @@ export const translations = {
         {
           title: "Eclipse FM 107.7 — Web & Dashboard",
           description:
-            "Website and admin dashboard for a community radio station. Live streaming with integrated chat, program schedule, blog, news and role-based admin panel.",
+            "Full-stack platform for Radio Eclipse FM 107.7. Public site with live audio streaming, integrated chat, weekly program schedule, blog and news. Admin panel with 3 roles (Admin/SubAdmin/Team), NextAuth v5 + bcryptjs authentication, serverless PostgreSQL (Neon), transactional emails with Resend and schema validation with Zod.",
         },
         {
           title: "SII Automation Suite",
@@ -292,7 +292,7 @@ export const translations = {
         {
           title: "Aguas Mi Sur — Institutional Website",
           description:
-            "Institutional website for a purified water distribution company in Chile. Built with Next.js 16, Tailwind CSS v4, Prisma v7 and serverless deployment on Vercel.",
+            "Institutional website for a purified water distribution company in Chile. Dynamic Markdown content rendering, serverless PostgreSQL with Prisma v7 and Neon, Zod v4 validation and continuous deployment on Vercel.",
         },
       ],
     },
@@ -482,7 +482,7 @@ export const translations = {
         {
           title: "Eclipse FM 107.7 — Web & Dashboard",
           description:
-            "Site web et tableau de bord pour une radio communautaire. Streaming en direct avec chat intégré, grille de programmation, blog, actualités et panneau d'administration avec rôles différenciés.",
+            "Plateforme full-stack pour Radio Eclipse FM 107.7. Site public avec lecteur audio en direct, chat intégré, grille de programmation hebdomadaire, blog et actualités. Panneau d'administration avec 3 rôles (Admin/SubAdmin/Team), authentification NextAuth v5 + bcryptjs, PostgreSQL serverless (Neon), emails avec Resend et validation avec Zod.",
         },
         {
           title: "Suite d'automatisation SII",
@@ -507,7 +507,7 @@ export const translations = {
         {
           title: "Aguas Mi Sur — Site Institutionnel",
           description:
-            "Site web institutionnel pour une entreprise de distribution d'eau purifiée au Chili. Next.js 16, Tailwind CSS v4, Prisma v7 et déploiement serverless sur Vercel.",
+            "Site web institutionnel pour une entreprise de distribution d'eau purifiée au Chili. Rendu de contenu en Markdown, base de données PostgreSQL serverless avec Prisma v7 et Neon, validation avec Zod v4 et déploiement continu sur Vercel.",
         },
       ],
     },
