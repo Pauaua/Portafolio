@@ -17,7 +17,7 @@ export const personalInfo = {
   github: "Pauaua",
   available: true,
   avatar: "/images/avatar.jpg", // FALTA PONER IMAGEN
-  resume: "/CVREALPAPCV.pdf",
+  resume: "/RESUMEPACUÑAP.pdf",
 };
 
 export const socialLinks = [
