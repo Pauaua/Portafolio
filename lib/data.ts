@@ -68,11 +68,11 @@ export const projects = [
     id: 1,
     title: "Eclipse FM 107.7 — Web & Dashboard",
     description:
-      "Sitio web oficial y panel de administración para Radio Eclipse FM 107.7, emisora comunitaria de Quilicura. Incluye reproductor de streaming en vivo con chat integrado, grilla de programación, blog, noticias y dashboard con control de acceso por roles.",
+      "Plataforma web full-stack para Radio Eclipse FM 107.7 (Quilicura). Sitio público con reproductor de audio en vivo, chat integrado, grilla de programación semanal, carrusel de auspiciadores, blog y noticias. Panel de administración con 3 roles (Admin, SubAdmin, Team) para gestión completa de usuarios, programas, sponsors y contenidos. Autenticación con NextAuth v5 + Prisma Adapter + bcryptjs, base de datos PostgreSQL serverless (Neon), emails transaccionales con Resend y validación con Zod.",
     role: "Desarrolladora única — proyecto freelance",
     stack: {
-      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS"],
-      backend: ["Next.js API Routes", "NextAuth v5", "Prisma"],
+      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      backend: ["Next.js API Routes", "NextAuth v5", "Prisma ORM", "bcryptjs", "Resend", "Zod"],
       database: ["PostgreSQL", "Neon"],
       tools: ["Vercel", "Git"],
     },
@@ -85,7 +85,7 @@ export const projects = [
       "Elegí NextAuth v5 para la autenticación del dashboard por su integración nativa con Next.js App Router y soporte flexible de providers. La separación entre sitio público y panel admin en la misma base de código simplifica el despliegue y mantenimiento.",
     challenge:
       "Mantener el reproductor de streaming activo entre navegaciones sin interrumpir la reproducción requirió un contexto global que persiste el estado del audio fuera del árbol de rutas, evitando que el componente se desmonte al cambiar de página.",
-    tags: ["Next.js", "TypeScript", "NextAuth", "PostgreSQL"],
+    tags: ["Next.js", "TypeScript", "NextAuth v5", "Prisma", "PostgreSQL", "Resend"],
     liveUrl: "https://eclipse-fm.vercel.app",
     repoUrl: "https://github.com/Pauaua/EclipseFM",
     featured: true,
@@ -199,7 +199,7 @@ export const projects = [
     id: 6,
     title: "Aguas Mi Sur — Sitio Institucional",
     description:
-      "Sitio web institucional para empresa de distribución de agua purificada en Chile. Desarrollado con Next.js 16 y Tailwind CSS v4, con base de datos serverless y despliegue continuo en Vercel.",
+      "Sitio web institucional para empresa distribuidora de agua purificada en Chile. Renderizado de contenido dinámico en Markdown, base de datos PostgreSQL serverless con Prisma v7 y Neon, validación de datos con Zod v4 y despliegue continuo en Vercel.",
     role: "Desarrolladora única — proyecto freelance",
     stack: {
       frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
@@ -228,7 +228,7 @@ export const experience = [
     id: 1,
     company: "Phantasia Soluciones Creativas",
     role: "Desarrolladora Full Stack",
-    period: "mar 2026 — actualidad",
+    period: "abr 2026 — jun 2026 · Trabajo por proyectos",
     description:
       "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
     tags: ["Next.js", "TypeScript", "Prisma", "Vercel", "Freelance"],
