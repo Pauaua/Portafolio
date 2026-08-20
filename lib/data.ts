@@ -9,7 +9,7 @@ export const personalInfo = {
   tagline:
     "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
   // About bio 
-  bio: "Ingeniería en Informática (en curso) con título técnico de Analista Programadora y experiencia en empresa real. Domino el ciclo completo: arquitectura de base de datos, APIs REST, lógica de negocio y frontend. Mi trayectoria previa en educación y filosofía me dio habilidades de comunicación, pensamiento sistemático y gestión de proyectos que aplico directamente al desarrollo.",
+  bio: "Desarrolladora Full Stack con dominio real de frontend, backend, aplicaciones móviles híbridas y automatización de procesos (Next.js, Spring Boot, Python, Ionic), respaldado por más de una decena de proyectos productivos entregados en menos de dos años de formación formal. Ocho años previos como docente de Filosofía y directora de proyectos aportan comunicación técnica clara, gestión ágil y experiencia coordinando equipos y clientes — hoy aplicadas a levantar requerimientos y entregar software de principio a fin.",
   location: "Santiago, RM. Chile",
   email: "paulinefugit@gmail.com",
   phone: "56974476368",
@@ -17,7 +17,7 @@ export const personalInfo = {
   github: "Pauaua",
   available: true,
   avatar: "/images/avatar.jpg", // FALTA PONER IMAGEN
-  resume: "/RESUMEPACUÑAP.pdf",
+  resume: "/CV-Paulina-Acuna-Paiva.pdf",
 };
 
 export const socialLinks = [
@@ -43,10 +43,13 @@ export const skills = [
       "Flask",
       "JavaScript (ES6+)",
       "TypeScript",
+      "HTML5 / CSS3",
       "React",
       "Next.js",
       "Node.js",
       "Ionic / Angular",
+      "PHP",
+      "Laravel",
     ],
   },
   {
@@ -64,6 +67,58 @@ export const skills = [
 ];
 
 export const projects = [
+  {
+    id: 7,
+    title: "PhantasiaWeb — Sitio Corporativo",
+    description:
+      "Sitio web corporativo para Phantasia, estudio de diseño y desarrollo de software. Internacionalización en tres idiomas (ES/EN/FR) con routing por locale, modo oscuro/claro con detección de preferencia del sistema, y formulario de onboarding de 6 pasos que persiste leads en base de datos y envía notificaciones automáticas por email.",
+    role: "Desarrolladora única — proyecto freelance",
+    stack: {
+      frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
+      backend: ["Next.js API Routes", "Prisma"],
+      database: ["PostgreSQL"],
+      tools: ["Vercel", "Resend", "Git"],
+    },
+    bullets: [
+      "Implementé internacionalización en tres idiomas (ES/EN/FR) con routing por locale sobre Next.js App Router.",
+      "Desarrollé modo oscuro/claro con detección automática de la preferencia del sistema del usuario.",
+      "Construí formulario de onboarding de 6 pasos que persiste leads en base de datos y dispara notificaciones automáticas por email con Resend.",
+    ],
+    decision:
+      "Elegí un routing basado en locale de Next.js en vez de una librería de i18n externa para mantener el bundle liviano y aprovechar el App Router de forma nativa en las tres versiones del sitio.",
+    challenge:
+      "Sincronizar el estado del formulario de 6 pasos entre pasos sin perder datos ante refrescos de página requirió persistencia intermedia en el cliente antes del envío final a la base de datos.",
+    tags: ["Next.js", "TypeScript", "i18n", "Prisma", "PostgreSQL"],
+    liveUrl: "",
+    repoUrl: "",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Asegalbyf Asesorías — E-commerce",
+    description:
+      "Plataforma e-commerce para una correduría de seguros. Dashboard administrable para gestión de servicios y checkout con integración de pagos Transbank. Desarrollado en solitario en 3 semanas y desplegado en producción.",
+    role: "Desarrolladora única — proyecto freelance",
+    stack: {
+      frontend: ["Next.js", "Tailwind CSS"],
+      backend: ["Next.js API Routes", "Prisma ORM", "Transbank"],
+      database: ["PostgreSQL"],
+      tools: ["Vercel", "Git"],
+    },
+    bullets: [
+      "Desarrollé dashboard administrable para gestión de servicios ofrecidos por la correduría.",
+      "Integré checkout con pasarela de pagos Transbank para procesar transacciones en producción.",
+      "Entregué el proyecto completo en solitario en un plazo de 3 semanas, desde el levantamiento de requerimientos hasta el despliegue.",
+    ],
+    decision:
+      "Prioricé Prisma ORM sobre queries directas para mantener un esquema de datos type-safe y acelerar el desarrollo dado el plazo ajustado de 3 semanas.",
+    challenge:
+      "La integración con la API de Transbank exigió manejar cuidadosamente los estados de transacción (aprobada, rechazada, anulada) para evitar inconsistencias entre el pago y el estado del pedido en base de datos.",
+    tags: ["Next.js", "Prisma", "Transbank", "PostgreSQL"],
+    liveUrl: "https://asegalbyfasesorias.cl",
+    repoUrl: "https://github.com/PauFugit/FS-ASEGAL",
+    featured: false,
+  },
   {
     id: 1,
     title: "Eclipse FM 107.7 — Web & Dashboard",
@@ -225,37 +280,28 @@ export const projects = [
 
 export const experience = [
   {
-    id: 1,
-    company: "Phantasia Soluciones Creativas",
-    role: "Desarrolladora Full Stack",
-    period: "abr 2026 — jun 2026 · Trabajo por proyectos",
-    description:
-      "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
-    tags: ["Next.js", "TypeScript", "Prisma", "Vercel", "Freelance"],
-  },
-  {
     id: 2,
     company: "Mimasoft",
-    role: "Desarrolladora Full Stack (Práctica)",
-    period: "feb 2026 — mar 2026",
+    role: "Desarrolladora Full Stack (Práctica profesional, 360 hrs)",
+    period: "feb 2026 — abr 2026",
     description:
-      "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript (data-es/data-en), integración de formularios WPForms con estilos glassmorphism, reCAPTCHA v2 y configuración Polylang. Arquitectura bajo DDD multi-tenant.",
+      "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript y arquitectura multi-tenant basada en DDD. Integré formularios WPForms con reCAPTCHA v2 y estilos glassmorphism; resolví bugs de redirección de Polylang y errores de scope en JavaScript. Elaboré una auditoría digital del sitio institucional con benchmarking competitivo y una hoja de ruta de implementación en cuatro fases.",
     tags: ["DDD", "Multi-tenant", "WordPress", "Fullstack"],
   },
   {
     id: 3,
-    company: "Unicorn Solutions",
+    company: "Asesorías Valdivia",
     role: "Desarrolladora Full Stack",
     period: "may 2024 — dic 2024",
     description:
-      "Desarrollo de aplicaciones web full stack para clientes externos bajo metodologías ágiles. Construcción de sitios y plataformas con Next.js 15, gestión de base de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, y despliegue continuo en Vercel. Coordinación directa con clientes para levantamiento y definición de requerimientos.",
-    tags: ["React", "Node.js", "PostgreSQL", "Scrum"],
+      "Desarrollo de sitios y plataformas para clientes externos con Next.js 15 bajo metodologías ágiles. Gestión de persistencia de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, con despliegue continuo en Vercel. Coordinación directa con clientes para el levantamiento y la definición de requerimientos.",
+    tags: ["Next.js", "Prisma", "PostgreSQL", "Scrum"],
   },
   {
     id: 4,
     company: "Docente de Filosofía",
     role: "Profesora — Sistema educativo formal",
-    period: "may 2017 — feb 2026",
+    period: "may 2017 — dic 2025",
     description:
       "Docente en establecimientos municipales y particulares pagados. Desarrollo de habilidades en planificación curricular, comunicación efectiva y gestión de grupos.",
     tags: ["Comunicación", "Planificación", "Gestión"],
@@ -274,20 +320,20 @@ export const experience = [
 export const education = [
   {
     id: 1,
-    institution: "Instituto Profesional CIISA",
+    institution: "Instituto Profesional San Sebastián (ex CIISA)",
     degree: "Ingeniería en Informática",
     period: "feb 2024 — actualidad",
     description:
-      "Desarrollo de software, arquitectura de bases de datos y patrones de diseño (MVC). Proyectos destacados con Spring Boot y aplicaciones móviles con Ionic.",
+      "En curso. Foco en arquitectura de software, bases de datos y patrones de diseño (MVC). Proyectos destacados con Spring Boot y aplicaciones móviles con Ionic.",
     highlight: true,
   },
   {
     id: 2,
-    institution: "IP San Sebastián (ex CIISA)",
+    institution: "Instituto Profesional San Sebastián (ex CIISA)",
     degree: "Técnica Analista Programadora",
-    period: "feb 2024 — feb 2026",
+    period: "feb 2024 — abr 2026",
     description:
-      "Título técnico obtenido con práctica profesional de 360 horas en Mimasoft bajo arquitectura multi-tenant y DDD.",
+      "Título obtenido; salida intermedia con práctica profesional de 360 horas en Mimasoft bajo arquitectura multi-tenant y DDD.",
     highlight: false,
   },
   {
