@@ -285,7 +285,7 @@ export const experience = [
     role: "Desarrolladora Full Stack (Práctica profesional, 360 hrs)",
     period: "feb 2026 — abr 2026",
     description:
-      "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript y arquitectura multi-tenant basada en DDD. Integré formularios WPForms con reCAPTCHA v2 y estilos glassmorphism; resolví bugs de redirección de Polylang y errores de scope en JavaScript. Elaboré una auditoría digital del sitio institucional con benchmarking competitivo y una hoja de ruta de implementación en cuatro fases.",
+      "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript (data-es/data-en), integración de formularios WPForms con estilos glassmorphism, reCAPTCHA v2 y configuración Polylang. Arquitectura bajo DDD multi-tenant.",
     tags: ["DDD", "Multi-tenant", "WordPress", "Fullstack"],
   },
   {
@@ -294,7 +294,7 @@ export const experience = [
     role: "Desarrolladora Full Stack",
     period: "may 2024 — dic 2024",
     description:
-      "Desarrollo de sitios y plataformas para clientes externos con Next.js 15 bajo metodologías ágiles. Gestión de persistencia de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, con despliegue continuo en Vercel. Coordinación directa con clientes para el levantamiento y la definición de requerimientos.",
+      "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
     tags: ["Next.js", "Prisma", "PostgreSQL", "Scrum"],
   },
   {
