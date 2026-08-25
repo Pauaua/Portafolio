@@ -86,19 +86,14 @@ export const translations = {
       headingAccent: "trabajado",
       items: [
         {
-          role: "Desarrolladora Full Stack",
-          description:
-            "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
-        },
-        {
-          role: "Desarrolladora Full Stack (Práctica)",
+          role: "Desarrolladora Full Stack (Práctica profesional, 360 hrs)",
           description:
             "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript (data-es/data-en), integración de formularios WPForms con estilos glassmorphism, reCAPTCHA v2 y configuración Polylang. Arquitectura bajo DDD multi-tenant.",
         },
         {
           role: "Desarrolladora Full Stack",
           description:
-            "Desarrollo de aplicaciones web full stack para clientes externos bajo metodologías ágiles. Construcción de sitios y plataformas con Next.js 15, gestión de base de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, y despliegue continuo en Vercel. Coordinación directa con clientes para levantamiento y definición de requerimientos.",
+            "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
         },
         {
           role: "Profesora — Sistema educativo formal",
@@ -302,19 +297,14 @@ export const translations = {
       headingAccent: "worked",
       items: [
         {
-          role: "Full Stack Developer",
-          description:
-            "Freelance development of digital products for the studio and its clients. Built the multilingual corporate website (ES/EN/FR) with Next.js 16, a 6-step lead capture system with database storage and email notifications (Resend). Web development for external clients of the studio.",
-        },
-        {
-          role: "Full Stack Developer (Internship)",
+          role: "Full Stack Developer (Professional Internship, 360 hrs)",
           description:
             "360-hour internship for Programmer Analyst certification. Developed a bilingual (ES/EN) institutional website in WordPress with Divi child theme, dynamic JavaScript translation system (data-es/data-en), WPForms integration with glassmorphism styles, reCAPTCHA v2 and Polylang configuration. Architecture under DDD multi-tenant.",
         },
         {
           role: "Full Stack Developer",
           description:
-            "Full stack web application development for external clients under agile methodologies. Built sites and platforms with Next.js 15, database management with Prisma ORM on MySQL, PostgreSQL and Supabase, and continuous deployment on Vercel. Direct client coordination for requirements gathering and definition.",
+            "Freelance development of digital products for the studio and its clients. Built the multilingual corporate website (ES/EN/FR) with Next.js 16, a 6-step lead capture system with database storage and email notifications (Resend). Web development for external clients of the studio.",
         },
         {
           role: "Philosophy Teacher — Formal Education",
@@ -517,19 +507,14 @@ export const translations = {
       headingAccent: "travaillé",
       items: [
         {
-          role: "Développeuse Full Stack",
-          description:
-            "Développement freelance de produits numériques pour le studio et ses clients. Construction du site web corporatif multilingue (ES/EN/FR) avec Next.js 16, système de captation de leads en 6 étapes avec stockage en base de données et notifications par email (Resend). Développement de sites et plateformes web pour les clients externes du studio.",
-        },
-        {
-          role: "Développeuse Full Stack (Stage)",
+          role: "Développeuse Full Stack (Stage professionnel, 360 h)",
           description:
             "Stage de 360 heures pour la certification d'Analyste Programmeuse. Développement d'un site institutionnel bilingue (ES/EN) sous WordPress avec Divi child theme, système de traduction dynamique JavaScript (data-es/data-en), intégration WPForms avec styles glassmorphism, reCAPTCHA v2 et configuration Polylang. Architecture DDD multi-tenant.",
         },
         {
           role: "Développeuse Full Stack",
           description:
-            "Développement d'applications web full stack pour des clients externes sous méthodologies agiles. Construction de sites et plateformes avec Next.js 15, gestion de base de données avec Prisma ORM sur MySQL, PostgreSQL et Supabase, et déploiement continu sur Vercel. Coordination directe avec les clients pour le recueil et la définition des besoins.",
+            "Développement freelance de produits numériques pour le studio et ses clients. Construction du site web corporatif multilingue (ES/EN/FR) avec Next.js 16, système de captation de leads en 6 étapes avec stockage en base de données et notifications par email (Resend). Développement de sites et plateformes web pour les clients externes du studio.",
         },
         {
           role: "Professeure de Philosophie — Éducation formelle",
