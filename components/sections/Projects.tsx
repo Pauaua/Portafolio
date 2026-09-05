@@ -14,8 +14,11 @@ export default function Projects() {
   const { t } = useLanguage();
   const [selected, setSelected] = useState<Project | null>(null);
 
-  const featuredProjects = projects.filter((p) => p.featured);
-  const otherProjects = projects.filter((p) => !p.featured);
+  // Orden de despliegue en el front (no altera lib/data.ts)
+  const displayOrder = [9, 8, 10, 6, 2, 7, 1, 4];
+  const sortedProjects = [...projects].sort(
+    (a, b) => displayOrder.indexOf(a.id) - displayOrder.indexOf(b.id)
+  );
 
   return (
     <section id="projects" className="section-padding">
@@ -40,32 +43,17 @@ export default function Projects() {
           <span className="gradient-text">{t.projects.headingAccent}</span>
         </motion.h2>
 
-        {/* Featured */}
-        <div className="grid md:grid-cols-2 gap-4 md:gap-5 mb-4 md:mb-5">
-          {featuredProjects.map((project, i) => {
-            const tx = t.projects.items[project.id - 1] ?? { title: project.title, description: project.description };
+        {/* Projects */}
+        <div className="columns-1 sm:columns-2 gap-4 md:gap-5">
+          {sortedProjects.map((project, i) => {
+            const tx = t.projects.items.find((item) => item.id === project.id) ?? {
+              title: project.title,
+              description: project.description,
+              role: project.role,
+            };
             return (
-              <FeaturedCard
-                key={project.id}
-                project={project}
-                tx={tx}
-                index={i}
-                tModal={t.projectModal}
-                tProjects={t.projects}
-                onDetails={() => setSelected(project)}
-              />
-            );
-          })}
-        </div>
-
-        {/* Other projects */}
-        {otherProjects.length > 0 && (
-          <div className="grid sm:grid-cols-2 gap-4">
-            {otherProjects.map((project, i) => {
-              const tx = t.projects.items[project.id - 1] ?? { title: project.title, description: project.description };
-              return (
-                <SmallCard
-                  key={project.id}
+              <div key={project.id} className="break-inside-avoid mb-4 md:mb-5">
+                <FeaturedCard
                   project={project}
                   tx={tx}
                   index={i}
@@ -73,10 +61,10 @@ export default function Projects() {
                   tProjects={t.projects}
                   onDetails={() => setSelected(project)}
                 />
-              );
-            })}
-          </div>
-        )}
+              </div>
+            );
+          })}
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -106,7 +94,7 @@ function FeaturedCard({
   project, tx, index, tModal, tProjects, onDetails,
 }: {
   project: Project;
-  tx: { title: string; description: string };
+  tx: { title: string; description: string; role: string };
   index: number;
   tModal: { viewRepo: string; viewLive: string; viewDetail: string };
   tProjects: { live: string; code: string };
@@ -120,22 +108,20 @@ function FeaturedCard({
       transition={{ delay: index * 0.1 }}
       className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/40 transition-all duration-300 hover:glow-sm"
     >
-      {/* Top strip with number */}
+      {/* Top strip */}
       <div className="h-1.5 w-full bg-gradient-to-r from-primary/60 via-primary to-primary/30" />
 
       <div className="p-4 md:p-6 flex flex-col flex-1">
-        {/* Number + role */}
-        <div className="flex items-center justify-between mb-4">
-          <span className="text-3xl font-light text-primary/20 font-[family-name:var(--font-heading)]">
-            0{project.id}
-          </span>
+        {/* Role */}
+        <div className="flex items-center justify-end mb-4">
           <span className="text-[10px] font-light text-primary border border-primary/30 bg-primary/5 px-2.5 py-1 rounded-full">
-            {project.role.split("—")[0].trim()}
+            {tx.role.split("—")[0].trim()}
           </span>
         </div>
 
         {/* Title + description */}
-        <h3 className="text-base font-light mb-2 group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
+        <h3 className="flex items-center gap-2 text-base font-light mb-2 group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
+          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
           {tx.title}
         </h3>
         <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1 font-light line-clamp-2">
@@ -205,83 +191,6 @@ function FeaturedCard({
             <ArrowUpRight size={12} />
           </button>
         </div>
-      </div>
-    </motion.article>
-  );
-}
-
-/* ─── Small card ─────────────────────────────────────────── */
-function SmallCard({
-  project, tx, index, tModal, tProjects, onDetails,
-}: {
-  project: Project;
-  tx: { title: string; description: string };
-  index: number;
-  tModal: { viewRepo: string; viewLive: string; viewDetail: string };
-  tProjects: { live: string; code: string };
-  onDetails: () => void;
-}) {
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
-      className="group flex flex-col p-4 md:p-5 rounded-xl border border-border bg-card hover:border-primary/40 transition-all"
-    >
-      <div className="flex items-start justify-between gap-2 mb-3">
-        <h3 className="text-sm font-light group-hover:text-primary transition-colors font-[family-name:var(--font-heading)]">
-          {tx.title}
-        </h3>
-        <span className="flex-shrink-0 text-[10px] font-light text-primary border border-primary/30 bg-primary/5 px-2 py-0.5 rounded-full whitespace-nowrap">
-          {project.role.split("—")[0].trim()}
-        </span>
-      </div>
-
-      <p className="text-xs text-muted-foreground leading-relaxed mb-3 flex-1 font-light line-clamp-2">
-        {tx.description}
-      </p>
-
-      {/* Stack flat */}
-      <div className="flex flex-wrap gap-1.5 mb-4">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="px-2 py-0.5 text-[11px] rounded-full bg-primary/8 text-primary font-light"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex items-center gap-3 pt-3 border-t border-border">
-        {project.repoUrl && (
-          <a
-            href={project.repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <GithubIcon size={13} />
-          </a>
-        )}
-        {project.liveUrl && (
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <ExternalLink size={13} />
-          </a>
-        )}
-        <button
-          onClick={onDetails}
-          className="ml-auto flex items-center gap-1 text-xs text-primary font-light hover:gap-2 transition-all"
-        >
-          {tModal.viewDetail}
-          <ArrowUpRight size={12} />
-        </button>
       </div>
     </motion.article>
   );

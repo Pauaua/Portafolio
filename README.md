@@ -25,6 +25,7 @@ Este portafolio fue diseñado pensando en reclutadores técnicos: cada proyecto 
 | **Internacionalización** | Context API — ES / EN / FR |
 | **Emails** | Resend API |
 | **Fuentes** | Geist (headings) + Geist Mono (code) |
+| **SEO** | `robots.ts`, `sitemap.ts`, `manifest.ts`, OG image dinámica, JSON-LD |
 | **Deploy** | Vercel |
 
 ---
@@ -32,13 +33,15 @@ Este portafolio fue diseñado pensando en reclutadores técnicos: cada proyecto 
 ## Características
 
 - **Dark / Light mode** — toggle persistente con `localStorage`
-- **i18n ES / EN / FR** — cambio de idioma sin recarga de página
+- **i18n ES / EN / FR** — cambio de idioma sin recarga de página, incluyendo modales de proyecto con stack, bullets, decisión técnica y desafío traducidos
 - **Cursor personalizado** — dot + ring con estela de partículas y brillo lila
 - **Modales de proyecto** — stack, bullets de impacto, decisión técnica y desafío resuelto
+- **CV bilingüe** — botón de descarga con selector Español / English
 - **Formulario de contacto real** — envío a Gmail vía Resend API
 - **Side navigation** — puntos de sección fijos con tooltips, solo visible en desktop
 - **Easter egg** — escribe `hire me` en cualquier parte de la página y te sorprenderá 
 - **Favicon personalizado** — logo propio vía `app/icon.png` (Next.js App Router)
+- **SEO técnico** — robots, sitemap, manifest, Open Graph dinámico y datos estructurados JSON-LD
 
 ---
 
@@ -46,10 +49,14 @@ Este portafolio fue diseñado pensando en reclutadores técnicos: cada proyecto 
 
 | Proyecto | Stack | Tipo |
 |----------|-------|------|
-| Automatizador de Facturas SII | Python · PyQt5 · Selenium · Pandas | Escritorio |
-| CTRL — Gestión Usuarios/Proyectos | Java · Spring Boot · Thymeleaf · H2 | Web |
+| StayCool — Agenda Personal | React Native · Expo · TypeScript · Supabase | Móvil |
+| Asegalbyf Asesorías | Next.js · Prisma · Transbank · PostgreSQL | Web / E-commerce |
+| ALT — Asamblea Las Torres | Next.js · TypeScript · Prisma · Tailwind CSS | Web |
+| Aguas Mi Sur | Next.js 16 · Prisma 7 · PostgreSQL (Neon) | Web |
+| Suite de Automatización SII | Python · PyQt5 · Selenium · Pandas | Escritorio |
+| PhantasiaWeb | Next.js 16 · TypeScript · Prisma · i18n | Web |
+| Eclipse FM 107.7 | Next.js 14 · NextAuth v5 · Prisma · PostgreSQL | Web |
 | PlantiDex Mobile | Ionic · Angular · Capacitor · TypeScript | Móvil |
-| Automatizador de Boletas SII | Python · PyQt5 · Selenium | Escritorio |
 
 ---
 
@@ -59,15 +66,20 @@ Este portafolio fue diseñado pensando en reclutadores técnicos: cada proyecto 
 ├── app/                    # App Router de Next.js
 │   ├── page.tsx            # Landing page
 │   ├── contact/page.tsx    # Página de contacto
-│   └── api/contact/        # API route — Resend
+│   ├── api/contact/        # API route — Resend
+│   ├── robots.ts           # SEO — robots.txt dinámico
+│   ├── sitemap.ts          # SEO — sitemap dinámico
+│   ├── manifest.ts         # PWA manifest
+│   └── opengraph-image.tsx # OG image dinámica
 ├── components/
 │   ├── sections/           # Hero, About, Skills, Projects, Experience, Education...
 │   ├── layout/             # Navbar, Footer
-│   └── ui/                 # ProjectModal, CustomCursor, EasterEgg, SideNav...
+│   └── ui/                 # ProjectModal, ResumeDownloadButton, CustomCursor, EasterEgg, SideNav...
 ├── lib/
 │   ├── data.ts             # Fuente única de datos del portfolio
+│   ├── site-config.ts      # Configuración de dominio/SEO
 │   └── translations.ts     # Textos en ES / EN / FR
-└── public/                 # Assets estáticos
+└── public/                 # Assets estáticos (incluye CV en español e inglés)
 ```
 
 

@@ -19,6 +19,17 @@ const stackSections = ["frontend", "backend", "database", "tools"] as const;
 export default function ProjectModal({ project, onClose }: Props) {
   const { t } = useLanguage();
 
+  const tx = project
+    ? t.projects.items.find((item) => item.id === project.id) ?? {
+        title: project.title,
+        description: project.description,
+        role: project.role,
+        bullets: project.bullets,
+        decision: project.decision,
+        challenge: project.challenge,
+      }
+    : null;
+
   // Cerrar con Escape
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -78,11 +89,12 @@ export default function ProjectModal({ project, onClose }: Props) {
                   <p className="text-xs text-primary font-light tracking-widest uppercase mb-1">
                     {t.projectModal.role}
                   </p>
-                  <h2 className="text-xl font-light font-[family-name:var(--font-heading)] leading-snug">
-                    {project.title}
+                  <h2 className="flex items-center gap-2 text-xl font-light font-[family-name:var(--font-heading)] leading-snug">
+                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+                    {tx?.title}
                   </h2>
                   <p className="text-sm text-muted-foreground font-light mt-0.5">
-                    {project.role}
+                    {tx?.role}
                   </p>
                 </div>
                 <button
@@ -97,7 +109,7 @@ export default function ProjectModal({ project, onClose }: Props) {
               <div className="p-6 flex flex-col gap-7">
                 {/* Descripción */}
                 <p className="text-sm text-muted-foreground leading-relaxed font-light">
-                  {project.description}
+                  {tx?.description}
                 </p>
 
                 {/* Stack */}
@@ -137,7 +149,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                     {t.projectModal.whatIDid}
                   </h3>
                   <ul className="flex flex-col gap-2.5">
-                    {project.bullets.map((bullet, i) => (
+                    {tx?.bullets.map((bullet, i) => (
                       <li key={i} className="flex gap-3 text-sm text-muted-foreground font-light leading-relaxed">
                         <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-primary" />
                         {bullet}
@@ -154,7 +166,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                       {t.projectModal.decision}
                     </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed font-light">
-                      {project.decision}
+                      {tx?.decision}
                     </p>
                   </div>
                   <div className="p-4 rounded-xl border border-border bg-background">
@@ -163,7 +175,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                       {t.projectModal.challenge}
                     </h3>
                     <p className="text-xs text-muted-foreground leading-relaxed font-light">
-                      {project.challenge}
+                      {tx?.challenge}
                     </p>
                   </div>
                 </div>

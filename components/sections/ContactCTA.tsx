@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MessageCircle, FileDown, Mail } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 import { useLanguage } from "@/components/ui/LanguageProvider";
+import ResumeDownloadButton from "@/components/ui/ResumeDownloadButton";
 
 export default function ContactCTA() {
   const { t } = useLanguage();
@@ -45,14 +46,11 @@ export default function ContactCTA() {
                 <MessageCircle size={16} />
                 {t.cta.btn1}
               </a>
-              <a
-                href={personalInfo.resume}
-                download
+              <ResumeDownloadButton
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-border text-foreground font-light hover:border-primary/50 hover:bg-primary/5 transition-all duration-200"
-              >
-                <FileDown size={16} />
-                {t.cta.btn2}
-              </a>
+                icon={<FileDown size={16} />}
+                label={t.cta.btn2}
+              />
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-primary/40 text-primary font-light hover:bg-primary/10 hover:border-primary transition-all duration-200"

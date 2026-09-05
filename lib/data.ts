@@ -9,7 +9,7 @@ export const personalInfo = {
   tagline:
     "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
   // About bio 
-  bio: "Desarrolladora Full Stack con dominio real de frontend, backend, aplicaciones móviles híbridas y automatización de procesos (Next.js, Spring Boot, Python, Ionic), respaldado por más de una decena de proyectos productivos entregados en menos de dos años de formación formal. Ocho años previos como docente de Filosofía y directora de proyectos aportan comunicación técnica clara, gestión ágil y experiencia coordinando equipos y clientes — hoy aplicadas a levantar requerimientos y entregar software de principio a fin.",
+  bio: "Desarrolladora Full Stack con dominio real de frontend, backend, aplicaciones móviles híbridas y nativas, y automatización de procesos (Next.js, Spring Boot, Python, Ionic, React Native), respaldado por más de una decena de proyectos productivos entregados en menos de dos años de formación formal. Ocho años previos como docente de Filosofía y directora de proyectos aportan comunicación técnica clara, gestión ágil y experiencia coordinando equipos y clientes — hoy aplicadas a levantar requerimientos y entregar software de principio a fin.",
   location: "Santiago, RM. Chile",
   email: "paulinefugit@gmail.com",
   phone: "56974476368",
@@ -18,6 +18,7 @@ export const personalInfo = {
   available: true,
   avatar: "/images/avatar.jpg", // FALTA PONER IMAGEN
   resume: "/CV-Paulina-Acuna-Paiva.pdf",
+  resumeEn: "/CV_Paulina_Acuna_EN.pdf",
 };
 
 export const socialLinks = [
@@ -48,6 +49,7 @@ export const skills = [
       "Next.js",
       "Node.js",
       "Ionic / Angular",
+      "React Native / Expo",
       "PHP",
       "Laravel",
     ],
@@ -58,15 +60,41 @@ export const skills = [
   },
   {
     category: "Herramientas & Metodologías",
-    items: ["Git", "Figma", "Cursor", "VS Code", "Maven", "Postman", "MySQL Workbench", "Linear", "Scrum", "MVC", "DDD", "WordPress"],
+    items: ["Git", "Figma", "Cursor", "VS Code", "Maven", "Postman", "MySQL Workbench", "Linear", "Scrum", "MVC", "DDD", "WordPress", "TanStack Query"],
   },
   {
     category: "Cloud & Deploy",
-    items: ["Vercel", "Railway", "Supabase", "Cloudflare", "Docker"],
+    items: ["Vercel", "Railway", "Supabase", "Cloudflare", "Docker", "EAS Build", "RevenueCat", "PostHog", "Sentry"],
   },
 ];
 
 export const projects = [
+  {
+    id: 9,
+    title: "StayCool — Agenda Personal",
+    description:
+      "Aplicación móvil de agenda personal que registra bienestar, imagen personal, actividades sociales, higiene y gastos. Incluye suscripciones premium con RevenueCat, un sistema de recompensas gamificado (MOOney) para personalizar avatar, y 'Mi Resumen': generación de PDF con estadísticas de actividad. En desarrollo desde agosto 2026.",
+    role: "Desarrolladora única — proyecto personal",
+    stack: {
+      frontend: ["React Native 0.81", "React 19", "Expo SDK 54", "TypeScript", "NativeWind", "React Navigation"],
+      backend: ["Supabase (Auth, Storage, Edge Functions)", "TanStack Query"],
+      database: ["PostgreSQL (Supabase)"],
+      tools: ["EAS Build/Update", "RevenueCat", "PostHog", "Sentry"],
+    },
+    bullets: [
+      "Diseñé arquitectura modular por features (bienestar, imagen, cabello, higiene, social, gastos, preferencias, notas) con patrón consistente types/services/hooks/screens en cada módulo.",
+      "Implementé sistema de suscripciones premium (planes Basic y Full) con RevenueCat y recompensas gamificadas (MOOney) para personalización de avatar.",
+      "Construí generación de PDF con estadísticas de actividad ('Mi Resumen'), notificaciones push locales y deep links para recuperación de contraseña.",
+    ],
+    decision:
+      "Elegí Expo + React Native sobre desarrollo nativo separado para iOS/Android por la velocidad de iteración con EAS Build/Update, priorizando lanzar features rápido en una app aún en desarrollo activo.",
+    challenge:
+      "Mantener consistencia entre los múltiples módulos de feature (bienestar, imagen, higiene, etc.) exigió definir migraciones de base de datos numeradas y Edge Functions para operaciones sensibles, evitando lógica de negocio duplicada en el cliente.",
+    tags: ["React Native", "Expo", "TypeScript", "Supabase", "Mobile"],
+    liveUrl: "",
+    repoUrl: "https://github.com/PauFugit/StayCool",
+    featured: true,
+  },
   {
     id: 7,
     title: "PhantasiaWeb — Sitio Corporativo",
@@ -89,15 +117,15 @@ export const projects = [
     challenge:
       "Sincronizar el estado del formulario de 6 pasos entre pasos sin perder datos ante refrescos de página requirió persistencia intermedia en el cliente antes del envío final a la base de datos.",
     tags: ["Next.js", "TypeScript", "i18n", "Prisma", "PostgreSQL"],
-    liveUrl: "",
-    repoUrl: "",
+    liveUrl: "https://www.phantasia.cl",
+    repoUrl: "https://github.com/Pauaua/PhantasiaWeb",
     featured: false,
   },
   {
     id: 8,
     title: "Asegalbyf Asesorías — E-commerce",
     description:
-      "Plataforma e-commerce para una correduría de seguros. Dashboard administrable para gestión de servicios y checkout con integración de pagos Transbank. Desarrollado en solitario en 3 semanas y desplegado en producción.",
+      "Plataforma e-commerce para venta de servicios de asesorías. Dashboard administrable para gestión de servicios y checkout con integración de pagos Transbank. Desarrollado en solitario en 3 semanas y desplegado en producción.",
     role: "Desarrolladora única — proyecto freelance",
     stack: {
       frontend: ["Next.js", "Tailwind CSS"],
@@ -173,29 +201,29 @@ export const projects = [
     featured: true,
   },
   {
-    id: 3,
-    title: "Tienda Berbelis",
+    id: 10,
+    title: "ALT - Asamblea Las Torres",
     description:
-      "Plataforma e-commerce completa para venta de productos orgánicos de salud y estética. Catálogo con paginación y filtros, carrito persistente, checkout, panel de administración y formulario de contacto.",
-    role: "Desarrolladora única — proyecto freelance",
+      "Sitio web para Asamblea Las Torres, organización comunitaria autogestionada dedicada a la regeneración ambiental y social en Quilicura. Presenta la historia de la organización, catálogo de proyectos de reforestación (método Miyawaki) e intervenciones de arte urbano, y formulario de contacto para colaboraciones.",
+    role: "Desarrolladora única — proyecto personal / organización",
     stack: {
-      frontend: ["Next.js 15", "TypeScript", "Tailwind CSS v4"],
-      backend: ["Next.js API Routes", "Prisma 5"],
-      database: ["PostgreSQL", "Neon"],
+      frontend: ["Next.js", "TypeScript", "Tailwind CSS", "PostCSS"],
+      backend: ["Next.js API Routes", "Prisma"],
+      database: ["PostgreSQL"],
       tools: ["Vercel", "Git"],
     },
     bullets: [
-      "Desarrollé catálogo de productos con paginación y filtrado server-side, y carrito de compras persistente con Context API.",
-      "Construí panel de administración completo para gestión de productos, pedidos y mensajes de contacto.",
-      "Desplegué la aplicación en Vercel con base de datos PostgreSQL serverless en Neon, incluyendo migraciones post-deploy con Prisma.",
+      "Desarrollé catálogo de proyectos de reforestación y arte urbano organizados en tres ejes de trabajo: medioambiental, social y cultural.",
+      "Construí formulario de contacto para gestionar colaboraciones de vecinos y voluntarios interesados en participar.",
+      "Implementé galería visual de intervenciones realizadas y presentación de la organización desde su fundación en 2019.",
     ],
     decision:
-      "Elegí Next.js 15 con App Router para combinar Server Components (catálogo, SEO) con Client Components (carrito, interacciones), obteniendo lo mejor de SSR y SPA sin complejidad adicional.",
+      "Elegí Next.js con Prisma para mantener el contenido de proyectos y colaboraciones estructurado en base de datos, facilitando actualizaciones futuras sin tocar código, dado que la organización sigue sumando iniciativas de forma continua.",
     challenge:
-      "La sincronización del carrito entre Client Components y el estado del servidor requirió un Context API bien estructurado con persistencia en localStorage, garantizando que el carrito sobreviva recargas sin necesidad de autenticación.",
-    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    liveUrl: "https://tienda-berbelis.vercel.app/",
-    repoUrl: "https://github.com/Pauaua/TiendaBerbelis",
+      "Traducir el trabajo horizontal y autogestionado de la organización en una estructura de datos clara (proyectos, ejes, intervenciones) que fuera fácil de mantener por personas sin conocimientos técnicos.",
+    tags: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS"],
+    liveUrl: "https://www.asamblealastorres.cl",
+    repoUrl: "https://github.com/Pauaua/ALTREAL",
     featured: false,
   },
   {
@@ -222,32 +250,6 @@ export const projects = [
     tags: ["Ionic", "Angular", "TypeScript", "Capacitor"],
     liveUrl: "",
     repoUrl: "https://github.com/Pauaua/PlantidexMobile",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "CTRL — Gestión de Usuarios y Proyectos",
-    description:
-      "Aplicación web para la gestión de proyectos: usuarios, cargos, proyectos y tareas, con control de acceso por roles y soporte para despliegue en la nube.",
-    role: "Desarrolladora única — proyecto personal",
-    stack: {
-      frontend: ["Thymeleaf", "HTML/CSS", "JavaScript"],
-      backend: ["Java", "Spring Boot", "Spring Data JPA"],
-      database: ["H2 Database", "Hibernate"],
-      tools: ["Maven", "Git"],
-    },
-    bullets: [
-      "Implementé autenticación con sesiones y control de acceso basado en roles (ADMIN/USER) que protege rutas sensibles del panel de administración.",
-      "Desarrollé CRUD completo para usuarios y proyectos con búsqueda, filtrado y gestión de asociaciones usuario-proyecto.",
-      "Diseñé arquitectura MVC con separación de controllers, models y repositories siguiendo buenas prácticas de Spring Boot.",
-    ],
-    decision:
-      "Elegí H2 Database sobre MySQL para facilitar la portabilidad y ejecución sin configuración externa. La persistencia file-based garantiza que los datos sobreviven reinicios de la aplicación sin depender de un servidor de base de datos.",
-    challenge:
-      "La gestión de permisos diferenciados entre ADMIN y USER requirió validaciones en múltiples capas: controladores, vistas Thymeleaf (th:if con roles) y nivel de sesión, para evitar accesos no autorizados por manipulación directa de URLs.",
-    tags: ["Java", "Spring Boot", "Thymeleaf", "H2"],
-    liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/Plantidex",
     featured: false,
   },
   {
