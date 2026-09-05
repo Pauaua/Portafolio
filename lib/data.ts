@@ -177,7 +177,7 @@ export const projects = [
     id: 2,
     title: "Suite de Automatización SII",
     description:
-      "Conjunto de dos herramientas de escritorio para automatizar operaciones tributarias en el portal del SII. El módulo de facturas electrónicas soporta procesamiento individual y masivo desde Excel, hasta 3 hilos concurrentes con Selenium WebDriver, modo headless y generación automática de reportes, distribuido con instalador profesional (PyInstaller + Inno Setup). El módulo de boletas de honorarios implementa el flujo completo: autenticación con RUT/clave, procesamiento individual y masivo desde Excel, modo headless y generación de reportes al finalizar. Ambos módulos comparten la misma arquitectura base (PyQt5 + QThread + Selenium) con monitoreo de logs en tiempo real.",
+      "Conjunto de dos herramientas de escritorio para automatizar operaciones tributarias en el portal del SII. El módulo de facturas electrónicas soporta procesamiento individual y masivo desde Excel, hasta 3 hilos concurrentes con Selenium WebDriver, modo headless y generación automática de reportes, distribuido con instalador profesional (PyInstaller + Inno Setup). El módulo de boletas de honorarios implementa el flujo completo: autenticación con RUT/clave, procesamiento individual y masivo desde Excel, modo headless y generación de reportes al finalizar. Ambos módulos comparten la misma arquitectura base (PyQt5 + QThread + Selenium) con monitoreo de logs en tiempo real. Actualmente desplegado en la página de Asesorías Valdivia.",
     role: "Desarrolladora única — 2026",
     stack: {
       frontend: ["PyQt5"],
