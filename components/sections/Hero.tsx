@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, Download, ArrowRight } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 import { useLanguage } from "@/components/ui/LanguageProvider";
+import ResumeDownloadButton from "@/components/ui/ResumeDownloadButton";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -94,14 +95,11 @@ export default function Hero() {
             {t.hero.cta1}
             <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
           </a>
-          <a
-            href={personalInfo.resume}
-            download
+          <ResumeDownloadButton
             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-border text-foreground font-light hover:border-primary/50 hover:bg-primary/5 transition-all duration-200"
-          >
-            <Download size={15} />
-            {t.hero.cta2}
-          </a>
+            icon={<Download size={15} />}
+            label={t.hero.cta2}
+          />
         </motion.div>
 
         {/* Scroll indicator */}

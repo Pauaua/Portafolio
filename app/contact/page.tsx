@@ -4,8 +4,19 @@ import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/sections/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contacto — Paulina Acuña",
-  description: "Envíame un mensaje para hablar sobre tu proyecto o colaboración.",
+  title: "Contacto",
+  description:
+    "Contacta a Paulina Acuña Paiva, desarrolladora Full Stack, para hablar sobre tu proyecto, colaboración o una posición full-time.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contacto — Paulina Acuña Paiva",
+    description:
+      "Contacta a Paulina Acuña Paiva, desarrolladora Full Stack, para hablar sobre tu proyecto o colaboración.",
+    url: "/contact",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {
