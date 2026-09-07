@@ -18,7 +18,7 @@ export const personalInfo = {
   available: true,
   avatar: "/images/avatar.jpg", // FALTA PONER IMAGEN
   resume: "/CV-Paulina-Acuna-Paiva.pdf",
-  resumeEn: "/CV_Paulina_Acuna_EN.pdf",
+  resumeEn: "/CV-Paulina-Acuna_EN.pdf",
 };
 
 export const socialLinks = [
