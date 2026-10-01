@@ -227,32 +227,6 @@ export const projects = [
     featured: false,
   },
   {
-    id: 4,
-    title: "PlantiDex Mobile",
-    description:
-      "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa a nivel comunitario. Soporta captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
-    role: "Desarrolladora única — proyecto académico",
-    stack: {
-      frontend: ["Ionic 8", "Angular 20", "TypeScript", "SCSS"],
-      backend: ["Capacitor", "RxJS"],
-      database: ["@ionic/storage-angular", "localForage"],
-      tools: ["@capacitor/camera", "@capacitor/geolocation", "Karma / Jasmine", "Git"],
-    },
-    bullets: [
-      "Implementé integración nativa de cámara y GPS con Capacitor, solicitando permisos Android en tiempo de ejecución con feedback claro al usuario en caso de denegación.",
-      "Desarrollé persistencia offline-first con @ionic/storage-angular (localForage) para registrar observaciones en campo sin necesidad de conexión a internet.",
-      "Construí gestión de estado reactiva con BehaviorSubject de RxJS para mantener la lista de especies sincronizada en tiempo real a través de múltiples vistas.",
-    ],
-    decision:
-      "Elegí Ionic + Angular + Capacitor por la combinación de productividad web con acceso real a hardware nativo (cámara, GPS). El enfoque offline-first con localForage fue clave para garantizar usabilidad en zonas rurales con conectividad limitada.",
-    challenge:
-      "La integración de permisos nativos de Android con Capacitor requirió manejo explícito de estados (concedido/denegado/no solicitado) en cada sesión. Resolví implementando un servicio de permisos centralizado que evalúa el estado antes de cada llamada a cámara o GPS.",
-    tags: ["Ionic", "Angular", "TypeScript", "Capacitor"],
-    liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/PlantidexMobile",
-    featured: false,
-  },
-  {
     id: 6,
     title: "Aguas Mi Sur — Sitio Institucional",
     description:
