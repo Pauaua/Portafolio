@@ -81,22 +81,6 @@ export const translations = {
             "La sincronización de hasta 3 instancias de Chrome simultáneas generaba condiciones de carrera en el sistema de logs. Resolví implementando una cola thread-safe con queue.Queue de Python para garantizar la integridad de los registros.",
         },
         {
-          id: 4,
-          title: "PlantiDex Mobile",
-          description:
-            "Aplicación móvil híbrida para registrar y compartir observaciones de flora nativa. Captura de fotos, geolocalización GPS y persistencia offline-first para uso en campo sin conexión.",
-          role: "Desarrolladora única — proyecto académico",
-          bullets: [
-            "Implementé integración nativa de cámara y GPS con Capacitor, solicitando permisos Android en tiempo de ejecución con feedback claro al usuario en caso de denegación.",
-            "Desarrollé persistencia offline-first con @ionic/storage-angular (localForage) para registrar observaciones en campo sin necesidad de conexión a internet.",
-            "Construí gestión de estado reactiva con BehaviorSubject de RxJS para mantener la lista de especies sincronizada en tiempo real a través de múltiples vistas.",
-          ],
-          decision:
-            "Elegí Ionic + Angular + Capacitor por la combinación de productividad web con acceso real a hardware nativo (cámara, GPS). El enfoque offline-first con localForage fue clave para garantizar usabilidad en zonas rurales con conectividad limitada.",
-          challenge:
-            "La integración de permisos nativos de Android con Capacitor requirió manejo explícito de estados (concedido/denegado/no solicitado) en cada sesión. Resolví implementando un servicio de permisos centralizado que evalúa el estado antes de cada llamada a cámara o GPS.",
-        },
-        {
           id: 6,
           title: "Aguas Mi Sur — Sitio Institucional",
           description:
@@ -390,22 +374,6 @@ export const translations = {
             "Synchronizing up to 3 simultaneous Chrome instances created race conditions in the logging system. I solved it by implementing a thread-safe queue with Python's queue.Queue to guarantee log integrity.",
         },
         {
-          id: 4,
-          title: "PlantiDex Mobile",
-          description:
-            "Hybrid mobile app for recording and sharing native plant species observations. Photo capture, GPS geolocation and offline-first persistence for field use without internet.",
-          role: "Sole developer — academic project",
-          bullets: [
-            "Implemented native camera and GPS integration with Capacitor, requesting Android permissions at runtime with clear user feedback on denial.",
-            "Developed offline-first persistence with @ionic/storage-angular (localForage) to record field observations without an internet connection.",
-            "Built reactive state management with RxJS's BehaviorSubject to keep the species list synchronized in real time across multiple views.",
-          ],
-          decision:
-            "I chose Ionic + Angular + Capacitor for the combination of web productivity with real access to native hardware (camera, GPS). The offline-first approach with localForage was key to ensuring usability in rural areas with limited connectivity.",
-          challenge:
-            "Integrating native Android permissions with Capacitor required explicit handling of states (granted/denied/not requested) each session. I solved it by implementing a centralized permissions service that checks status before every camera or GPS call.",
-        },
-        {
           id: 6,
           title: "Aguas Mi Sur — Institutional Website",
           description:
@@ -696,22 +664,6 @@ export const translations = {
             "J'ai opté pour Selenium plutôt que les API directes du SII car le portail n'expose pas d'endpoints publics. L'architecture de workers en QThread garde l'interface réactive pendant le traitement concurrent.",
           challenge:
             "La synchronisation de jusqu'à 3 instances Chrome simultanées créait des conditions de concurrence dans le système de logs. J'ai résolu cela en implémentant une file thread-safe avec queue.Queue de Python pour garantir l'intégrité des enregistrements.",
-        },
-        {
-          id: 4,
-          title: "PlantiDex Mobile",
-          description:
-            "Application mobile hybride pour enregistrer et partager des observations de flore native. Capture photo, géolocalisation GPS et persistance offline-first pour une utilisation terrain sans connexion.",
-          role: "Développeuse unique — projet académique",
-          bullets: [
-            "J'ai implémenté l'intégration native caméra et GPS avec Capacitor, en demandant les permissions Android à l'exécution avec un retour clair à l'utilisateur en cas de refus.",
-            "J'ai développé une persistance offline-first avec @ionic/storage-angular (localForage) pour enregistrer les observations sur le terrain sans connexion internet.",
-            "J'ai construit une gestion d'état réactive avec BehaviorSubject de RxJS pour garder la liste des espèces synchronisée en temps réel à travers plusieurs vues.",
-          ],
-          decision:
-            "J'ai choisi Ionic + Angular + Capacitor pour combiner la productivité web avec un accès réel au matériel natif (caméra, GPS). L'approche offline-first avec localForage était essentielle pour garantir l'utilisabilité dans les zones rurales à connectivité limitée.",
-          challenge:
-            "L'intégration des permissions natives Android avec Capacitor a nécessité une gestion explicite des états (accordé/refusé/non demandé) à chaque session. J'ai résolu cela en implémentant un service de permissions centralisé qui vérifie l'état avant chaque appel caméra ou GPS.",
         },
         {
           id: 6,
