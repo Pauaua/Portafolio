@@ -6,7 +6,8 @@
       "Bash(npm install:*)",
       "Bash(ls:*)",
       "Bash(cp:*)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
