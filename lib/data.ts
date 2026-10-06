@@ -4,12 +4,12 @@
 
 export const personalInfo = {
   name: "Paulina Acuña Paiva",
-  role: "Desarrolladora Full Stack",
+  role: "Desarrolladora de Software",
   // Hero tagline
   tagline:
     "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
   // About bio 
-  bio: "Desarrolladora Full Stack con dominio real de frontend, backend, aplicaciones móviles híbridas y nativas, y automatización de procesos (Next.js, Spring Boot, Python, Ionic, React Native), respaldado por más de una decena de proyectos productivos entregados en menos de dos años de formación formal. Ocho años previos como docente de Filosofía y directora de proyectos aportan comunicación técnica clara, gestión ágil y experiencia coordinando equipos y clientes — hoy aplicadas a levantar requerimientos y entregar software de principio a fin.",
+  bio: "Desarrolladora de Software con dominio real de frontend, backend, aplicaciones móviles híbridas y nativas, y automatización de procesos (Next.js, Spring Boot, Python, Ionic, React Native), respaldado por más de una decena de proyectos productivos entregados en menos de dos años de formación formal. Ocho años previos como docente de Filosofía y directora de proyectos aportan comunicación técnica clara, gestión ágil y experiencia coordinando equipos y clientes — hoy aplicadas a levantar requerimientos y entregar software de principio a fin.",
   location: "Santiago, RM. Chile",
   email: "paulinefugit@gmail.com",
   phone: "56974476368",
@@ -251,6 +251,33 @@ export const projects = [
     liveUrl: "https://aguasmisur.vercel.app/",
     repoUrl: "https://github.com/Pauaua/MiSur",
     featured: false,
+  },
+  {
+    id: 11,
+    title: "NotMubi — Plataforma de Streaming de Cine de Culto",
+    description:
+      "Plataforma de streaming full-stack para cine de culto, construida como arquitectura de microservicios con 5 servicios independientes (API Gateway, Discovery Server, Auth, Catalog, Subscription). Autenticación JWT centralizada en el Gateway con validación stateless entre servicios, comunicación entre microservicios vía OpenFeign + Eureka sin URLs hardcodeadas, y una base de datos PostgreSQL independiente por bounded context. Infraestructura reproducible con Docker Compose y frontend en React + Vite.",
+    role: "Desarrolladora única — proyecto personal de portafolio",
+    stack: {
+      frontend: ["React 18", "Vite", "React Router", "Axios"],
+      backend: ["Spring Boot 3.3.4", "Spring Cloud 2023.0.3", "Spring Cloud Gateway", "Netflix Eureka", "OpenFeign", "Spring Security", "Spring Data JPA", "jjwt 0.12.6"],
+      database: ["PostgreSQL 16", "Hibernate 6.5"],
+      tools: ["Docker", "Docker Compose", "Maven", "PgAdmin", "Git"],
+    },
+    bullets: [
+      "Diseñé y construí una arquitectura de microservicios con 5 servicios independientes: API Gateway reactivo, Discovery Server (Eureka), Auth Service, Catalog Service y Subscription Service, cada uno con su propia base de datos PostgreSQL.",
+      "Implementé autenticación JWT centralizada en el Gateway, con validación stateless por petición, propagación del contexto de usuario (userId, username, role) vía headers internos X-User-* y control de acceso por rol (USER vs ADMIN).",
+      "Desarrollé comunicación entre servicios con OpenFeign + Eureka, eliminando URLs hardcodeadas: el Catalog Service compone respuestas enriquecidas llamando al Auth Service vía descubrimiento dinámico de servicios.",
+      "Configuré CORS centralizado en el Gateway con CorsWebFilter reactivo y reglas de rutas públicas/privadas por filtro personalizado, y orquesté toda la infraestructura con Docker Compose (PostgreSQL + PgAdmin con múltiples bases de datos autogeneradas).",
+    ],
+    decision:
+      "Opté por microservicios con Spring Cloud en lugar de un monolito para practicar los patrones reales de arquitecturas distribuidas: service discovery, API Gateway, seguridad centralizada y comunicación entre servicios sin acoplamiento por URLs. Cada servicio mantiene su propio bounded context y base de datos, respetando la independencia de despliegue y consistencia eventual.",
+    challenge:
+      "El mayor reto fue la depuración de problemas típicos de sistemas distribuidos: conflictos de puertos entre servicios, caché de Eureka con el orden de arranque, propagación correcta del contexto de usuario desde el JWT hasta los servicios internos, y configuración de CORS en un Gateway reactivo con filtros personalizados. También requirió ajustar la versión de Lombok y el annotation processor para compatibilidad con Java 21 en un proyecto multi-módulo Maven.",
+    tags: ["Spring Boot", "Spring Cloud", "Microservicios", "JWT", "Docker", "React", "PostgreSQL"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/NotMubi",
+    featured: true,
   },
 ];
 

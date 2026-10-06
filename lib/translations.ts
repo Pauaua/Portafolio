@@ -160,6 +160,33 @@ export const translations = {
           challenge:
             "Traducir el trabajo horizontal y autogestionado de la organización en una estructura de datos clara (proyectos, ejes, intervenciones) que fuera fácil de mantener por personas sin conocimientos técnicos.",
         },
+          {
+    id: 7,
+    title: "NotMubi — Plataforma de Streaming de Cine de Culto",
+    description:
+      "Plataforma de streaming full-stack para cine de culto, construida como arquitectura de microservicios con 5 servicios independientes (API Gateway, Discovery Server, Auth, Catalog, Subscription). Autenticación JWT centralizada en el Gateway con validación stateless entre servicios, comunicación entre microservicios vía OpenFeign + Eureka sin URLs hardcodeadas, y una base de datos PostgreSQL independiente por bounded context. Infraestructura reproducible con Docker Compose y frontend en React + Vite.",
+    role: "Desarrolladora única — proyecto personal de portafolio",
+    stack: {
+      frontend: ["React 18", "Vite", "React Router", "Axios"],
+      backend: ["Spring Boot 3.3.4", "Spring Cloud 2023.0.3", "Spring Cloud Gateway", "Netflix Eureka", "OpenFeign", "Spring Security", "Spring Data JPA", "jjwt 0.12.6"],
+      database: ["PostgreSQL 16", "Hibernate 6.5"],
+      tools: ["Docker", "Docker Compose", "Maven", "PgAdmin", "Git"],
+    },
+    bullets: [
+      "Diseñé y construí una arquitectura de microservicios con 5 servicios independientes: API Gateway reactivo, Discovery Server (Eureka), Auth Service, Catalog Service y Subscription Service, cada uno con su propia base de datos PostgreSQL.",
+      "Implementé autenticación JWT centralizada en el Gateway, con validación stateless por petición, propagación del contexto de usuario (userId, username, role) vía headers internos X-User-* y control de acceso por rol (USER vs ADMIN).",
+      "Desarrollé comunicación entre servicios con OpenFeign + Eureka, eliminando URLs hardcodeadas: el Catalog Service compone respuestas enriquecidas llamando al Auth Service vía descubrimiento dinámico de servicios.",
+      "Configuré CORS centralizado en el Gateway con CorsWebFilter reactivo y reglas de rutas públicas/privadas por filtro personalizado, y orquesté toda la infraestructura con Docker Compose (PostgreSQL + PgAdmin con múltiples bases de datos autogeneradas).",
+    ],
+    decision:
+      "Opté por microservicios con Spring Cloud en lugar de un monolito para practicar los patrones reales de arquitecturas distribuidas: service discovery, API Gateway, seguridad centralizada y comunicación entre servicios sin acoplamiento por URLs. Cada servicio mantiene su propio bounded context y base de datos, respetando la independencia de despliegue y consistencia eventual.",
+    challenge:
+      "El mayor reto fue la depuración de problemas típicos de sistemas distribuidos: conflictos de puertos entre servicios, caché de Eureka con el orden de arranque, propagación correcta del contexto de usuario desde el JWT hasta los servicios internos, y configuración de CORS en un Gateway reactivo con filtros personalizados. También requirió ajustar la versión de Lombok y el annotation processor para compatibilidad con Java 21 en un proyecto multi-módulo Maven.",
+    tags: ["Spring Boot", "Spring Cloud", "Microservicios", "JWT", "Docker", "React", "PostgreSQL"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/NotMubi",
+    featured: true,
+  },
       ],
     },
     experience: {
@@ -453,6 +480,33 @@ export const translations = {
           challenge:
             "Translating the organization's horizontal, self-managed work into a clear data structure (projects, work areas, interventions) that would be easy to maintain for people without technical knowledge.",
         },
+          {
+    id: 7,
+    title: "NotMubi — Cult Movie Streaming Platform",
+    description:
+      "Full-stack streaming platform for cult cinema, built as a microservices architecture with 5 independent services (API Gateway, Discovery Server, Auth, Catalog, Subscription). JWT authentication centralized in the Gateway with stateless validation across services, inter-service communication via OpenFeign + Eureka without hardcoded URLs, and an independent PostgreSQL database per bounded context. Reproducible infrastructure with Docker Compose and a React + Vite frontend.",
+    role: "Solo Developer — personal portfolio project",
+    stack: {
+      frontend: ["React 18", "Vite", "React Router", "Axios"],
+      backend: ["Spring Boot 3.3.4", "Spring Cloud 2023.0.3", "Spring Cloud Gateway", "Netflix Eureka", "OpenFeign", "Spring Security", "Spring Data JPA", "jjwt 0.12.6"],
+      database: ["PostgreSQL 16", "Hibernate 6.5"],
+      tools: ["Docker", "Docker Compose", "Maven", "PgAdmin", "Git"],
+    },
+    bullets: [
+      "Designed and built a microservices architecture with 5 independent services: reactive API Gateway, Discovery Server (Eureka), Auth Service, Catalog Service, and Subscription Service, each with its own PostgreSQL database.",
+      "Implemented JWT authentication centralized in the Gateway, with stateless per-request validation, user context propagation (userId, username, role) through internal X-User-* headers, and role-based access control (USER vs ADMIN).",
+      "Developed inter-service communication with OpenFeign + Eureka, removing hardcoded URLs: the Catalog Service composes enriched responses by calling the Auth Service through dynamic service discovery.",
+      "Configured centralized CORS in the Gateway with a reactive CorsWebFilter and public/private route rules via a custom filter, and orchestrated the whole infrastructure with Docker Compose (PostgreSQL + PgAdmin with multiple auto-generated databases).",
+    ],
+    decision:
+      "I chose microservices with Spring Cloud over a monolith to practice real distributed architecture patterns: service discovery, API Gateway, centralized security, and inter-service communication without URL coupling. Each service keeps its own bounded context and database, respecting deployment independence and eventual consistency.",
+    challenge:
+      "The biggest challenge was debugging typical distributed system issues: port conflicts between services, Eureka cache with startup order, correct user context propagation from the JWT to internal services, and CORS configuration in a reactive Gateway with custom filters. It also required adjusting the Lombok version and annotation processor for compatibility with Java 21 in a multi-module Maven project.",
+    tags: ["Spring Boot", "Spring Cloud", "Microservices", "JWT", "Docker", "React", "PostgreSQL"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/NotMubi",
+    featured: true,
+  },
       ],
     },
     experience: {
@@ -745,6 +799,33 @@ export const translations = {
           challenge:
             "Traduire le travail horizontal et autogéré de l'organisation en une structure de données claire (projets, axes, interventions) facile à maintenir par des personnes sans connaissances techniques.",
         },
+          {
+    id: 7,
+    title: "NotMubi — Plateforme de Streaming de Films Cultes",
+    description:
+      "Plateforme de streaming full-stack dédiée au cinéma culte, construite comme une architecture de microservices avec 5 services indépendants (API Gateway, Discovery Server, Auth, Catalog, Subscription). Authentification JWT centralisée dans le Gateway avec validation stateless entre services, communication inter-services via OpenFeign + Eureka sans URLs codées en dur, et une base de données PostgreSQL indépendante par bounded context. Infrastructure reproductible avec Docker Compose et frontend en React + Vite.",
+    role: "Développeuse unique — projet personnel de portfolio",
+    stack: {
+      frontend: ["React 18", "Vite", "React Router", "Axios"],
+      backend: ["Spring Boot 3.3.4", "Spring Cloud 2023.0.3", "Spring Cloud Gateway", "Netflix Eureka", "OpenFeign", "Spring Security", "Spring Data JPA", "jjwt 0.12.6"],
+      database: ["PostgreSQL 16", "Hibernate 6.5"],
+      tools: ["Docker", "Docker Compose", "Maven", "PgAdmin", "Git"],
+    },
+    bullets: [
+      "J'ai conçu et développé une architecture de microservices avec 5 services indépendants : API Gateway réactif, Discovery Server (Eureka), Auth Service, Catalog Service et Subscription Service, chacun avec sa propre base de données PostgreSQL.",
+      "J'ai implémenté une authentification JWT centralisée dans le Gateway, avec validation stateless à chaque requête, propagation du contexte utilisateur (userId, username, role) via des en-têtes internes X-User-*, et contrôle d'accès basé sur les rôles (USER vs ADMIN).",
+      "J'ai développé la communication inter-services avec OpenFeign + Eureka, en éliminant les URLs codées en dur : le Catalog Service compose des réponses enrichies en appelant l'Auth Service via la découverte dynamique de services.",
+      "J'ai configuré CORS de manière centralisée dans le Gateway avec un CorsWebFilter réactif et des règles de routes publiques/privées via un filtre personnalisé, et orchestré toute l'infrastructure avec Docker Compose (PostgreSQL + PgAdmin avec plusieurs bases de données auto-générées).",
+    ],
+    decision:
+      "J'ai choisi les microservices avec Spring Cloud plutôt qu'un monolithe pour pratiquer les vrais patterns des architectures distribuées : service discovery, API Gateway, sécurité centralisée et communication inter-services sans couplage par URLs. Chaque service conserve son propre bounded context et sa propre base de données, en respectant l'indépendance de déploiement et la cohérence à terme.",
+    challenge:
+      "Le plus grand défi a été le débogage des problèmes typiques des systèmes distribués : conflits de ports entre services, cache d'Eureka selon l'ordre de démarrage, propagation correcte du contexte utilisateur depuis le JWT vers les services internes, et configuration CORS dans un Gateway réactif avec filtres personnalisés. Il a également fallu ajuster la version de Lombok et l'annotation processor pour la compatibilité avec Java 21 dans un projet Maven multi-modules.",
+    tags: ["Spring Boot", "Spring Cloud", "Microservices", "JWT", "Docker", "React", "PostgreSQL"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/NotMubi",
+    featured: true,
+  },
       ],
     },
     experience: {

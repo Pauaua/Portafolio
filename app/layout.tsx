@@ -21,9 +21,9 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500"],
 });
 
-const title = "Paulina Acuña Paiva — Desarrolladora Full Stack";
+const title = "Paulina Acuña Paiva — Desarrolladora de Software";
 const description =
-  "Desarrolladora Full Stack disponible para contratación. Especialista en Java Spring Boot, Python, React y Next.js. Santiago, Chile.";
+  "Desarrolladora de Software disponible para contratación. Especialista en Java Spring Boot, Python, React y Next.js. Santiago, Chile.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    "desarrolladora full stack",
-    "desarrolladora full stack Chile",
+    "desarrolladora de Software",
+    "desarrolladora de Software Chile",
     "Java Spring Boot",
     "React",
     "Next.js",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description:
-      "Disponible para posiciones full-time y freelance. Full stack con conocimientos en Java, Python y React.",
+      "Disponible para posiciones full-time y freelance. de Software con conocimientos en Java, Python y React.",
     type: "website",
     url: SITE_URL,
     siteName: `${personalInfo.name} — Portfolio`,
