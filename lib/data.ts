@@ -39,36 +39,109 @@ export const skills = [
     category: "Lenguajes & Frameworks",
     items: [
       "Java",
-      "Spring Boot",
       "Python",
-      "Flask",
       "JavaScript (ES6+)",
       "TypeScript",
       "HTML5 / CSS3",
+      "Spring Boot",
       "React",
       "Next.js",
       "Node.js",
+      "React Native",
+      "Expo",
       "Ionic / Angular",
-      "React Native / Expo",
+      "Flask",
       "PHP",
       "Laravel",
+      "Tailwind CSS",
+      "NativeWind",
+      "Framer Motion",
     ],
   },
   {
-    category: "Bases de Datos & ORM",
-    items: ["MySQL", "PostgreSQL", "Oracle SQL", "Prisma", "SQLAlchemy", "Spring Data JPA"],
+    category: "Arquitectura & Patrones",
+    items: ["Microservicios", "Spring Cloud", "Eureka", "API Gateway", "OpenFeign", "JWT", "REST", "Service Discovery", "CORS", "DDD", "MVC"],
   },
   {
-    category: "Herramientas & Metodologías",
-    items: ["Git", "Figma", "Cursor", "VS Code", "Maven", "Postman", "MySQL Workbench", "Linear", "Scrum", "MVC", "DDD", "WordPress", "TanStack Query"],
+    category: "Bases de Datos & ORM",
+    items: ["MySQL", "PostgreSQL", "Oracle SQL", "Prisma", "SQLAlchemy", "JPA"],
+  },
+  {
+    category: "State & Data",
+    items: ["TanStack Query", "Zod"],
   },
   {
     category: "Cloud & Deploy",
-    items: ["Vercel", "Railway", "Supabase", "Cloudflare", "Docker", "EAS Build", "RevenueCat", "PostHog", "Sentry"],
+    items: ["Vercel", "Railway", "Supabase", "Cloudflare", "Docker", "EAS Build"],
+  },
+  {
+    category: "Testing & Monitoreo",
+    items: ["Jest", "PostHog", "Sentry"],
+  },
+  {
+    category: "Herramientas",
+    items: ["Git", "VS Code", "Figma", "Maven", "Postman", "WordPress"],
+  },
+  {
+    category: "Metodologías",
+    items: ["Scrum", "Desarrollo Ágil", "Gestión de Proyectos"],
   },
 ];
 
 export const projects = [
+  {
+    id: 11,
+    title: "NotMubi — Plataforma de Streaming de Cine de Culto",
+    description:
+      "Plataforma de streaming full-stack para cine de culto, construida como arquitectura de microservicios con 5 servicios independientes (API Gateway, Discovery Server, Auth, Catalog, Subscription). Autenticación JWT centralizada en el Gateway con validación stateless entre servicios, comunicación entre microservicios vía OpenFeign + Eureka sin URLs hardcodeadas, y una base de datos PostgreSQL independiente por bounded context. Infraestructura reproducible con Docker Compose y frontend en React + Vite.",
+    role: "Desarrolladora única — proyecto personal de portafolio",
+    stack: {
+      frontend: ["React 18", "Vite", "React Router", "Axios"],
+      backend: ["Spring Boot 3.3.4", "Spring Cloud 2023.0.3", "Spring Cloud Gateway", "Netflix Eureka", "OpenFeign", "Spring Security", "Spring Data JPA", "jjwt 0.12.6"],
+      database: ["PostgreSQL 16", "Hibernate 6.5"],
+      tools: ["Docker", "Docker Compose", "Maven", "PgAdmin", "Git"],
+    },
+    bullets: [
+      "Diseñé y construí una arquitectura de microservicios con 5 servicios independientes: API Gateway reactivo, Discovery Server (Eureka), Auth Service, Catalog Service y Subscription Service, cada uno con su propia base de datos PostgreSQL.",
+      "Implementé autenticación JWT centralizada en el Gateway, con validación stateless por petición, propagación del contexto de usuario (userId, username, role) vía headers internos X-User-* y control de acceso por rol (USER vs ADMIN).",
+      "Desarrollé comunicación entre servicios con OpenFeign + Eureka, eliminando URLs hardcodeadas: el Catalog Service compone respuestas enriquecidas llamando al Auth Service vía descubrimiento dinámico de servicios.",
+      "Configuré CORS centralizado en el Gateway con CorsWebFilter reactivo y reglas de rutas públicas/privadas por filtro personalizado, y orquesté toda la infraestructura con Docker Compose (PostgreSQL + PgAdmin con múltiples bases de datos autogeneradas).",
+    ],
+    decision:
+      "Opté por microservicios con Spring Cloud en lugar de un monolito para practicar los patrones reales de arquitecturas distribuidas: service discovery, API Gateway, seguridad centralizada y comunicación entre servicios sin acoplamiento por URLs. Cada servicio mantiene su propio bounded context y base de datos, respetando la independencia de despliegue y consistencia eventual.",
+    challenge:
+      "El mayor reto fue la depuración de problemas típicos de sistemas distribuidos: conflictos de puertos entre servicios, caché de Eureka con el orden de arranque, propagación correcta del contexto de usuario desde el JWT hasta los servicios internos, y configuración de CORS en un Gateway reactivo con filtros personalizados. También requirió ajustar la versión de Lombok y el annotation processor para compatibilidad con Java 21 en un proyecto multi-módulo Maven.",
+    tags: ["Spring Boot", "Spring Cloud", "Microservicios", "JWT", "Docker", "React", "PostgreSQL"],
+    liveUrl: "",
+    repoUrl: "https://github.com/Pauaua/NotMubi",
+    featured: true,
+  },
+  {
+    id: 1,
+    title: "Eclipse FM 107.7 — Web & Dashboard",
+    description:
+      "Plataforma web full-stack para Radio Eclipse FM 107.7 (Quilicura). Sitio público con reproductor de audio en vivo, chat integrado, grilla de programación semanal, carrusel de auspiciadores, blog y noticias. Panel de administración con 3 roles (Admin, SubAdmin, Team) para gestión completa de usuarios, programas, sponsors y contenidos. Autenticación con NextAuth v5 + Prisma Adapter + bcryptjs, base de datos PostgreSQL serverless (Neon), emails transaccionales con Resend y validación con Zod.",
+    role: "Desarrolladora única — proyecto freelance",
+    stack: {
+      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      backend: ["Next.js API Routes", "NextAuth v5", "Prisma ORM", "bcryptjs", "Resend", "Zod"],
+      database: ["PostgreSQL", "Neon"],
+      tools: ["Vercel", "Git"],
+    },
+    bullets: [
+      "Implementé reproductor de audio streaming en tiempo real con chat integrado, permitiendo a los oyentes interactuar durante las transmisiones en vivo.",
+      "Desarrollé dashboard de administración con roles diferenciados (Admin/SubAdmin/Team) para gestión de programas, sponsors, blog y noticias.",
+      "Construí grilla de programación semanal, catálogo de programas y sección de noticias locales con sistema completo de gestión de contenidos.",
+    ],
+    decision:
+      "Elegí NextAuth v5 para la autenticación del dashboard por su integración nativa con Next.js App Router y soporte flexible de providers. La separación entre sitio público y panel admin en la misma base de código simplifica el despliegue y mantenimiento.",
+    challenge:
+      "Mantener el reproductor de streaming activo entre navegaciones sin interrumpir la reproducción requirió un contexto global que persiste el estado del audio fuera del árbol de rutas, evitando que el componente se desmonte al cambiar de página.",
+    tags: ["Next.js", "TypeScript", "NextAuth v5", "Prisma", "PostgreSQL", "Resend"],
+    liveUrl: "https://eclipse-fm.vercel.app",
+    repoUrl: "https://github.com/Pauaua/EclipseFM",
+    featured: true,
+  },
   {
     id: 9,
     title: "StayCool — Agenda Personal",
@@ -96,32 +169,6 @@ export const projects = [
     featured: true,
   },
   {
-    id: 7,
-    title: "PhantasiaWeb — Sitio Corporativo",
-    description:
-      "Sitio web corporativo para Phantasia, estudio de diseño y desarrollo de software. Internacionalización en tres idiomas (ES/EN/FR) con routing por locale, modo oscuro/claro con detección de preferencia del sistema, y formulario de onboarding de 6 pasos que persiste leads en base de datos y envía notificaciones automáticas por email.",
-    role: "Desarrolladora única — proyecto freelance",
-    stack: {
-      frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
-      backend: ["Next.js API Routes", "Prisma"],
-      database: ["PostgreSQL"],
-      tools: ["Vercel", "Resend", "Git"],
-    },
-    bullets: [
-      "Implementé internacionalización en tres idiomas (ES/EN/FR) con routing por locale sobre Next.js App Router.",
-      "Desarrollé modo oscuro/claro con detección automática de la preferencia del sistema del usuario.",
-      "Construí formulario de onboarding de 6 pasos que persiste leads en base de datos y dispara notificaciones automáticas por email con Resend.",
-    ],
-    decision:
-      "Elegí un routing basado en locale de Next.js en vez de una librería de i18n externa para mantener el bundle liviano y aprovechar el App Router de forma nativa en las tres versiones del sitio.",
-    challenge:
-      "Sincronizar el estado del formulario de 6 pasos entre pasos sin perder datos ante refrescos de página requirió persistencia intermedia en el cliente antes del envío final a la base de datos.",
-    tags: ["Next.js", "TypeScript", "i18n", "Prisma", "PostgreSQL"],
-    liveUrl: "https://www.phantasia.cl",
-    repoUrl: "https://github.com/Pauaua/PhantasiaWeb",
-    featured: false,
-  },
-  {
     id: 8,
     title: "Asegalbyf Asesorías — E-commerce",
     description:
@@ -146,32 +193,6 @@ export const projects = [
     liveUrl: "https://asegalbyfasesorias.cl",
     repoUrl: "https://github.com/PauFugit/FS-ASEGAL",
     featured: false,
-  },
-  {
-    id: 1,
-    title: "Eclipse FM 107.7 — Web & Dashboard",
-    description:
-      "Plataforma web full-stack para Radio Eclipse FM 107.7 (Quilicura). Sitio público con reproductor de audio en vivo, chat integrado, grilla de programación semanal, carrusel de auspiciadores, blog y noticias. Panel de administración con 3 roles (Admin, SubAdmin, Team) para gestión completa de usuarios, programas, sponsors y contenidos. Autenticación con NextAuth v5 + Prisma Adapter + bcryptjs, base de datos PostgreSQL serverless (Neon), emails transaccionales con Resend y validación con Zod.",
-    role: "Desarrolladora única — proyecto freelance",
-    stack: {
-      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      backend: ["Next.js API Routes", "NextAuth v5", "Prisma ORM", "bcryptjs", "Resend", "Zod"],
-      database: ["PostgreSQL", "Neon"],
-      tools: ["Vercel", "Git"],
-    },
-    bullets: [
-      "Implementé reproductor de audio streaming en tiempo real con chat integrado, permitiendo a los oyentes interactuar durante las transmisiones en vivo.",
-      "Desarrollé dashboard de administración con roles diferenciados (Admin/SubAdmin/Team) para gestión de programas, sponsors, blog y noticias.",
-      "Construí grilla de programación semanal, catálogo de programas y sección de noticias locales con sistema completo de gestión de contenidos.",
-    ],
-    decision:
-      "Elegí NextAuth v5 para la autenticación del dashboard por su integración nativa con Next.js App Router y soporte flexible de providers. La separación entre sitio público y panel admin en la misma base de código simplifica el despliegue y mantenimiento.",
-    challenge:
-      "Mantener el reproductor de streaming activo entre navegaciones sin interrumpir la reproducción requirió un contexto global que persiste el estado del audio fuera del árbol de rutas, evitando que el componente se desmonte al cambiar de página.",
-    tags: ["Next.js", "TypeScript", "NextAuth v5", "Prisma", "PostgreSQL", "Resend"],
-    liveUrl: "https://eclipse-fm.vercel.app",
-    repoUrl: "https://github.com/Pauaua/EclipseFM",
-    featured: true,
   },
   {
     id: 2,
@@ -201,6 +222,32 @@ export const projects = [
     featured: true,
   },
   {
+    id: 7,
+    title: "PhantasiaWeb — Sitio Corporativo",
+    description:
+      "Sitio web corporativo para Phantasia, estudio de diseño y desarrollo de software. Internacionalización en tres idiomas (ES/EN/FR) con routing por locale, modo oscuro/claro con detección de preferencia del sistema, y formulario de onboarding de 6 pasos que persiste leads en base de datos y envía notificaciones automáticas por email.",
+    role: "Desarrolladora única — proyecto freelance",
+    stack: {
+      frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
+      backend: ["Next.js API Routes", "Prisma"],
+      database: ["PostgreSQL"],
+      tools: ["Vercel", "Resend", "Git"],
+    },
+    bullets: [
+      "Implementé internacionalización en tres idiomas (ES/EN/FR) con routing por locale sobre Next.js App Router.",
+      "Desarrollé modo oscuro/claro con detección automática de la preferencia del sistema del usuario.",
+      "Construí formulario de onboarding de 6 pasos que persiste leads en base de datos y dispara notificaciones automáticas por email con Resend.",
+    ],
+    decision:
+      "Elegí un routing basado en locale de Next.js en vez de una librería de i18n externa para mantener el bundle liviano y aprovechar el App Router de forma nativa en las tres versiones del sitio.",
+    challenge:
+      "Sincronizar el estado del formulario de 6 pasos entre pasos sin perder datos ante refrescos de página requirió persistencia intermedia en el cliente antes del envío final a la base de datos.",
+    tags: ["Next.js", "TypeScript", "i18n", "Prisma", "PostgreSQL"],
+    liveUrl: "https://www.phantasia.cl",
+    repoUrl: "https://github.com/Pauaua/PhantasiaWeb",
+    featured: false,
+  },
+  {
     id: 10,
     title: "ALT - Asamblea Las Torres",
     description:
@@ -225,59 +272,6 @@ export const projects = [
     liveUrl: "https://www.asamblealastorres.cl",
     repoUrl: "https://github.com/Pauaua/ALTREAL",
     featured: false,
-  },
-  {
-    id: 6,
-    title: "Aguas Mi Sur — Sitio Institucional",
-    description:
-      "Sitio web institucional para empresa distribuidora de agua purificada en Chile. Renderizado de contenido dinámico en Markdown, base de datos PostgreSQL serverless con Prisma v7 y Neon, validación de datos con Zod v4 y despliegue continuo en Vercel.",
-    role: "Desarrolladora única — proyecto freelance",
-    stack: {
-      frontend: ["Next.js 16", "TypeScript", "Tailwind CSS v4"],
-      backend: ["Next.js API Routes", "Prisma 7"],
-      database: ["PostgreSQL", "Neon"],
-      tools: ["Vercel", "Turbopack", "Git"],
-    },
-    bullets: [
-      "Desarrollé sitio institucional completamente responsivo con Next.js 16 App Router y Tailwind CSS v4.",
-      "Integré base de datos PostgreSQL serverless con Prisma v7 para gestión de contenidos dinámicos.",
-      "Configuré Turbopack para builds optimizados y despliegue continuo en Vercel con entorno serverless.",
-    ],
-    decision:
-      "Elegí Next.js 16 con Turbopack por la velocidad de desarrollo y el despliegue serverless en Vercel, ideal para un sitio institucional que requiere bajo mantenimiento y alta disponibilidad.",
-    challenge:
-      "La configuración de Prisma v7 con el adaptador PostgreSQL serverless de Neon requirió ajustes específicos para el entorno serverless de Vercel, garantizando conexiones eficientes sin agotamiento de pool en funciones edge.",
-    tags: ["Next.js", "TypeScript", "Prisma", "Tailwind CSS v4"],
-    liveUrl: "https://aguasmisur.vercel.app/",
-    repoUrl: "https://github.com/Pauaua/MiSur",
-    featured: false,
-  },
-  {
-    id: 11,
-    title: "NotMubi — Plataforma de Streaming de Cine de Culto",
-    description:
-      "Plataforma de streaming full-stack para cine de culto, construida como arquitectura de microservicios con 5 servicios independientes (API Gateway, Discovery Server, Auth, Catalog, Subscription). Autenticación JWT centralizada en el Gateway con validación stateless entre servicios, comunicación entre microservicios vía OpenFeign + Eureka sin URLs hardcodeadas, y una base de datos PostgreSQL independiente por bounded context. Infraestructura reproducible con Docker Compose y frontend en React + Vite.",
-    role: "Desarrolladora única — proyecto personal de portafolio",
-    stack: {
-      frontend: ["React 18", "Vite", "React Router", "Axios"],
-      backend: ["Spring Boot 3.3.4", "Spring Cloud 2023.0.3", "Spring Cloud Gateway", "Netflix Eureka", "OpenFeign", "Spring Security", "Spring Data JPA", "jjwt 0.12.6"],
-      database: ["PostgreSQL 16", "Hibernate 6.5"],
-      tools: ["Docker", "Docker Compose", "Maven", "PgAdmin", "Git"],
-    },
-    bullets: [
-      "Diseñé y construí una arquitectura de microservicios con 5 servicios independientes: API Gateway reactivo, Discovery Server (Eureka), Auth Service, Catalog Service y Subscription Service, cada uno con su propia base de datos PostgreSQL.",
-      "Implementé autenticación JWT centralizada en el Gateway, con validación stateless por petición, propagación del contexto de usuario (userId, username, role) vía headers internos X-User-* y control de acceso por rol (USER vs ADMIN).",
-      "Desarrollé comunicación entre servicios con OpenFeign + Eureka, eliminando URLs hardcodeadas: el Catalog Service compone respuestas enriquecidas llamando al Auth Service vía descubrimiento dinámico de servicios.",
-      "Configuré CORS centralizado en el Gateway con CorsWebFilter reactivo y reglas de rutas públicas/privadas por filtro personalizado, y orquesté toda la infraestructura con Docker Compose (PostgreSQL + PgAdmin con múltiples bases de datos autogeneradas).",
-    ],
-    decision:
-      "Opté por microservicios con Spring Cloud en lugar de un monolito para practicar los patrones reales de arquitecturas distribuidas: service discovery, API Gateway, seguridad centralizada y comunicación entre servicios sin acoplamiento por URLs. Cada servicio mantiene su propio bounded context y base de datos, respetando la independencia de despliegue y consistencia eventual.",
-    challenge:
-      "El mayor reto fue la depuración de problemas típicos de sistemas distribuidos: conflictos de puertos entre servicios, caché de Eureka con el orden de arranque, propagación correcta del contexto de usuario desde el JWT hasta los servicios internos, y configuración de CORS en un Gateway reactivo con filtros personalizados. También requirió ajustar la versión de Lombok y el annotation processor para compatibilidad con Java 21 en un proyecto multi-módulo Maven.",
-    tags: ["Spring Boot", "Spring Cloud", "Microservicios", "JWT", "Docker", "React", "PostgreSQL"],
-    liveUrl: "",
-    repoUrl: "https://github.com/Pauaua/NotMubi",
-    featured: true,
   },
 ];
 

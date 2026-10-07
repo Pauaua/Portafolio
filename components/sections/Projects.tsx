@@ -14,11 +14,7 @@ export default function Projects() {
   const { t } = useLanguage();
   const [selected, setSelected] = useState<Project | null>(null);
 
-  // Orden de despliegue en el front (no altera lib/data.ts)
-  const displayOrder = [9, 8, 10, 6, 2, 7, 1, 4];
-  const sortedProjects = [...projects].sort(
-    (a, b) => displayOrder.indexOf(a.id) - displayOrder.indexOf(b.id)
-  );
+  const sortedProjects = projects;
 
   return (
     <section id="projects" className="section-padding">

@@ -31,7 +31,7 @@ export default function ResumeDownloadButton({ className, icon, label }: Props) 
       </button>
 
       {open && (
-        <div className="absolute z-20 top-full mt-2 left-1/2 -translate-x-1/2 w-40 rounded-xl border border-border bg-card shadow-lg overflow-hidden">
+        <div className="absolute z-20 bottom-full mb-2 left-1/2 -translate-x-1/2 w-40 rounded-xl border border-border bg-card shadow-lg overflow-hidden">
           <a
             href={personalInfo.resume}
             download
