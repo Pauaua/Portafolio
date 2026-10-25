@@ -4,7 +4,7 @@
 
 export const personalInfo = {
   name: "Paulina Acuña Paiva",
-  role: "Desarrolladora de Software",
+  role: "Técnica en Programación y Análisis de Sistemas - Desarrolladora de Software",
   // Hero tagline
   tagline:
     "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
@@ -89,6 +89,34 @@ export const skills = [
 ];
 
 export const projects = [
+  {
+    id: 12,
+    title: "TuContaPro — SaaS de Contabilidad Multiempresa",
+    description:
+      "SaaS de contabilidad multiempresa en producción (tucontapro.cl) para estudios contables y pymes chilenas. Incluye F29, honorarios, conciliación bancaria, activo fijo, estados financieros y calendario tributario, validados con una pauta de 24 casos contables. Diseñado con privacidad desde el diseño para cumplir la Ley 21.719 de protección de datos: aislamiento por cliente con Row-Level Security, cifrado y trazabilidad de credenciales tributarias, respaldos cifrados automáticos y cierre de cuenta con exportación completa, borrado automático y certificado de eliminación.",
+    role: "Desarrolladora — SaaS en producción",
+    stack: {
+      frontend: ["React"],
+      backend: ["NestJS", "Prisma"],
+      database: ["PostgreSQL"],
+      tools: ["Docker", "Railway", "Vercel"],
+    },
+    bullets: [
+      "Arquitectura multiempresa con Row-Level Security por cliente.",
+      "Cumplimiento Ley 21.719: cifrado, trazabilidad y borrado certificado de credenciales tributarias.",
+      "F29, honorarios, conciliación bancaria, activo fijo, EEFF y calendario tributario.",
+      "Validado con una pauta de 24 casos contables.",
+      "Desplegado en Railway (backend) y Vercel (frontend) con Docker.",
+    ],
+    decision:
+      "Apliqué privacidad desde el diseño para cumplir la Ley 21.719: el aislamiento entre clientes se resuelve con Row-Level Security en PostgreSQL, de modo que la separación de datos de cada empresa no depende solo de la lógica de la aplicación.",
+    challenge:
+      "Asegurar la exactitud de los cálculos contables y tributarios (F29, honorarios, estados financieros) exigió validarlos contra una pauta de 24 casos contables antes de llevarlos a producción.",
+    tags: ["React", "NestJS", "Prisma", "PostgreSQL", "Docker", "Railway", "Vercel"],
+    liveUrl: "https://tucontapro.cl",
+    repoUrl: "https://github.com/Pauaua/TuContaPro",
+    featured: true,
+  },
   {
     id: 11,
     title: "NotMubi — Plataforma de Streaming de Cine de Culto",

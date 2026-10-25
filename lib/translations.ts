@@ -14,7 +14,7 @@ export const translations = {
       badge1: "Disponible para contratación",
       badge2: "Disponible para proyectos",
       greeting: "Hola, soy",
-      role: "Desarrolladora de Software",
+      role: "Técnica en Programación y Análisis de Sistemas - Desarrolladora de Software",
       tagline:
         "Construyo productos digitales que funcionan — del backend al frontend, con metodologías claras permitiendo un código limpio y eficiente.",
       cta1: "Revisa mis proyectos",
@@ -48,6 +48,24 @@ export const translations = {
       code: "Código",
       moreOnGithub: "Ver más en GitHub",
       items: [
+        {
+          id: 12,
+          title: "TuContaPro — SaaS de Contabilidad Multiempresa",
+          description:
+            "SaaS de contabilidad multiempresa en producción (tucontapro.cl) para estudios contables y pymes chilenas. Incluye F29, honorarios, conciliación bancaria, activo fijo, estados financieros y calendario tributario, validados con una pauta de 24 casos contables. Diseñado con privacidad desde el diseño para cumplir la Ley 21.719 de protección de datos: aislamiento por cliente con Row-Level Security, cifrado y trazabilidad de credenciales tributarias, respaldos cifrados automáticos y cierre de cuenta con exportación completa, borrado automático y certificado de eliminación.",
+          role: "Desarrolladora — SaaS en producción",
+          bullets: [
+            "Arquitectura multiempresa con Row-Level Security por cliente.",
+            "Cumplimiento Ley 21.719: cifrado, trazabilidad y borrado certificado de credenciales tributarias.",
+            "F29, honorarios, conciliación bancaria, activo fijo, EEFF y calendario tributario.",
+            "Validado con una pauta de 24 casos contables.",
+            "Desplegado en Railway (backend) y Vercel (frontend) con Docker.",
+          ],
+          decision:
+            "Apliqué privacidad desde el diseño para cumplir la Ley 21.719: el aislamiento entre clientes se resuelve con Row-Level Security en PostgreSQL, de modo que la separación de datos de cada empresa no depende solo de la lógica de la aplicación.",
+          challenge:
+            "Asegurar la exactitud de los cálculos contables y tributarios (F29, honorarios, estados financieros) exigió validarlos contra una pauta de 24 casos contables antes de llevarlos a producción.",
+        },
         {
           id: 1,
           title: "Eclipse FM 107.7 — Web & Dashboard",
@@ -161,7 +179,7 @@ export const translations = {
             "Traducir el trabajo horizontal y autogestionado de la organización en una estructura de datos clara (proyectos, ejes, intervenciones) que fuera fácil de mantener por personas sin conocimientos técnicos.",
         },
           {
-    id: 7,
+    id: 11,
     title: "NotMubi — Plataforma de Streaming de Cine de Culto",
     description:
       "Plataforma de streaming full-stack para cine de culto, construida como arquitectura de microservicios con 5 servicios independientes (API Gateway, Discovery Server, Auth, Catalog, Subscription). Autenticación JWT centralizada en el Gateway con validación stateless entre servicios, comunicación entre microservicios vía OpenFeign + Eureka sin URLs hardcodeadas, y una base de datos PostgreSQL independiente por bounded context. Infraestructura reproducible con Docker Compose y frontend en React + Vite.",
@@ -334,7 +352,7 @@ export const translations = {
       badge1: "Available for hire",
       badge2: "Available for projects",
       greeting: "Hi, I'm",
-      role: "Software Developer",
+      role: "Programming and Systems Analysis Technician - Software Developer",
       tagline:
         "I build digital products that work — from backend to frontend, with clear methodologies enabling clean and efficient code.",
       cta1: "See my projects",
@@ -368,6 +386,24 @@ export const translations = {
       code: "Code",
       moreOnGithub: "More on GitHub",
       items: [
+        {
+          id: 12,
+          title: "TuContaPro — Multi-company Accounting SaaS",
+          description:
+            "Multi-company accounting SaaS in production (tucontapro.cl) for Chilean accounting firms and SMEs. Includes F29 tax returns, fee receipts (honorarios), bank reconciliation, fixed assets, financial statements and a tax calendar, validated against a rubric of 24 accounting cases. Built with privacy by design to comply with Chile's Data Protection Law 21.719: per-client isolation with Row-Level Security, encryption and audit trails for tax credentials, automatic encrypted backups, and account closure with full export, automatic deletion and a deletion certificate.",
+          role: "Developer — SaaS in production",
+          bullets: [
+            "Multi-company architecture with per-client Row-Level Security.",
+            "Law 21.719 compliance: encryption, audit trails and certified deletion of tax credentials.",
+            "F29, fee receipts, bank reconciliation, fixed assets, financial statements and tax calendar.",
+            "Validated against a rubric of 24 accounting cases.",
+            "Deployed on Railway (backend) and Vercel (frontend) with Docker.",
+          ],
+          decision:
+            "I applied privacy by design to comply with Law 21.719: tenant isolation is enforced with Row-Level Security in PostgreSQL, so each company's data separation doesn't rely on application logic alone.",
+          challenge:
+            "Ensuring the accuracy of accounting and tax calculations (F29, fee receipts, financial statements) required validating them against a rubric of 24 accounting cases before shipping to production.",
+        },
         {
           id: 1,
           title: "Eclipse FM 107.7 — Web & Dashboard",
@@ -481,7 +517,7 @@ export const translations = {
             "Translating the organization's horizontal, self-managed work into a clear data structure (projects, work areas, interventions) that would be easy to maintain for people without technical knowledge.",
         },
           {
-    id: 7,
+    id: 11,
     title: "NotMubi — Cult Movie Streaming Platform",
     description:
       "Full-stack streaming platform for cult cinema, built as a microservices architecture with 5 independent services (API Gateway, Discovery Server, Auth, Catalog, Subscription). JWT authentication centralized in the Gateway with stateless validation across services, inter-service communication via OpenFeign + Eureka without hardcoded URLs, and an independent PostgreSQL database per bounded context. Reproducible infrastructure with Docker Compose and a React + Vite frontend.",
@@ -653,7 +689,7 @@ export const translations = {
       badge1: "Disponible à l'embauche",
       badge2: "Disponible pour des projets",
       greeting: "Bonjour, je suis",
-      role: "Développeuse Logicielle",
+      role: "Technicienne en Programmation et Analyse de Systèmes - Développeuse Logicielle",
       tagline:
         "Je construis des produits numériques qui fonctionnent — du backend au frontend, avec des méthodologies claires permettant un code propre et efficace.",
       cta1: "Voir mes projets",
@@ -687,6 +723,24 @@ export const translations = {
       code: "Code",
       moreOnGithub: "Plus sur GitHub",
       items: [
+        {
+          id: 12,
+          title: "TuContaPro — SaaS de Comptabilité Multi-entreprises",
+          description:
+            "SaaS de comptabilité multi-entreprises en production (tucontapro.cl) pour les cabinets comptables et les PME chiliennes. Comprend le F29, les honoraires, le rapprochement bancaire, les immobilisations, les états financiers et le calendrier fiscal, validés à l'aide d'une grille de 24 cas comptables. Conçu selon le principe de protection des données dès la conception pour respecter la loi chilienne 21.719 : isolation par client avec Row-Level Security, chiffrement et traçabilité des identifiants fiscaux, sauvegardes chiffrées automatiques et clôture de compte avec export complet, suppression automatique et certificat de suppression.",
+          role: "Développeuse — SaaS en production",
+          bullets: [
+            "Architecture multi-entreprises avec Row-Level Security par client.",
+            "Conformité à la loi 21.719 : chiffrement, traçabilité et suppression certifiée des identifiants fiscaux.",
+            "F29, honoraires, rapprochement bancaire, immobilisations, états financiers et calendrier fiscal.",
+            "Validé à l'aide d'une grille de 24 cas comptables.",
+            "Déployé sur Railway (backend) et Vercel (frontend) avec Docker.",
+          ],
+          decision:
+            "J'ai appliqué la protection des données dès la conception pour respecter la loi 21.719 : l'isolation entre clients est assurée par Row-Level Security dans PostgreSQL, afin que la séparation des données de chaque entreprise ne dépende pas uniquement de la logique applicative.",
+          challenge:
+            "Garantir l'exactitude des calculs comptables et fiscaux (F29, honoraires, états financiers) a exigé de les valider à l'aide d'une grille de 24 cas comptables avant la mise en production.",
+        },
         {
           id: 1,
           title: "Eclipse FM 107.7 — Web & Dashboard",
@@ -800,7 +854,7 @@ export const translations = {
             "Traduire le travail horizontal et autogéré de l'organisation en une structure de données claire (projets, axes, interventions) facile à maintenir par des personnes sans connaissances techniques.",
         },
           {
-    id: 7,
+    id: 11,
     title: "NotMubi — Plateforme de Streaming de Films Cultes",
     description:
       "Plateforme de streaming full-stack dédiée au cinéma culte, construite comme une architecture de microservices avec 5 services indépendants (API Gateway, Discovery Server, Auth, Catalog, Subscription). Authentification JWT centralisée dans le Gateway avec validation stateless entre services, communication inter-services via OpenFeign + Eureka sans URLs codées en dur, et une base de données PostgreSQL indépendante par bounded context. Infrastructure reproductible avec Docker Compose et frontend en React + Vite.",
