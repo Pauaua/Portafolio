@@ -2,7 +2,9 @@ import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const toEmail = process.env.CONTACT_TO_EMAIL ?? "paulina.acuna.paiva@gmail.com";
+// Destino de los mensajes: debe ser el correo de la cuenta de Resend mientras se use
+// onboarding@resend.dev como remitente. El correo VISIBLE en el sitio está en lib/data.ts.
+const toEmail = process.env.CONTACT_TO_EMAIL ?? "paulinefugit@gmail.com";
 
 export async function POST(req: NextRequest) {
   try {

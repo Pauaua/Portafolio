@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import BackgroundSparkles from "@/components/ui/BackgroundSparkles";
 import LanguageBanner from "@/components/ui/LanguageBanner";
@@ -9,16 +9,20 @@ import EasterEgg from "@/components/ui/EasterEgg";
 import { personalInfo, socialLinks } from "@/lib/data";
 import { SITE_URL } from "@/lib/site-config";
 
-const inter = Inter({
-  subsets: ["latin"],
+// Fuentes auto-alojadas (variables, subset latin) para que el build no dependa
+// de descargar Google Fonts: esa descarga fallaba de forma intermitente en Vercel.
+const inter = localFont({
+  src: "./fonts/inter-latin-wght.woff2",
   variable: "--font-sans",
-  weight: ["300", "400", "500"],
+  weight: "300 500",
+  display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
+const spaceGrotesk = localFont({
+  src: "./fonts/space-grotesk-latin-wght.woff2",
   variable: "--font-heading",
-  weight: ["300", "400", "500"],
+  weight: "300 500",
+  display: "swap",
 });
 
 const title = "Paulina Acuña Paiva — Desarrolladora de Software";
