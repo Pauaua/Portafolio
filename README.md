@@ -121,4 +121,4 @@ Entiendo la IA como una herramienta que potencia mi trabajo, no como un reemplaz
 
 ## Contacto
 
-**paulinefugit@gmail.com** · [LinkedIn](https://www.linkedin.com/in/paulinefugit/) · [GitHub](https://github.com/Pauaua) · [Portafolio](https://paulinaap.vercel.app/)
+**paulina.acuna.paiva@gmail.com** · [LinkedIn](https://www.linkedin.com/in/paulinefugit/) · [GitHub](https://github.com/Pauaua) · [Portafolio](https://paulinaap.vercel.app/)

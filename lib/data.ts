@@ -11,7 +11,7 @@ export const personalInfo = {
   // About bio 
   bio: "Desarrolladora de Software con dominio real de frontend, backend, aplicaciones móviles híbridas y nativas, y automatización de procesos (Next.js, Spring Boot, Python, Ionic, React Native), respaldado por más de una decena de proyectos productivos entregados en menos de dos años de formación formal. Ocho años previos como docente de Filosofía y directora de proyectos aportan comunicación técnica clara, gestión ágil y experiencia coordinando equipos y clientes — hoy aplicadas a levantar requerimientos y entregar software de principio a fin.",
   location: "Santiago, RM. Chile",
-  email: "paulinefugit@gmail.com",
+  email: "paulina.acuna.paiva@gmail.com",
   phone: "56974476368",
   whatsappMessage: "Hola Paulina, vi tu portfolio y me gustaría hablar contigo.",
   github: "Pauaua",
@@ -64,7 +64,23 @@ export const skills = [
   },
   {
     category: "Bases de Datos & ORM",
-    items: ["MySQL", "PostgreSQL", "Oracle SQL", "Prisma", "SQLAlchemy", "JPA"],
+    items: ["MySQL", "PostgreSQL", "Oracle SQL", "SQL Server", "Prisma", "SQLAlchemy", "JPA"],
+  },
+  {
+    category: "Datos & Análisis",
+    items: [
+      "Advanced SQL (JOINs, CTEs, window functions)",
+      "Data modeling",
+      "Stored procedures & views",
+      "Pandas",
+      "ETL",
+      "Data quality & validation",
+      "Power BI",
+      "Charts as code",
+      "Descriptive statistics",
+      "Report automation",
+      "Data privacy & governance (Law 21.719)",
+    ],
   },
   {
     category: "State & Data",
@@ -72,7 +88,7 @@ export const skills = [
   },
   {
     category: "Cloud & Deploy",
-    items: ["Vercel", "Railway", "Supabase", "Cloudflare", "Docker", "EAS Build"],
+    items: ["Vercel", "Railway", "Supabase", "Cloudflare", "Docker", "EAS Build", "AWS"],
   },
   {
     category: "Testing & Monitoreo",
@@ -305,6 +321,15 @@ export const projects = [
 
 export const experience = [
   {
+    id: 1,
+    company: "Asesorías Valdivia",
+    role: "Desarrolladora de Software (trabajo por proyecto)",
+    period: "may 2026 — oct 2026",
+    description:
+      "Desarrollé TuContaPro de punta a punta: plataforma SaaS de contabilidad multiempresa para estudios y pymes chilenas, en producción en tucontapro.cl. Implementé F29, honorarios, conciliación bancaria, activo fijo, estados financieros y calendario tributario, validados con una pauta de 24 casos contables. La diseñé para la Ley 21.719: aislamiento por cliente con Row-Level Security, cifrado y trazabilidad de credenciales tributarias, respaldos cifrados y borrado certificado.",
+    tags: ["React", "NestJS", "Prisma", "PostgreSQL", "Docker", "Railway", "Vercel"],
+  },
+  {
     id: 2,
     company: "Mimasoft",
     role: "Desarrolladora Full Stack (Práctica profesional, 360 hrs)",
@@ -319,8 +344,8 @@ export const experience = [
     role: "Desarrolladora Full Stack",
     period: "may 2024 — dic 2024",
     description:
-      "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "Scrum"],
+      "Desarrollé sitios y plataformas para clientes externos con Next.js 15 bajo metodologías ágiles. Gestioné persistencia de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, con despliegue continuo en Vercel. Coordiné directamente con clientes el levantamiento y la definición de requerimientos.",
+    tags: ["Next.js", "Prisma", "PostgreSQL", "Supabase", "Vercel", "Scrum"],
   },
   {
     id: 4,
@@ -373,7 +398,7 @@ export const education = [
   {
     id: 4,
     institution: "Universidad Miguel de Cervantes", 
-    degree: "Magíster en Educación cn mención en Currículum",
+    degree: "Magíster en Educación, mención Currículum y Evaluación Basada en Competencias",
     period: "2019 — 2021", 
     description:
       "Investigación educativa, diseño curricular y gestión de proyectos pedagógicos. Rigor metodológico y comunicación de ideas complejas — habilidades que hoy aplico directamente en desarrollo de software.",
@@ -382,7 +407,7 @@ export const education = [
   {
     id: 5,
     institution: "Pontificia Universidad Católica de Valparaíso", 
-    degree: "Licenciatura en Filosofía",
+    degree: "Licenciatura en Educación y Pedagogía en Filosofía",
     period: "2010 — 2016", 
     description:
       "Formación en pensamiento crítico, argumentación estructurada y análisis de sistemas. Base que potencia mi capacidad para diseñar soluciones limpias y razonar sobre arquitecturas complejas.",

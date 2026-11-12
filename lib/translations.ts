@@ -24,7 +24,7 @@ export const translations = {
       label: "Sobre mí",
       heading: "Del aula al",
       headingAccent: "código",
-      bio: "Ingeniería en Informática (en curso) con título técnico de Analista Programadora y experiencia en empresa real. Domino el ciclo completo: arquitectura de base de datos, APIs REST, lógica de negocio y frontend. Me motiva integrarme a equipos donde pueda aportar valor desde el día uno y seguir creciendo técnicamente.",
+      bio: "Ingeniería en Informática (en curso) con título técnico de Analista Programadora y experiencia en empresa real. Domino el ciclo completo: arquitectura de base de datos, APIs REST, lógica de negocio y frontend. También trabajo con datos: consultas SQL, tratamiento y validación de datos, procesos ETL e informes con Power BI. Busco roles de programadora, desarrolladora de software o analista de datos, en equipos donde pueda aportar valor desde el día uno y seguir creciendo técnicamente.",
       extra:
         "Antes de dedicarme al desarrollo, fui docente de Filosofía durante más de 8 años y tengo un Magíster en Educación. Esa etapa me enseñó a comunicar ideas complejas de forma clara, a gestionar proyectos con recursos limitados y a trabajar con equipos diversos — habilidades que aplico directamente al desarrollo de software.",
       openToWork: "Open to work",
@@ -38,6 +38,12 @@ export const translations = {
         "Bases de Datos & ORM": "Bases de Datos & ORM",
         "Herramientas & Metodologías": "Herramientas & Metodologías",
         "Cloud & Deploy": "Cloud & Deploy",
+        "Arquitectura & Patrones": "Arquitectura & Patrones",
+        "Datos & Análisis": "Datos & Análisis",
+        "State & Data": "State & Data",
+        "Testing & Monitoreo": "Testing & Monitoreo",
+        "Herramientas": "Herramientas",
+        "Metodologías": "Metodologías",
       },
     },
     projects: {
@@ -213,6 +219,11 @@ export const translations = {
       headingAccent: "trabajado",
       items: [
         {
+          role: "Desarrolladora de Software (trabajo por proyecto)",
+          description:
+            "Desarrollé TuContaPro de punta a punta: plataforma SaaS de contabilidad multiempresa para estudios y pymes chilenas, en producción en tucontapro.cl. Implementé F29, honorarios, conciliación bancaria, activo fijo, estados financieros y calendario tributario, validados con una pauta de 24 casos contables. La diseñé para la Ley 21.719: aislamiento por cliente con Row-Level Security, cifrado y trazabilidad de credenciales tributarias, respaldos cifrados y borrado certificado.",
+        },
+        {
           role: "Desarrolladora Full Stack (Práctica profesional, 360 hrs)",
           description:
             "Práctica (360 horas) para salida intermedia Técnico Analista Programador. Desarrollé sitio web institucional bilingüe (ES/EN) en WordPress con Divi child theme, sistema de traducción dinámico JavaScript (data-es/data-en), integración de formularios WPForms con estilos glassmorphism, reCAPTCHA v2 y configuración Polylang. Arquitectura bajo DDD multi-tenant.",
@@ -220,7 +231,7 @@ export const translations = {
         {
           role: "Desarrolladora Full Stack",
           description:
-            "Desarrollo freelance de productos digitales para el estudio y sus clientes. Construcción del sitio web corporativo multilingüe (ES/EN/FR) con Next.js 16, sistema de captación de leads de 6 pasos con almacenamiento en base de datos y notificaciones por email (Resend). Desarrollo de sitios y plataformas web para clientes externos del estudio.",
+            "Desarrollé sitios y plataformas para clientes externos con Next.js 15 bajo metodologías ágiles. Gestioné persistencia de datos con Prisma ORM sobre MySQL, PostgreSQL y Supabase, con despliegue continuo en Vercel. Coordiné directamente con clientes el levantamiento y la definición de requerimientos.",
         },
         {
           role: "Profesora — Sistema educativo formal",
@@ -255,12 +266,12 @@ export const translations = {
             "Bootcamp intensivo de desarrollo full stack. Primer paso en la transición hacia el mundo del software.",
         },
         {
-          degree: "Magíster en Educación",
+          degree: "Magíster en Educación, mención Currículum y Evaluación Basada en Competencias",
           description:
             "Investigación educativa, diseño curricular y gestión de proyectos pedagógicos. Rigor metodológico y comunicación de ideas complejas — habilidades que hoy aplico directamente en desarrollo de software.",
         },
         {
-          degree: "Licenciatura en Filosofía",
+          degree: "Licenciatura en Educación y Pedagogía en Filosofía",
           description:
             "Formación en pensamiento crítico, argumentación estructurada y análisis de sistemas. Base que potencia mi capacidad para diseñar soluciones limpias y razonar sobre arquitecturas complejas.",
         },
@@ -362,7 +373,7 @@ export const translations = {
       label: "About me",
       heading: "From the classroom to",
       headingAccent: "code",
-      bio: "Computer Engineering student (in progress) with a technical degree as Programmer Analyst and real company experience. I handle the full development cycle: database architecture, REST APIs, business logic and frontend. I'm motivated to join teams where I can contribute from day one and keep growing technically.",
+      bio: "Computer Engineering student (in progress) with a technical degree as Programmer Analyst and real company experience. I handle the full development cycle: database architecture, REST APIs, business logic and frontend. I also work with data: SQL queries, data processing and validation, ETL processes and Power BI reports. I'm looking for programmer, software developer or data analyst roles, in teams where I can contribute from day one and keep growing technically.",
       extra:
         "Before transitioning into software development, I was a Philosophy teacher for over 8 years and hold a Master's degree in Education. That chapter taught me to communicate complex ideas clearly, manage projects with limited resources and collaborate with diverse teams — skills I apply directly to software development.",
       openToWork: "Open to work",
@@ -376,6 +387,12 @@ export const translations = {
         "Bases de Datos & ORM": "Databases & ORM",
         "Herramientas & Metodologías": "Tools & Methodologies",
         "Cloud & Deploy": "Cloud & Deploy",
+        "Arquitectura & Patrones": "Architecture & Patterns",
+        "Datos & Análisis": "Data & Analytics",
+        "State & Data": "State & Data",
+        "Testing & Monitoreo": "Testing & Monitoring",
+        "Herramientas": "Tools",
+        "Metodologías": "Methodologies",
       },
     },
     projects: {
@@ -551,6 +568,11 @@ export const translations = {
       headingAccent: "worked",
       items: [
         {
+          role: "Software Developer (project-based)",
+          description:
+            "I built TuContaPro end to end: a multi-company accounting SaaS platform for Chilean accounting firms and SMEs, in production at tucontapro.cl. I implemented F29 tax returns, fee receipts (honorarios), bank reconciliation, fixed assets, financial statements and a tax calendar, validated against a rubric of 24 accounting cases. I designed it for Chile's Data Protection Law 21.719: per-client isolation with Row-Level Security, encryption and audit trails for tax credentials, encrypted backups and certified deletion.",
+        },
+        {
           role: "Full Stack Developer (Professional Internship, 360 hrs)",
           description:
             "360-hour internship for Programmer Analyst certification. Developed a bilingual (ES/EN) institutional website in WordPress with Divi child theme, dynamic JavaScript translation system (data-es/data-en), WPForms integration with glassmorphism styles, reCAPTCHA v2 and Polylang configuration. Architecture under DDD multi-tenant.",
@@ -558,7 +580,7 @@ export const translations = {
         {
           role: "Full Stack Developer",
           description:
-            "Freelance development of digital products for the studio and its clients. Built the multilingual corporate website (ES/EN/FR) with Next.js 16, a 6-step lead capture system with database storage and email notifications (Resend). Web development for external clients of the studio.",
+            "I built websites and platforms for external clients with Next.js 15 under agile methodologies. I managed data persistence with Prisma ORM on MySQL, PostgreSQL and Supabase, with continuous deployment on Vercel. I worked directly with clients to gather and define requirements.",
         },
         {
           role: "Philosophy Teacher — Formal Education",
@@ -593,12 +615,12 @@ export const translations = {
             "Intensive full stack development bootcamp. First step in the transition into the software world.",
         },
         {
-          degree: "Master's in Education",
+          degree: "Master's in Education, specialization in Curriculum and Competency-Based Assessment",
           description:
             "Educational research, curriculum design and pedagogical project management. Methodological rigor and communication of complex ideas — skills I now apply directly to software development.",
         },
         {
-          degree: "Bachelor's in Philosophy",
+          degree: "Bachelor's in Education and Pedagogy in Philosophy",
           description:
             "Training in critical thinking, structured argumentation and systems analysis. A foundation that enhances my ability to design clean solutions and reason about complex architectures.",
         },
@@ -699,7 +721,7 @@ export const translations = {
       label: "À propos",
       heading: "De la salle de classe au",
       headingAccent: "code",
-      bio: "Étudiante en Ingénierie Informatique (en cours) avec un diplôme technique d'Analyste Programmeuse et une expérience en entreprise réelle. Je maîtrise le cycle complet : architecture de base de données, API REST, logique métier et frontend. Je suis motivée à rejoindre des équipes où je peux apporter de la valeur dès le premier jour et continuer à grandir techniquement.",
+      bio: "Étudiante en Ingénierie Informatique (en cours) avec un diplôme technique d'Analyste Programmeuse et une expérience en entreprise réelle. Je maîtrise le cycle complet : architecture de base de données, API REST, logique métier et frontend. Je travaille aussi avec les données : requêtes SQL, traitement et validation de données, processus ETL et rapports avec Power BI. Je recherche des postes de programmeuse, développeuse logicielle ou analyste de données, au sein d'équipes où je peux apporter de la valeur dès le premier jour et continuer à grandir techniquement.",
       extra:
         "Avant de me consacrer au développement, j'ai été professeure de Philosophie pendant plus de 8 ans et je suis titulaire d'un Master en Éducation. Cette étape m'a appris à communiquer des idées complexes clairement, à gérer des projets avec des ressources limitées et à travailler avec des équipes diverses — des compétences que j'applique directement au développement logiciel.",
       openToWork: "Disponible",
@@ -713,6 +735,12 @@ export const translations = {
         "Bases de Datos & ORM": "Bases de données & ORM",
         "Herramientas & Metodologías": "Outils & Méthodologies",
         "Cloud & Deploy": "Cloud & Déploiement",
+        "Arquitectura & Patrones": "Architecture & Patrons",
+        "Datos & Análisis": "Données & Analyse",
+        "State & Data": "État & Données",
+        "Testing & Monitoreo": "Tests & Monitoring",
+        "Herramientas": "Outils",
+        "Metodologías": "Méthodologies",
       },
     },
     projects: {
@@ -888,6 +916,11 @@ export const translations = {
       headingAccent: "travaillé",
       items: [
         {
+          role: "Développeuse Logicielle (mission par projet)",
+          description:
+            "J'ai développé TuContaPro de bout en bout : une plateforme SaaS de comptabilité multi-entreprises pour les cabinets comptables et les PME chiliennes, en production sur tucontapro.cl. J'ai implémenté le F29, les honoraires, le rapprochement bancaire, les immobilisations, les états financiers et le calendrier fiscal, validés à l'aide d'une grille de 24 cas comptables. Je l'ai conçue pour la loi chilienne 21.719 : isolation par client avec Row-Level Security, chiffrement et traçabilité des identifiants fiscaux, sauvegardes chiffrées et suppression certifiée.",
+        },
+        {
           role: "Développeuse Full Stack (Stage professionnel, 360 h)",
           description:
             "Stage de 360 heures pour la certification d'Analyste Programmeuse. Développement d'un site institutionnel bilingue (ES/EN) sous WordPress avec Divi child theme, système de traduction dynamique JavaScript (data-es/data-en), intégration WPForms avec styles glassmorphism, reCAPTCHA v2 et configuration Polylang. Architecture DDD multi-tenant.",
@@ -895,7 +928,7 @@ export const translations = {
         {
           role: "Développeuse Full Stack",
           description:
-            "Développement freelance de produits numériques pour le studio et ses clients. Construction du site web corporatif multilingue (ES/EN/FR) avec Next.js 16, système de captation de leads en 6 étapes avec stockage en base de données et notifications par email (Resend). Développement de sites et plateformes web pour les clients externes du studio.",
+            "J'ai développé des sites et des plateformes pour des clients externes avec Next.js 15 selon des méthodologies agiles. J'ai géré la persistance des données avec Prisma ORM sur MySQL, PostgreSQL et Supabase, avec déploiement continu sur Vercel. J'ai coordonné directement avec les clients le recueil et la définition des besoins.",
         },
         {
           role: "Professeure de Philosophie — Éducation formelle",
@@ -930,12 +963,12 @@ export const translations = {
             "Bootcamp intensif de développement full stack. Première étape dans la transition vers le monde du logiciel.",
         },
         {
-          degree: "Master en Éducation",
+          degree: "Master en Éducation, mention Curriculum et Évaluation par Compétences",
           description:
             "Recherche en éducation, conception curriculaire et gestion de projets pédagogiques. Rigueur méthodologique et communication d'idées complexes — des compétences que j'applique maintenant directement au développement logiciel.",
         },
         {
-          degree: "Licence en Philosophie",
+          degree: "Licence en Éducation et Pédagogie en Philosophie",
           description:
             "Formation à la pensée critique, à l'argumentation structurée et à l'analyse de systèmes. Une base qui renforce ma capacité à concevoir des solutions propres et à raisonner sur des architectures complexes.",
         },
