@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Paulina Acuña Paiva — Desarrolladora Full Stack",
+    name: "Paulina Acuña Paiva — Desarrolladora de Software",
     short_name: "Paulina Acuña",
     description:
-      "Portfolio de Paulina Acuña Paiva, desarrolladora Full Stack especialista en Java Spring Boot, Python, React y Next.js.",
+      "Portfolio de Paulina Acuña Paiva, técnica en programación y análisis de sistemas: desarrollo de software (Java, Python, React, Next.js) y análisis de datos (SQL, Power BI).",
     start_url: "/",
     display: "standalone",
     background_color: "#09090f",

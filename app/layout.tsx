@@ -23,7 +23,7 @@ const spaceGrotesk = Space_Grotesk({
 
 const title = "Paulina Acuña Paiva — Desarrolladora de Software";
 const description =
-  "Desarrolladora de Software disponible para contratación. Especialista en Java Spring Boot, Python, React y Next.js. Santiago, Chile.";
+  "Técnica en Programación y Análisis de Sistemas. Desarrollo de software (Java, Python, React, Next.js) y análisis de datos (SQL, ETL, Power BI). Santiago, Chile.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,6 +39,10 @@ export const metadata: Metadata = {
     "React",
     "Next.js",
     "Python",
+    "SQL",
+    "Power BI",
+    "analista de datos",
+    "técnica en programación y análisis de sistemas",
     "contratar desarrolladora",
     "portfolio desarrolladora",
     "Santiago Chile",
@@ -61,8 +65,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title,
-    description:
-      "Disponible para posiciones full-time y freelance. de Software con conocimientos en Java, Python y React.",
+    description,
     type: "website",
     url: SITE_URL,
     siteName: `${personalInfo.name} — Portfolio`,
@@ -108,6 +111,9 @@ const personJsonLd = {
     "React",
     "Next.js",
     "TypeScript",
+    "SQL",
+    "ETL",
+    "Power BI",
   ],
 };
 

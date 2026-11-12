@@ -6,14 +6,14 @@ import ContactForm from "@/components/sections/ContactForm";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Contacta a Paulina Acuña Paiva, desarrolladora Full Stack, para hablar sobre tu proyecto, colaboración o una posición full-time.",
+    "Contacta a Paulina Acuña Paiva, técnica en programación y desarrolladora de software, para hablar sobre una posición, un proyecto o una colaboración.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contacto — Paulina Acuña Paiva",
     description:
-      "Contacta a Paulina Acuña Paiva, desarrolladora Full Stack, para hablar sobre tu proyecto o colaboración.",
+      "Contacta a Paulina Acuña Paiva, técnica en programación y desarrolladora de software, para hablar sobre una posición, un proyecto o una colaboración.",
     url: "/contact",
     type: "website",
   },
